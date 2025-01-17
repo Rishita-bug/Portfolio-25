@@ -1,0 +1,86 @@
+/*body {
+  padding-left: 80px;
+  padding-top: 75px;
+  padding-bottom: 100px;
+}*/
+
+.landing-page-container {
+  margin-top: 60px;
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgray;
+}
+
+.info-container {
+  position: fixed;
+  z-index: 20;
+  top: 320px;
+  left: 48px;
+}
+
+.fixed-div {
+  position: fixed;
+  /*background-color: lightgreen;*/
+  height: 424px;
+  width: 100%;
+  overflow: auto;
+}
+
+.thumbnail-container {
+  position: relative;
+  background-color: lightblue;
+  width: 624px;
+  height: 388px;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.about-project-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  opacity: 0.4;
+  transition: opacity 0.3s;
+}
+
+.active-about-project-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.line-decoration {
+  width: 5%;
+  margin-left: 0;
+  border: none;
+  border-top: 3px solid black;
+  transition: width 0.25s ease-in-out;
+  opacity: 0.4;
+}
+
+.active-line-decoration {
+  width: 20%;
+  margin-left: 0;
+  border: none;
+  border-top: 3px solid black;
+  transition: width 0.25s ease-in-out;
+}
+
+.project-description {
+  max-width: 260px;
+}
+
+
+
