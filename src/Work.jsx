@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { useState, forwardRef, useRef, useEffect, useMemo } from "react";
-import './Work.css'
+// import './Work.css'
 import {Link} from 'react-router-dom';
 
 function LandingPage () {
@@ -38,9 +38,9 @@ Thumbnail.displayName = "Thumbnail"
 function ProjectTitles ({number, title, year, className}) {
   return (
     <div className = "info-container">
-    <p>{number}</p>  
-    <p>{year}</p>
-    <p>{title}</p>
+      <p>{number}</p>  
+      <p>{year}</p>
+      <p>{title}</p>
     </div>
   )
 }
@@ -161,7 +161,6 @@ return () => observer1.disconnect();
         year= {visibleProject.year}
       />
       )}
-
       <div className="project-container">
         {projects.map((project, index) => (
           <div 
