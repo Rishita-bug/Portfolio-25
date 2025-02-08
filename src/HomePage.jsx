@@ -41,9 +41,9 @@ function ProjectTitles({number, year, title, isWorkVisible}){
 ProjectTitles.displayName = "ProjectTitles";
 
 
-function ProjectTags ({tags}){
+function ProjectTags ({tags, className}){
   return(
-    <ul className = "tags-list">
+    <ul className = {`tags-list ${className}`}>
       {tags.map((tag, index) => {
         return(
           <li key = {index} className = "tag">
@@ -58,10 +58,10 @@ function ProjectTags ({tags}){
 ProjectTags.displayName = "ProjectTags";
 
 
-function ProjectDescription({scope, description}){
+function ProjectDescription({scope, description, className}){
   return(
     // <div className = "description-container">
-    <p className="project-description">{description}</p>
+    <p className={`project-description ${className}`}>{description}</p>
     // </div>
   )
 }

@@ -160,6 +160,8 @@ hr {
   right: 1rem;
 }
 
+
+
 @media screen and (min-width: 700px) {
 
   .project-number,
@@ -221,13 +223,20 @@ hr {
   hr {
     grid-area: line;
     height: 0;
-    width: 10%;
+    width: 15%;
+    transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out;
+  }
+
+  .inactive-hr {
+    opacity: 0.4;
+    width: 5%;
   }
 
   .tags-list {
     grid-area: tag;
     padding-bottom: 1rem;
-    font-size: 1.2rem;
+    padding-top: 1rem;
+    font-size: 1.07rem;
   }
 
   .project-description {
@@ -289,6 +298,15 @@ hr {
 
   .set-sticky {
     flex-direction: column;
+  }
+
+  .inactive-tags, .inactive-description {
+    opacity: 0.4;
+  }
+
+  .active-tags, .active-description {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
   }
 }
 

@@ -2,6 +2,31 @@
 import TestImage from './test-image.jpg';
 import HeaderImg from './halftone-test2.png';
 
+import Project1Slide1 from './slides-test-img.png';
+import Project1Slide2 from './slides-test-img.png';
+import Project1Slide3 from './slides-test-img.png';
+
+import Project2Slide1 from './slides-test-img.png';
+import Project2Slide2 from './slides-test-img.png';
+import Project2Slide3 from './slides-test-img.png';
+
+import Project3Slide1 from './slides-test-img.png';
+import Project3Slide2 from './slides-test-img.png';
+import Project3Slide3 from './slides-test-img.png';
+
+import Project4Slide1 from './slides-test-img.png';
+import Project4Slide2 from './slides-test-img.png';
+import Project4Slide3 from './slides-test-img.png';
+
+import Project5Slide1 from './slides-test-img.png';
+import Project5Slide2 from './slides-test-img.png';
+import Project5Slide3 from './slides-test-img.png';
+
+import Project6Slide1 from './slides-test-img.png';
+import Project6Slide2 from './slides-test-img.png';
+import Project6Slide3 from './slides-test-img.png';
+
+
 const projects = [
 
     {
@@ -14,10 +39,11 @@ const projects = [
       tags: ["information design", "graphic design", "ux research"],
       description: "Very short description about the project. Might go upto a second line, partly. Perhaps a little more.",
       headerImg: HeaderImg,
-      about: "All about project 1",
-      brief: "This is the first project's brief.",
-      deliverables: "Something, more stuff, final stuff",
+      about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur interdum, nisi mauris fringilla leo, vel dignissim justo libero id libero. Duis quis nisi non lorem aliquam gravida. Nulla facilisi. Suspendisse potenti.",
+      brief: "This is the first project's brief. It will be longer than this but short enough to be read quickly.",
+      deliverables: "Something, more stuff, final stuff, more long stuffhaha",
       duration: "6 months",
+      slides: [Project1Slide1, Project1Slide2, Project1Slide3]
     },
     {
       number:"2/6",
@@ -33,6 +59,7 @@ const projects = [
       brief: "This is the second project's brief.",
       deliverables: "Something, more stuff, final stuff",
       duration: "5 months",
+      slides: [Project2Slide1, Project2Slide2, Project2Slide3]
     },
     {
       number:"3/6",
@@ -48,6 +75,7 @@ const projects = [
       brief: "This is the third project's brief.",
       deliverables: "Something, more stuff, final stuff",
       duration: "4 months",
+      slides: [Project3Slide1, Project3Slide2, Project3Slide3]
     },
     {
       number:"4/6",
@@ -63,6 +91,7 @@ const projects = [
       brief: "This is the fourth project's brief.",
       deliverables: "Something, more stuff, final stuff",
       duration: "3 months",
+      slides: [Project4Slide1, Project4Slide2, Project4Slide3]
     },
     {
       number:"5/6",
@@ -78,6 +107,7 @@ const projects = [
       brief: "This is the fifth project's brief.",
       deliverables: "Something, more stuff, final stuff",
       duration: "2 months",
+      slides: [Project5Slide1, Project5Slide2, Project5Slide3]
     },
     {
       number:"6/6",
@@ -93,6 +123,7 @@ const projects = [
       brief: "This is the sixth project's brief.",
       deliverables: "Something, more stuff, final stuff",
       duration: "1 month",
+      slides: [Project6Slide1, Project6Slide2, Project6Slide3]
     }
   ];
 
