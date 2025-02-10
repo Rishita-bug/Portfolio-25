@@ -3,7 +3,7 @@ import TestImage from './test-image.jpg';
 import HeaderImg from './halftone-test2.png';
 
 import Project1Slide1 from './slides-test-img.png';
-import Project1Slide2 from './slides-test-img.png';
+import Project1Slide2 from './slides-test-img2.jpg';
 import Project1Slide3 from './slides-test-img.png';
 
 import Project2Slide1 from './slides-test-img.png';

@@ -1,8 +1,11 @@
 import React from 'react'
-import {useState} from "react"
+import {useState, useEffect, useRef} from "react" 
 import { useParams, Link } from 'react-router-dom'
+import{ useSwipeable } from 'react-swipeable'
 import './Project.css'
 import projects from './projects'
+import FullscreenIcon from './fullscreen-icon.svg'
+import ExitFullscreenIcon from './esc-fullscreen-icon.png'
 
 function HeaderImg({headerImgSrc}) {
   return(
@@ -48,6 +51,8 @@ function ProjectOverview() {
 function ProcessSlides({projectInView, id}) {
   
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const slideContainerRef = useRef(null);
   
   const PrevSlide = () => {
     setCurrentSlideIndex((prevIndex) => {
@@ -61,24 +66,118 @@ function ProcessSlides({projectInView, id}) {
     })
   }
 
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "ArrowRight") {
+        NextSlide()
+      } else if (event.key === "ArrowLeft") {
+        PrevSlide()
+      } else if (event.key === "Escape" && isFullScreen) {
+        exitFullscreen()
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      window.addEventListener("keydown", handleKeyDown)
+    }
+  }, [isFullscreen]);
+
+  const enterFullscreen = async () => {
+    if(slideContainerRef.current) {
+      try {
+        if (slideContainerRef.current.requestFullscreen) {
+          await slideContainerRef.current.requestFullscreen()
+        } else if (slideContainerRef.current.webkitRequestFullscreen) {
+          await slideContainerRef.current.webkitRequestFullscreen()
+        } else if (slideContainerRef.current.msRequestFullscreen) {
+          await slideContainerRef.current.msRequestFullscreen()
+        }
+        setIsFullscreen(true)
+
+        if (window.screen.orientation && window.innerWidth < 768) {
+          await window.screen.orientation.lock("landscape")
+        }
+      } catch (err) {
+        console.error("Error enabling fullscreen", err)
+      }
+    }
+  }
+
+  const exitFullscreen = async () => {
+    try {
+      if (document.exitFullscreen) {
+        await document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) { // Safari
+        await document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) { // IE11
+        await document.msExitFullscreen();
+      }
+
+      setIsFullscreen(false)
+
+      // Unlock orientation if it was changed
+      if (window.screen.orientation) {
+        await window.screen.orientation.unlock();
+      }
+    } catch (err) {
+      console.error("Error exiting fullscreen:", err);
+    }
+  };
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      if (!document.fullscreenElement) {
+        setIsFullscreen(false);
+      }
+    };
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+    return () => {
+      document.removeEventListener("fullscreenchange", handleFullscreenChange);
+    };
+}, []);
+
+  const toggleFullscreen = () => {
+    if(document.fullscreenElement) {
+      exitFullscreen()
+    } else {
+      enterFullscreen()
+    }
+  }
+
   const currentSlide = projectInView.slides[currentSlideIndex]
 
+  const handlers = useSwipeable({
+    onSwipedLeft: NextSlide,  // Swipe left for next slide
+    onSwipedRight: PrevSlide, // Swipe right for previous slide
+    preventScrollOnSwipe: true,
+    trackMouse: true, // Enables swipe using mouse as well
+  });
+
   return(
-    <>
-      <button className = "prev-slide-button" onClick={PrevSlide}>prev slide</button>
+    <div className = "carousel-container" {...handlers}>
+      <button className = "prev-slide-button" onClick={PrevSlide}></button>
         {currentSlide && (
-        <div className="slide-img-container">
+        <div className="slide-img-container" {...handlers} ref={slideContainerRef} >
           <img 
             className="slide-img"
             src = {projectInView.slides[currentSlideIndex]} />
+          <img 
+            className="fullscreen-btn"
+            src = {isFullscreen ? ExitFullscreenIcon : FullscreenIcon}
+            onClick={toggleFullscreen}
+          />
         </div>
         )}
-      <button className = "next-slide-button" onClick={NextSlide}>next slide</button>
-    </>
+      <button className = "next-slide-button" onClick={NextSlide}></button>
+    </div>
   )
 }
 
 function Pagination({projectInView, id}) {
+
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   
   const currentIndex = projects.findIndex((p) => p.id === projectInView.id);
   const previousProject = currentIndex > 0 ? projects[currentIndex - 1] : projects[currentIndex];
@@ -88,10 +187,18 @@ function Pagination({projectInView, id}) {
     <div className='pagination-container'>
       <Link className={previousProject ? 'previous-project-link' : 'inactive-previous-project-link'} to={previousProject ? `/work/${previousProject.id}` : "#"}>&#x1438;</Link>
         <ul className="pagination-list">
-          {projects.map((project)=>{
+          {projects.map((project, index)=>{
             return(
               <Link to={`/work/${project.id}`} key={project.id} className="number-links">
-                <li className={project.id === projectInView.id ? "active-project-link" : "inactive-project-link"}>
+                <li 
+                  className={`
+                    ${project.id === projectInView.id ? "active-project-link" : "inactive-project-link"}
+                    ${hoveredIndex === index ? "hovered-project-link" : "not-hovered-adjacent"}
+                    ${hoveredIndex === index+1 || hoveredIndex === index -1 ? "adjacent-project-link" : "not-hovered-adjacent"}
+                  `}
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                  >
                   {project.id}
                 </li>
               </Link>
