@@ -56,12 +56,32 @@ function ProcessSlides({projectInView, id}) {
   const slideContainerRef = useRef(null);
   
   const PrevSlide = () => {
+
+    if(slideContainerRef.current) {
+      const container = slideContainerRef.current
+      if (container.scrollLeft <= 0) {
+        container.scrollTo({left: container.scrollWidth - container.clientWidth, behavior: "instant"}) 
+      } else {
+        container.scrollBy({left: -container.clientWidth, behavior:"smooth"})
+      }
+    }
+
     setCurrentSlideIndex((prevIndex) => {
       return prevIndex > 0 ? prevIndex - 1 : projectInView.slides.length - 1 
     })
   }
 
   const NextSlide = () => {
+
+    if(slideContainerRef.current) {
+      const container = slideContainerRef.current
+      if(container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+        container.scrollTo({left: 0, behavior: "instant"}) //go back to first slide
+      } else {
+        container.scrollBy({left: container.clientWidth, behavior: "smooth"})
+      }
+    }
+
     setCurrentSlideIndex((prevIndex) => {
       return prevIndex < projectInView.slides.length - 1 ? prevIndex + 1 : 0
     })
@@ -73,7 +93,7 @@ function ProcessSlides({projectInView, id}) {
         NextSlide()
       } else if (event.key === "ArrowLeft") {
         PrevSlide()
-      } else if (event.key === "Escape" && isFullScreen) {
+      } else if (event.key === "Escape" && isFullscreen) {
         exitFullscreen()
       }
     }
@@ -177,7 +197,7 @@ function ProcessSlides({projectInView, id}) {
 
   return (
     <div className="carousel-container">
-    <button className="prev-slide-button" onClick={PrevSlide}></button>
+    <button className="prev-slide-button" onClick= {PrevSlide}></button>
     <div className="slide-img-container" ref= {slideContainerRef}>
       {projectInView.slides.map((slide, index) => (
         <img
