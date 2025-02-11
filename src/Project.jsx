@@ -7,6 +7,7 @@ import projects from './projects'
 import FullscreenIcon from './fullscreen-icon.svg'
 import ExitFullscreenIcon from './esc-fullscreen-icon.png'
 
+
 function HeaderImg({headerImgSrc}) {
   return(
     <div className="header-img-container" >
@@ -155,24 +156,48 @@ function ProcessSlides({projectInView, id}) {
     trackMouse: true, // Enables swipe using mouse as well
   });
 
-  return(
-    <div className = "carousel-container" {...handlers}>
-      <button className = "prev-slide-button" onClick={PrevSlide}></button>
-        {currentSlide && (
-        <div className="slide-img-container" {...handlers} ref={slideContainerRef} >
-          <img 
-            className="slide-img"
-            src = {projectInView.slides[currentSlideIndex]} />
-          <img 
-            className="fullscreen-btn"
-            src = {isFullscreen ? ExitFullscreenIcon : FullscreenIcon}
-            onClick={toggleFullscreen}
-          />
-        </div>
-        )}
-      <button className = "next-slide-button" onClick={NextSlide}></button>
+  // return(
+  //   <div className = "carousel-container" {...handlers}>
+  //     <button className = "prev-slide-button" onClick={PrevSlide}></button>
+  //       {currentSlide && (
+  //       <div className="slide-img-container" {...handlers} ref={slideContainerRef} >
+  //         <img 
+  //           className="slide-img"
+  //           src = {projectInView.slides[currentSlideIndex]} />
+  //         <img 
+  //           className="fullscreen-btn"
+  //           src = {isFullscreen ? ExitFullscreenIcon : FullscreenIcon}
+  //           onClick={toggleFullscreen}
+  //         />
+  //       </div>
+  //       )}
+  //     <button className = "next-slide-button" onClick={NextSlide}></button>
+  //   </div>
+  // )
+
+  return (
+    <div className="carousel-container">
+    <button className="prev-slide-button" onClick={PrevSlide}></button>
+    <div className="slide-img-container" ref= {slideContainerRef}>
+      {projectInView.slides.map((slide, index) => (
+        <img
+          className="slide-img"
+          src={slide}
+          key={index}
+        />
+      ))}
+        <img 
+        className = "fullscreen-btn"
+        src = {isFullscreen ? ExitFullscreenIcon : FullscreenIcon}
+        onClick={toggleFullscreen}
+        />
+    </div>
+    <button className="next-slide-button" onClick= {NextSlide}></button>
     </div>
   )
+
+
+
 }
 
 function Pagination({projectInView, id}) {
