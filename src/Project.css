@@ -94,7 +94,8 @@
   font-weight: 350;
 }
 
-.previous-project-link, .next-project-link {
+.previous-project-link,
+.next-project-link {
   padding-top: 10px;
 }
 
@@ -185,6 +186,7 @@
 
 .carousel-container {
   display: flex;
+  position: relative;
   justify-content: center;
   gap: 0.4rem;
   margin-top: 2rem;
@@ -202,6 +204,7 @@
 
 .slide-img-container {
   display: flex;
+  position: relative;
   gap: 0;
   overflow-x: auto;
   width: 92vw;
@@ -215,8 +218,9 @@
 }
 
 .slide-img {
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
+  display: block;
   border-radius: 1rem;
   aspect-ratio: 936 / 500;
   flex: 0 0 100%;
@@ -230,6 +234,16 @@
   border: none;
   font-size: 1rem;
   cursor: pointer;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.prev-slide-button {
+  padding-left: 20px;
+}
+
+.next-slide-button {
+  padding-right: 20px;
 }
 
 .prev-slide-button::before {
@@ -244,22 +258,36 @@
 
 .fullscreen-btn {
   width: 16px;
+  height: fit-content;
   position: absolute;
-  bottom: 12px;
-  right: 12px;
-  opacity: 0.5;
+  bottom: 1rem;
+  right: 10.5%;
+  opacity: 1;
   transition: opacity 0.2s ease-in-out;
+  z-index: 999;
+}
+
+.exit-fullscreen-icon {
+  position: fixed;
+  width: 16px;
+  bottom: 1rem;
+  right: 1rem;
 }
 
 .fullscreen-btn:hover {
   opacity: 1;
 }
 
+.inactive-next-project-link {
+  opacity: 0.5;
+}
+
+.inactive-previous-project-link {
+  opacity: 0.5;
+}
+
 /*bigger screens*/
 @media screen and (min-width: 700px) {
-
-
-
   .about-h {
     display: block;
   }
@@ -398,12 +426,26 @@
     top: -1px;
   }
 
+  .active-previous-project-link {
+    transform: translateX(0px);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .active-previous-project-link:hover {
+    transform: translateX(-10px);
+  }
+
   .next-project-link::before {
     content: "next project";
     text-wrap: nowrap;
     position: relative;
     right: 0.5rem;
     top: -1px;
+  }
+
+  .active-next-project-link {
+    transform: translateX(0px);
+    transition: transform 0.2s ease-in-out;
   }
 
   .carousel-container {
