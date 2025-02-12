@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,7 +18,7 @@
   max-width: 690px;
   min-width: 200px;
   padding-bottom: 2vw;
-  font-weight:600;
+  font-weight: 600;
   text-wrap: balance;
 }
 
@@ -77,7 +77,7 @@
   margin-bottom: 3rem;
   margin-left: 1.1rem;
   margin-right: 1.1rem;
-  grid-template-areas: 
+  grid-template-areas:
     "number img-1"
     "year img-2"
     "img-3 img-3"
@@ -150,20 +150,20 @@ hr {
   font-size: 1rem;
 }
 
-.thumbnail-container{
+.thumbnail-container {
   position: relative;
 }
 
 .view-more-link {
   position: absolute;
-  bottom: 1rem;
+  top: 1rem;
   right: 1rem;
+  font-family: var(--header-font);
+  color: black;
+  text-decoration: none;
 }
 
-
-
 @media screen and (min-width: 700px) {
-
   .project-number,
   .project-year,
   .project-title,
@@ -172,7 +172,7 @@ hr {
   .project-description {
     grid-column: auto;
     grid-row: auto;
-    grid-area:auto;
+    grid-area: auto;
   }
 
   .project-number,
@@ -284,11 +284,17 @@ hr {
     width: 100%; /* Scale to fit the container */
     object-fit: cover; /*Prevent distortion */
     height: 100%;
+    /* filter: grayscale(80%);
+    transition: filter 0.25s ease; */
+  }
+
+  .thumbnail-container {
     filter: grayscale(80%);
     transition: filter 0.25s ease;
   }
 
-  .thumbnail-img:hover {
+  .thumbnail-container:has(:hover),
+  .thumbnail-img {
     filter: grayscale(0%) drop-shadow(0px 3px 13px rgba(172, 172, 172, 0.5));
   }
 
@@ -300,16 +306,14 @@ hr {
     flex-direction: column;
   }
 
-  .inactive-tags, .inactive-description {
+  .inactive-tags,
+  .inactive-description {
     opacity: 0.4;
   }
 
-  .active-tags, .active-description {
+  .active-tags,
+  .active-description {
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
   }
 }
-
-
-
-

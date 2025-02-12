@@ -208,7 +208,10 @@ function ProcessSlides({projectInView, id}) {
         />
       ))}
         {isFullscreen && 
-          <img className="exit-fullscreen-icon" src={ExitFullscreenIcon} />
+          <img 
+            className="exit-fullscreen-icon" 
+            src={ExitFullscreenIcon} 
+            onClick={toggleFullscreen} />
         }
     </div>
     <img 

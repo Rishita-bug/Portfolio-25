@@ -137,7 +137,7 @@ body {
     font-weight: 350;
   }
 
-  .nav-link::before {
+  .active-link::before {
     content: "\279C";
     font-size: 1rem;
     position: absolute;
