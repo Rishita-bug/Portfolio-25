@@ -194,6 +194,8 @@ hr {
 
   .work-section-container {
     padding-left: 4vw;
+    overflow: visible;
+    border: 2px solid red;
   }
 
   .project-grid {
@@ -251,7 +253,7 @@ hr {
     position: sticky;
     top: 50vh;
     left: 3.6vw;
-    bottom: 0;
+    padding-bottom: 300px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

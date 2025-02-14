@@ -6,6 +6,7 @@ import HomePage from './HomePage.jsx'
 import AboutPage from './About.jsx'
 import SandpitPage from './Sandpit.jsx'
 import ProjectPage from './Project.jsx'
+import Footer from './Footer.jsx'
 
 
 function Layout() {
@@ -13,6 +14,7 @@ function Layout() {
     <div>
       <Navbar />
       <Outlet />
+      <Footer />
     </div>
   )
 }
