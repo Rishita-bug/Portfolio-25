@@ -195,7 +195,6 @@ hr {
   .work-section-container {
     padding-left: 4vw;
     overflow: visible;
-    border: 2px solid red;
   }
 
   .project-grid {
@@ -259,6 +258,7 @@ hr {
     align-items: flex-start;
     height: 0;
     z-index: 999;
+    width: max-content;
   }
 
   .project-title {
