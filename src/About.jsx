@@ -32,6 +32,10 @@ function AboutPage() {
         Currently tinkering with <span className="lately">web development, </span> and kindling a growing interest in graphic design for the web. As a creature I am <span className="self">persistent, curious and wordy.</span> Indulgences include <span className="other">cortados, plein air scribbling, amateur poetry writing and watercolour painting </span> (sometimes concurrently).
         </p>
       </div>
+      <div className="links-container-mobile">
+          <a className= "rotate-link-mobile" href="#">email</a>
+          <a className= "rotate-link-mobile" href="#">resume</a>
+        </div>
     </div>
   )
 }
