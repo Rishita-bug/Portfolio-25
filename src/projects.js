@@ -14,13 +14,25 @@ import Project3Slide1 from './slides-test-img.png';
 import Project3Slide2 from './slides-test-img.png';
 import Project3Slide3 from './slides-test-img.png';
 
-import Project4Slide1 from './slides-test-img.png';
-import Project4Slide2 from './slides-test-img.png';
-import Project4Slide3 from './slides-test-img.png';
+import Project4Slide1 from './assets/ashore-process-1.png';
+import Project4Slide2 from './assets/ashore-process-2.png';
+import Project4Slide3 from './assets/ashore-process-3.png';
+import Project4Slide4 from './assets/ashore-process-4.png';
+import Project4Slide45 from './assets/ashore-process-4.5.png';
+import Project4Slide5 from './assets/ashore-process-5.png';
+import Project4Slide6 from './assets/ashore-process-6.png';
 
-import Project5Slide1 from './slides-test-img.png';
-import Project5Slide2 from './slides-test-img.png';
-import Project5Slide3 from './slides-test-img.png';
+
+import Project5Slide1 from './assets/papereku-process-1.png';
+import Project5Slide2 from './assets/papereku-process-2.png';
+import Project5Slide3 from './assets/papereku-process-3.png';
+import Project5Slide4 from './assets/papereku-process-4.png';
+import Project5Slide5 from './assets/papereku-process-5.png';
+import Project5Slide6 from './assets/papereku-process-6.png';
+import Project5Slide7 from './assets/papereku-process-7.png';
+import Project5Slide8 from './assets/papereku-process-8.png';
+import Project5Slide9 from './assets/papereku-process-9.png';
+import Project5Slide10 from './assets/papereku-process-10.png';
 
 import Project6Slide1 from './slides-test-img.png';
 import Project6Slide2 from './slides-test-img.png';
@@ -91,7 +103,7 @@ const projects = [
       brief: "This is the fourth project's brief.",
       deliverables: "Something, more stuff, final stuff",
       duration: "3 months",
-      slides: [Project4Slide1, Project4Slide2, Project4Slide3]
+      slides: [Project4Slide1, Project4Slide2, Project4Slide3, Project4Slide4, Project4Slide45, Project4Slide5, Project4Slide6]
     },
     {
       number:"5/6",
@@ -107,7 +119,7 @@ const projects = [
       brief: "This is the fifth project's brief.",
       deliverables: "Something, more stuff, final stuff",
       duration: "2 months",
-      slides: [Project5Slide1, Project5Slide2, Project5Slide3]
+      slides: [Project5Slide1, Project5Slide2, Project5Slide3, Project5Slide4, Project5Slide5, Project5Slide6, Project5Slide7, Project5Slide8, Project5Slide9, Project5Slide10]
     },
     {
       number:"6/6",

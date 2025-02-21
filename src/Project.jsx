@@ -118,8 +118,6 @@ function ProcessSlides({projectInView, id}) {
           await slideContainerRef.current.msRequestFullscreen()
         }
         setIsFullscreen(true)
-        const container = slideContainerRef.current
-        container.scrollLeft = currentSlideIndex * container.clientWidth 
 
         if (window.screen.orientation && window.innerWidth < 768) {
           await window.screen.orientation.lock("landscape")
@@ -186,7 +184,33 @@ function ProcessSlides({projectInView, id}) {
     }
   }
 
-  const currentSlide = projectInView.slides[currentSlideIndex]
+  // useEffect(() => {
+
+  //   const carousel = slideContainerRef.current
+  //   carousel.scrollLeft = (currentSlideIndex + 1) * carousel.clientWidth
+
+  // }, [isFullscreen])
+
+  useEffect(() => {
+    const updateScrollPosition = () => {
+        if (slideContainerRef.current) {
+            const carousel = slideContainerRef.current;
+            setTimeout(() => {
+                carousel.scrollTo({ left: (currentSlideIndex+1) * carousel.clientWidth, behavior: "instant" });
+              }, 50);
+        }
+    };
+
+    if (isFullscreen) {
+        document.addEventListener("fullscreenchange", updateScrollPosition);
+    } else {
+        updateScrollPosition();
+    }
+
+    return () => {
+        document.removeEventListener("fullscreenchange", updateScrollPosition);
+    };
+}, [isFullscreen]);
 
   const handlers = useSwipeable({
     onSwipedLeft: NextSlide,  // Swipe left for next slide
@@ -222,9 +246,6 @@ function ProcessSlides({projectInView, id}) {
     <button className="next-slide-button" onClick= {NextSlide}></button>
     </div>
   )
-
-
-
 }
 
 function Pagination({projectInView, id}) {
