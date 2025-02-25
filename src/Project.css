@@ -209,7 +209,7 @@
   overflow-x: auto;
   width: 92vw;
   white-space: nowrap;
-  border: 2px solid red;
+  box-shadow: (5px 5px 10px rgb(59, 59, 59));
   aspect-ratio: 936 / 500;
   scroll-snap-type: x mandatory; /* Enables horizontal snapping */
   scroll-behavior: smooth; /* Smooth scrolling */
@@ -457,7 +457,6 @@
   .active-next-project-link:hover {
     transform: translateX(10px);
   }
-
 
   .carousel-container {
     margin-top: 5rem;

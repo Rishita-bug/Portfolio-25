@@ -60,15 +60,20 @@ function ProcessSlides({projectInView, id}) {
     if(slideContainerRef.current) {
       const container = slideContainerRef.current
       if (container.scrollLeft <= 0) {
-        container.scrollTo({left: container.scrollWidth - container.clientWidth, behavior: "instant"}) 
+        container.scrollTo({left: container.scrollWidth - container.clientWidth, behavior: "smooth"}) 
       } else {
-        container.scrollBy({left: -container.clientWidth, behavior:"smooth"})
+        container.scrollBy({left: -container.clientWidth, behavior:"instant"})
       }
     }
 
-    setCurrentSlideIndex((prevIndex) => {
-      return prevIndex > 0 ? prevIndex - 1 : projectInView.slides.length - 1 
-    })
+    //scroll happens first, then state updates without interference
+    setTimeout(() => {
+      setCurrentSlideIndex((prevIndex) => {
+        return prevIndex > 0 ? prevIndex - 1 : projectInView.slides.length - 1 
+      })
+    }, 100)
+
+
   }
 
   const NextSlide = () => {
@@ -76,18 +81,20 @@ function ProcessSlides({projectInView, id}) {
     if(slideContainerRef.current) {
       const container = slideContainerRef.current
       if(container.scrollLeft + container.clientWidth >= container.scrollWidth - 1) {
-        container.scrollTo({left: 0, behavior: "instant"}) //go back to first slide
+        container.scrollTo({left: 0, behavior: "smooth"}) //go back to first slide
       } else {
-        container.scrollBy({left: container.clientWidth, behavior: "smooth"})
+        container.scrollBy({left: container.clientWidth, behavior: "instant"})
         console.log(container.scrollWidth, container.clientWidth, container.scrollLeft);
       }
     }
 
     
+    setTimeout(()=> {
+      setCurrentSlideIndex((prevIndex) => {
+        return prevIndex < projectInView.slides.length - 1 ? prevIndex + 1 : 0
+      })
+    }, 100)
 
-    setCurrentSlideIndex((prevIndex) => {
-      return prevIndex < projectInView.slides.length - 1 ? prevIndex + 1 : 0
-    })
   }
 
   useEffect(() => {
@@ -122,6 +129,7 @@ function ProcessSlides({projectInView, id}) {
         if (window.screen.orientation && window.innerWidth < 768) {
           await window.screen.orientation.lock("landscape")
         }
+
       } catch (err) {
         console.error("Error enabling fullscreen", err)
       }
@@ -144,6 +152,7 @@ function ProcessSlides({projectInView, id}) {
       if (window.screen.orientation) {
         await window.screen.orientation.unlock();
       }
+
     } catch (err) {
       console.error("Error exiting fullscreen:", err);
     }
@@ -151,7 +160,7 @@ function ProcessSlides({projectInView, id}) {
 
   useEffect(() => {
     const handleFullscreenChange = () => {
-      if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement && !isFullscreen) {
+      if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
         setIsFullscreen(false);
       }
     };
@@ -165,13 +174,13 @@ function ProcessSlides({projectInView, id}) {
     document.addEventListener("fullscreenchange", handleFullscreenChange);
     document.addEventListener("webkitfullscreenchange", handleFullscreenChange);
     document.addEventListener("msfullscreenchange", handleFullscreenChange);
-    document.addEventListener("keyDown", handleKeyDown)
+    document.addEventListener("keydown", handleKeyDown)
 
     return () => {
       document.removeEventListener("fullscreenchange", handleFullscreenChange);
       document.removeEventListener("webkitfullscreenchange", handleFullscreenChange);
       document.removeEventListener("msfullscreenchange", handleFullscreenChange);
-      document.removeEventListener("keyDown", handleKeyDown)
+      document.removeEventListener("keydown", handleKeyDown)
 
     };
 }, []);
@@ -184,33 +193,32 @@ function ProcessSlides({projectInView, id}) {
     }
   }
 
-  // useEffect(() => {
-
-  //   const carousel = slideContainerRef.current
-  //   carousel.scrollLeft = (currentSlideIndex + 1) * carousel.clientWidth
-
-  // }, [isFullscreen])
-
+  //update scroll value manually after fullscreen
   useEffect(() => {
     const updateScrollPosition = () => {
         if (slideContainerRef.current) {
             const carousel = slideContainerRef.current;
             setTimeout(() => {
-                carousel.scrollTo({ left: (currentSlideIndex+1) * carousel.clientWidth, behavior: "instant" });
-              }, 50);
+                currentSlideIndex === 0 ? carousel.scrollTo ({left: 0, behavior: "instant"}) :
+                carousel.scrollTo({ left: currentSlideIndex * carousel.clientWidth, behavior: "instant" });
+              }, 100);
         }
     };
-
-    if (isFullscreen) {
+  
         document.addEventListener("fullscreenchange", updateScrollPosition);
-    } else {
-        updateScrollPosition();
-    }
+        document.addEventListener("webkitfullscreenchange", updateScrollPosition);
+        document.addEventListener("msfullscreenchange", updateScrollPosition);
+
+        updateScrollPosition()
 
     return () => {
+       
         document.removeEventListener("fullscreenchange", updateScrollPosition);
+        document.removeEventListener("webkitfullscreenchange", updateScrollPosition);
+        document.removeEventListener("msfullscreenchange", updateScrollPosition);
+      
     };
-}, [isFullscreen]);
+}, [currentSlideIndex]);
 
   const handlers = useSwipeable({
     onSwipedLeft: NextSlide,  // Swipe left for next slide
@@ -289,19 +297,23 @@ function Pagination({projectInView, id}) {
   )
 }
 
+
 function ProjectPage() {
   const { id } = useParams();
   const projectInView = projects.find((p) => p.id === Number(id) );
+  const DynamicContent = projectInView.component;
 
   if (!projectInView) {
     return <h2>Page Not Found</h2>;
   }
+
 
   return(
     <>
       <HeaderImg headerImgSrc={projectInView.headerImg} />
       <ProjectOverview projectInView = {projectInView} />
       <ProcessSlides projectInView={projectInView} id = {id} />
+      <DynamicContent />
       <Pagination projectInView={projectInView} id = {id} />
     </>
   )  
