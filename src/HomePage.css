@@ -181,13 +181,15 @@ hr {
   }
 
   .project-number {
-    padding-bottom: 6rem;
-    font-size: 1.3rem;
+    /* padding-bottom: 6rem; max */
+    /* padding-bottom: 2.1rem; min */
+    padding-bottom: clamp(2.1rem, 5vw, 6rem);
+    /* font-size: 1.3rem; */
     font-weight: 250;
   }
 
   .project-year {
-    font-size: 2.1rem;
+    /* font-size: 2.1rem; */
     font-weight: 200;
     font-style: italic;
   }
@@ -209,14 +211,19 @@ hr {
       "img-2 tag"
       "img-3 description-1"
       "img-4 description-2";
+    /* margin-bottom: 5vh; mid */
+    /* margin-bottom: 3.5rem; big */
+    /* margin-bottom: 1.5rem; min */
+    margin-bottom: clamp(1.5rem, 5vh, 3.5rem);
   }
 
   .thumbnail-container {
     grid-row: img-1/img-4;
     cursor: pointer;
     width: 50vw;
-    max-width: 700px;
-    height: 50vh;
+    max-width: 800px;
+    min-width: 360px;
+    /* height: 55vh; */
     justify-self: start;
     background-color: blue;
     aspect-ratio: 16/9;
@@ -236,8 +243,11 @@ hr {
 
   .tags-list {
     grid-area: tag;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+    padding: 0px;
+    /* padding-top: 1rem; mid */
+    /* padding-top: 0; min */
+    /* padding-top: 2vh; mid */
+    padding-top: clamp(0, 2.25%, 2rem);
     font-size: 1.07rem;
   }
 
@@ -245,13 +255,12 @@ hr {
     grid-row: description-1/description-2;
     width: 65%;
     min-width: 250px;
-    font-size: 1.1rem;
-    text-wrap: balance;
+    font-size: clamp(0.9rem, 1.4vw, 1.32rem);
   }
 
   .sticky-titles-container {
     position: sticky;
-    top: 50vh;
+    top: 25vh;
     left: 3.6vw;
     /* padding-bottom: 300px; */
     display: flex;
@@ -260,10 +269,19 @@ hr {
     height: 0;
     z-index: 999;
     width: max-content;
+    /* font-size: 2rem; medium */
+    /* font-size: 2em; mid ish */
+    /* font-size:2.5vw max */
+    /* font-size: 1.55rem; min */
+    font-size: clamp(1.55rem, 2.7vw, 3rem);
+  }
+
+  .sticky-titles-container > * {
+    font-size: inherit;
   }
 
   .project-title {
-    font-size: 2rem;
+    /* font-size: 2rem; */
     font-weight: 300;
     text-shadow: 2px 2px 3px rgba(97, 97, 97, 0.3);
   }

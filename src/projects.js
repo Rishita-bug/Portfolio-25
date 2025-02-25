@@ -52,6 +52,8 @@ import Project6Slide2 from './slides-test-img.png';
 import Project6Slide3 from './slides-test-img.png';
 
 import ProjectOne from './ProjectOne';
+import ProjectTwo from './ProjectFive';
+import ProjectFive from './ProjectFive';
 
 const projects = [
 
@@ -138,7 +140,7 @@ const projects = [
       deliverables: "Something, more stuff, final stuff",
       duration: "2 months",
       slides: [Project5Slide1, Project5Slide2, Project5Slide3, Project5Slide4, Project5Slide5, Project5Slide6, Project5Slide7, Project5Slide8, Project5Slide9, Project5Slide10],
-      component: ProjectOne, 
+      component: ProjectFive, 
     },
     {
       number:"6/6",
