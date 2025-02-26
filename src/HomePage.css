@@ -29,7 +29,7 @@
   width: 40vw;
   max-width: 1200px;
   min-width: 200px;
-  font-size: clamp(8px, 1.5vw, 3rem);
+  font-size: clamp(10px, 2vw, 3rem);
   text-wrap: balance;
 }
 
@@ -218,7 +218,7 @@ hr {
     grid-row: img-1/img-4;
     cursor: pointer;
     width: 45vw;
-    max-width: 1800px;
+    max-width: 1900px;
     min-width: 360px;
     /* height: 55vh; */
     justify-self: start;

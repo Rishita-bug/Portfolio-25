@@ -27,9 +27,11 @@ function ProjectOverview() {
   
   return (
     <>
-      <h2 className="title">{projectInView.title}</h2>
+      
 
       <div className="overview-container">
+
+        <h2 className="title">{projectInView.title}</h2>
         
         <h3 className="overview-headers about-h">About</h3>
         <p className="about-text overview-text">{projectInView.about}</p>
