@@ -112,8 +112,8 @@ function WorkSection({ref}){
       });
     },
     { 
-      rootMargin: '-40% 0px -30% 0px',
-      threshold: [0.25]
+      rootMargin: '-25% 0px -45% 0px',
+      threshold: [0.2],
     }
   );
 

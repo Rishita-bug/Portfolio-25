@@ -8,26 +8,28 @@
   height: 100vh;
   height: 100svh;
   padding-left: 4vw;
-  padding-top: 10vh;
 }
 
 .hero-text {
+  padding-top: 10vh;
   font-family: var(--header-font);
-  font-size: clamp(20px, 12vw, 54px);
-  width: 70%;
-  max-width: 690px;
-  min-width: 200px;
-  padding-bottom: 2vw;
+  font-size: clamp(28px, 5vw, 120px);
+  /* width: 80%;
+  max-width: 1200px;
+  min-width: 200px; */
+  width: clamp(200px, 60%, 1200px);
+  padding-bottom: 2%;
   font-weight: 600;
   text-wrap: balance;
+  line-height: 1.1em;
 }
 
 .about-site {
   font-family: var(--body-font);
-  width: 70%;
-  max-width: 380px;
-  min-width: 270px;
-  font-size: clamp(8px, 1.2rem, 2rem);
+  width: 40vw;
+  max-width: 1200px;
+  min-width: 200px;
+  font-size: clamp(8px, 1.5vw, 3rem);
   text-wrap: balance;
 }
 
@@ -49,6 +51,7 @@
   font-family: var(--header-font);
   font-weight: 400;
   font-size: 1.7rem;
+  padding-top: 0.5rem;
 }
 
 .tags-list {
@@ -59,10 +62,11 @@
   flex-wrap: wrap;
   font-family: var(--header-font);
   font-variant: small-caps;
-  font-size: 1rem;
+  font-size: 1.1rem;
   letter-spacing: 0.05rem;
   width: 100%;
   padding-bottom: 0.2rem;
+  font-weight: 450;
 }
 
 .thumbnail-container {
@@ -147,7 +151,7 @@ hr {
 .tags-list li:not(:last-child)::after {
   content: "\2726";
   margin-left: 0.9rem;
-  font-size: 1rem;
+  font-size: 0.8em;
 }
 
 .thumbnail-container {
@@ -181,47 +185,40 @@ hr {
   }
 
   .project-number {
-    /* padding-bottom: 6rem; max */
-    /* padding-bottom: 2.1rem; min */
-    padding-bottom: clamp(2.1rem, 5vw, 6rem);
-    /* font-size: 1.3rem; */
+    padding-bottom: clamp(2.1rem, 4vw, 6rem);
     font-weight: 250;
   }
 
   .project-year {
-    /* font-size: 2.1rem; */
     font-weight: 200;
     font-style: italic;
   }
 
   .work-section-container {
-    padding-left: 4vw;
+    padding-left: 8vw;
     overflow: visible;
-    margin-bottom: -80px;
+    margin-bottom: 40vh;
   }
 
   .project-grid {
     display: grid;
     grid-template-areas: none;
+    /* column-gap: 2rem; */
+    column-gap: 1.2vw;
     grid-template-rows: auto auto 1fr;
-    column-gap: 1rem;
-    max-width: 1500px;
     grid-template-areas:
       "img-1 line"
       "img-2 tag"
       "img-3 description-1"
       "img-4 description-2";
-    /* margin-bottom: 5vh; mid */
-    /* margin-bottom: 3.5rem; big */
-    /* margin-bottom: 1.5rem; min */
-    margin-bottom: clamp(1.5rem, 5vh, 3.5rem);
+    margin-bottom: clamp(2rem, 4%, 5rem);
   }
 
   .thumbnail-container {
     grid-row: img-1/img-4;
     cursor: pointer;
-    width: 50vw;
-    max-width: 800px;
+    width: 45vw;
+    max-width: 1800px;
     min-width: 360px;
     /* height: 55vh; */
     justify-self: start;
@@ -244,22 +241,30 @@ hr {
   .tags-list {
     grid-area: tag;
     padding: 0px;
-    /* padding-top: 1rem; mid */
-    /* padding-top: 0; min */
-    /* padding-top: 2vh; mid */
-    padding-top: clamp(0, 2.25%, 2rem);
-    font-size: 1.07rem;
+    font-size: clamp(1rem, 1.57vw, 3rem);
+    /* padding-top: 1vh; mid */
+    /* padding-top: 0.9rem; big */
+    /* padding-top: 0.25rem; small */
+    padding-top: 2%;
+
+   
+    
   }
 
   .project-description {
     grid-row: description-1/description-2;
-    width: 65%;
+    width: 75%;
     min-width: 250px;
-    font-size: clamp(0.9rem, 1.4vw, 1.32rem);
+    font-size: clamp(0.9rem, 1.4vw, 2.75rem);
+    /* padding-top: 2vh; mid */
+    /* padding-top: 2rem; big */
+    /* padding-top: 0.5rem; small */
+    padding-top: 2%;
   }
 
   .sticky-titles-container {
     position: sticky;
+    /* top: 15vh; mid */
     top: 25vh;
     left: 3.6vw;
     /* padding-bottom: 300px; */
@@ -269,21 +274,29 @@ hr {
     height: 0;
     z-index: 999;
     width: max-content;
-    /* font-size: 2rem; medium */
-    /* font-size: 2em; mid ish */
-    /* font-size:2.5vw max */
-    /* font-size: 1.55rem; min */
-    font-size: clamp(1.55rem, 2.7vw, 3rem);
+    font-size: clamp(1.55rem, 2.7vw, 6rem);
+    margin-left: -1%;
   }
 
-  .sticky-titles-container > * {
+  /* .sticky-titles-container > * {
     font-size: inherit;
-  }
+  } */
 
   .project-title {
-    /* font-size: 2rem; */
+    font-size: inherit;
     font-weight: 300;
-    text-shadow: 2px 2px 3px rgba(97, 97, 97, 0.3);
+    /* text-shadow: 2px 2px 3px rgba(97, 97, 97, 0.3); */
+    font-weight: 400;
+    padding-top: unset;
+    max-width: 35vw;
+  }
+
+  .project-number {
+    font-size: 0.75em;
+  }
+
+  .project-year {
+    font-size: 1.1em;
   }
 
   .fade-in {
