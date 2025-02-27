@@ -358,7 +358,7 @@
     margin-inline: 4vw;
     display: grid;
     grid-template-areas: none;
-    grid-template-columns: min-content 44vw min-content 1fr;
+    grid-template-columns: min-content 40vw min-content 1fr;
     grid-template-rows: auto;
     grid-template-areas:
       "empty title-1 emty wmpty"
@@ -367,8 +367,8 @@
       "about-h about-text duration-h duration-text";
     align-items: start;
     justify-items: baseline;
-    column-gap: 1.5rem;
-    font-size: clamp(0.9rem, 1.2vw, 2.75rem);
+    column-gap: 1.5em;
+    font-size: clamp(0.9rem, 1.05vw, 2.75rem);
     padding-top: clamp(0.5rem, 2%, 0.75rem);
   }
 
