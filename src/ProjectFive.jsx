@@ -90,22 +90,22 @@ const ProjectFive = () => {
           
           <div className = "logo-content-container" >
 
-            <div className="logo-clear-space-container">
+            <figure className="logo-clear-space-container">
                 <img 
                   className="logo-clear-space" 
-                  src = {images["logo-clear-space"]}
+                  src = {images["resized-22"]}
                 />
-              <p>Logo clear space</p>
-            </div>
+              <figcaption>Logo clear space</figcaption>
+            </figure>
             
-            <div className="logo-colour-container">
+            <figure className="logo-colour-container">
                 <img 
                   className="logo-colour" 
                   src = {images["logo-colour"]}  
                 />
               
-              <p>Logo colour variations</p>
-            </div>
+              <figcaption>Logo colour variations</figcaption>
+            </figure>
 
           </div>
           
@@ -116,34 +116,30 @@ const ProjectFive = () => {
 
           <div className = "monogram-content-container" >
 
-            <div className = "monogram-clear-space-container">
+            <figure className = "monogram-clear-space-container">
                 <img 
                   className="monogram-clear-space" 
                   src = {images["monogram-clear-space"]}  
                 />
-                <img 
-                  className="monogram-bw" 
-                  src = {images["monogram-bw"]}  
-                />
-                <p>Monogram clear space</p>
-              </div>
+                <figcaption>Monogram clear space</figcaption>
+              </figure>
            
-            <div className = "monogram-colour-container">
+            <figure className = "monogram-colour-container">
               <img 
                 className= "monogram-colour" 
                 src = {images["monogram-colour"]}  
               />
-              <p>Monogram colour variations</p>
-            </div>
+              <figcaption>Monogram colour variations</figcaption>
+            </figure>
             
-            <div classname="monogram-icons-container">
+            <figure className="monogram-icons-container">
               <img 
                 className="monogram-icons" 
                 src = {images["monogram-icons"]}  
               />
-              <p>Monogram as icons</p>
-            </div>
-            
+              <figcaption>Monogram as icons</figcaption>
+            </figure>
+          
 
           </div>
           
