@@ -170,18 +170,36 @@ const ProjectFive = () => {
         <div className="packaging">
           
           <p>Front</p>
-          <img className="front" />
-          <img className="front" />
-          <img className="front" />
+          <img 
+            className="front"
+            src={images['front-1']} 
+          
+          />
+          <img 
+            className="front"
+            src={images['front-2']} 
+          
+          />
+          <img 
+            className="front"
+            src={images['front-3']} 
+          
+          />
 
           <p>Back</p>
-          <img className="back" />
+          <img className="back" 
+            src = {images['']}
+          />
 
           <p>Side</p>
-          <img className="side" />
+          <img className="side" 
+            src = {images['side']}
+          />
 
           <p>Top</p>
-          <img className="top" />
+          <img className="top" 
+            src = {images['top']}
+          />
 
         </div>
       </div>

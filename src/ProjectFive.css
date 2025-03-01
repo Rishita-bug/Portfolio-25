@@ -33,34 +33,39 @@
 .graphic-elements {
   padding-top: 4em;
   display: grid;
-  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-template-rows: auto 1fr;
-  max-width: 100%;
+  width: 100%;
+  border: 2px solid green;
+  column-gap: 2em;
+  row-gap: 2em;
 }
 
 .graphics-grid {
-  grid-row: span 3;
+  grid-row: span 2;
 }
 
-.graphics-elements img {
+.graphic-elements img {
   width: 100%;
   height: auto;
   object-fit: contain;
   display: block;
+  border: 2px solid red;
+  align-self: end;
 }
 
 
 
 @media (max-width: 600px) {
   .monogram-content-container {
-    flex-wrap: wrap; /* Allows wrapping at smaller widths */
-    justify-content: center; /* Keeps things aligned neatly */
+    flex-wrap: wrap; 
+    justify-content: center; 
     align-items: centre;
   }
 
   .monogram-content-container img {
-    width: 100%; /* Makes sure images scale down instead of getting huge */
-    height: auto; /* Maintains aspect ratio */
+    width: 100%; 
+    height: auto; 
     object-fit: contain;
     max-height: 200px;
     justify-self: center;
@@ -68,8 +73,8 @@
 
   .monogram-content-container {
     display: grid;
-    grid-template-columns: repeat(2, auto); /* Two equal columns */
-    grid-template-rows: auto auto; /* Two rows */
+    grid-template-columns: repeat(2, auto); 
+    grid-template-rows: auto auto; 
     column-gap: 2em;
     max-width: 100%;
     min-width: 350px;
@@ -85,5 +90,10 @@
     font-size: 0.75em;
     height: 2em;
     overflow: hidden;
+  }
+
+  .graphic-elements img {
+    max-width: 80%;
+    justify-self: center;
   }
 }
