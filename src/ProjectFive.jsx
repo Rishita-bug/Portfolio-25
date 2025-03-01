@@ -146,12 +146,25 @@ const ProjectFive = () => {
         </div>
 
         <div className="graphic-elements">
-          <h2 className="section-h">Graphic Elements</h2>
-          <p className="graphics-description">
-            The packaging graphics are composed using the following guide to ensure a dynamic, asymmetric composition of elements. The elements include visualizations of chopped dry fruits as found traditionally in poothareku, partially visible through layers translucent rice paper, coated with a sheen of ghee.
-          </p>
-          <img className="graphic-elements-vector" />
-          <img className="graphics-grid" />
+
+          <div>
+            <h2 className="section-h">Graphic Elements</h2>
+
+            <p className="graphics-description">
+              The packaging graphics are composed using the following guide to ensure a dynamic, asymmetric composition of elements. The elements include visualizations of chopped dry fruits as found traditionally in poothareku, partially visible through layers translucent rice paper, coated with a sheen of ghee.
+            </p>
+          </div>
+          
+          <img 
+            className="graphics-grid" 
+            src = {images['graphics-grid']}
+          />
+
+          <img 
+            className="graphic-elements-vector" 
+            src = {images['graphic-elements-vector']}
+          />
+
         </div>
 
         <div className="packaging">

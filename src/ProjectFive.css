@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 .logo-evolution {
   width: 100%;
 }
@@ -25,6 +29,27 @@
   gap: 1em;
   min-width: 400px;
 }
+
+.graphic-elements {
+  padding-top: 4em;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-template-rows: auto 1fr;
+  max-width: 100%;
+}
+
+.graphics-grid {
+  grid-row: span 3;
+}
+
+.graphics-elements img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+
 
 @media (max-width: 600px) {
   .monogram-content-container {
