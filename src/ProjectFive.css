@@ -1,5 +1,38 @@
-*{
+* {
   box-sizing: border-box;
+}
+
+.swatch {
+  width: 25%;
+  min-width: 90px;
+  height: auto;
+  aspect-ratio: 3/4;
+  background-color: grey;
+}
+
+.palette-container {
+  display: flex;
+  justify-content: center;
+}
+
+.brown {
+  background-color: #844921;
+}
+
+.orange {
+  background-color: #f37921;
+}
+
+.yellow {
+  background-color: #f1ec76;
+}
+
+.green {
+  background-color: #b1d689;
+}
+
+.purple {
+  background-color: #c0a0cb;
 }
 
 .logo-evolution {
@@ -33,9 +66,9 @@
 .graphic-elements {
   padding-top: 4em;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
   grid-template-rows: auto 1fr;
-  width: 100%;
+  max-width: 100%;
   border: 2px solid green;
   column-gap: 2em;
   row-gap: 2em;
@@ -54,18 +87,51 @@
   align-self: end;
 }
 
+.graphics-description {
+  max-width: 60ch;
+}
 
+.packaging {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-template-rows: auto auto 1fr;
+  align-items: end;
+}
+
+.packaging figure {
+  display: flex;
+  flex-direction: column;
+}
+
+.front-figure {
+  grid-row: span 3;
+  height: 100%;
+}
+
+.front,
+.back,
+.side,
+.top {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.top {
+  align-self: end;
+}
 
 @media (max-width: 600px) {
   .monogram-content-container {
-    flex-wrap: wrap; 
-    justify-content: center; 
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: centre;
   }
 
   .monogram-content-container img {
-    width: 100%; 
-    height: auto; 
+    width: 100%;
+    height: auto;
     object-fit: contain;
     max-height: 200px;
     justify-self: center;
@@ -73,8 +139,8 @@
 
   .monogram-content-container {
     display: grid;
-    grid-template-columns: repeat(2, auto); 
-    grid-template-rows: auto auto; 
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto auto;
     column-gap: 2em;
     max-width: 100%;
     min-width: 350px;
@@ -95,5 +161,13 @@
   .graphic-elements img {
     max-width: 80%;
     justify-self: center;
+  }
+
+  .graphic-elements {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .packaging {
+    grid-template-columns: 1fr;
   }
 }
