@@ -1,4 +1,4 @@
- *{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,7 +13,6 @@
   --speak-bold-italic: "SpeakPro-bold-italic", sans-serif;
   --speak-heavy: "SpeakPro-heavy", sans-serif;
   --borel: "Borel", sans-serif;
-
 
   /*TYPOGRAPHIC SCALE*/
   --tiny: clamp(0.7901rem, 0.7887rem + 0.0071vw, 0.8rem);
@@ -55,5 +54,3 @@
   font-family: "Borel";
   src: url(./fonts/Borel-Regular.ttf);
 }
-
-

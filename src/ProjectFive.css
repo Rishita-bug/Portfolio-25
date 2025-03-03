@@ -28,6 +28,10 @@
   font-size: var(--h1);
 }
 
+.graphics-description {
+  text-wrap: balance;
+}
+
 /*GRIDS*/
 
 .swatch {
@@ -67,6 +71,12 @@
   width: 100%;
 }
 
+.primary-secondary-type-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  column-gap: 2em;
+}
+
 .logo-content-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, auto));
@@ -87,7 +97,7 @@
 .monogram-content-container {
   display: flex;
   max-width: 100%;
-  gap: 1em;
+  gap: 2em;
   min-width: 400px;
 }
 
@@ -123,6 +133,7 @@
   grid-template-columns: repeat(2, minmax(300px, 1fr));
   grid-template-rows: auto auto 1fr;
   align-items: end;
+  column-gap: 1em;
 }
 
 .packaging figure {
@@ -176,7 +187,7 @@ figcaption {
 
 /*SPACING*/
 .section {
-  padding-top: clamp(3rem, 8%, 90px);
+  padding-bottom: clamp(3rem, 8%, 90px);
 }
 
 h2 {
@@ -185,13 +196,25 @@ h2 {
 
 h3,
 p,
-.front {
+.front,
+.back,
+.side,
+.top {
   padding-bottom: clamp(0.75rem, 2%, 22.5px);
 }
 
 .primary-logo-container figcaption {
   position: relative;
-  top: -1rem;
+  top: -0.5rem;
+}
+
+.primary-type-description,
+.secondary-type-description {
+  padding-bottom: clamp(1.5rem, 4%, 45px);
+}
+
+.packaging {
+  padding-top: clamp(3rem, 8%, 90px);
 }
 
 @media (max-width: 600px) {

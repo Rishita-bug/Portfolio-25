@@ -14,8 +14,9 @@ const ProjectFive = () => {
  
   return (
     <div className = "project-five-container">
-      <img className="primary-mockup"/>
+      <img className="primary-mockup section"/>
 
+      <div className="gif-section section">
       <figure>
         <img 
           src={images["LogoEvolution"]}
@@ -23,6 +24,8 @@ const ProjectFive = () => {
         />
         <figcaption>Logo evolution</figcaption>
       </figure>
+      </div>
+      
       
       <div className="style-guide-grid">
         
@@ -80,7 +83,7 @@ const ProjectFive = () => {
 
 
           <div className="secondary-type-container section">
-          <h3 className=" section-h primary-typeface-h">Secondary Typeface</h3>
+          <h3 className=" section-h secondary-typeface-h">Secondary Typeface</h3>
           <p className="secondary-type-description">
             Borel Regular is a low-contrast, cursive typeface to emphasize the fluid, continuous stroke of the monogram. It is to be used only along with the Primary typeface for emphasis, additional imformation or callouts.
           </p>
