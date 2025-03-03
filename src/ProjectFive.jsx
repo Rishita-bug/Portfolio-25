@@ -13,15 +13,20 @@ const images = Object.fromEntries(
 const ProjectFive = () => {
  
   return (
-    <>
+    <div className = "project-five-container">
       <img className="primary-mockup"/>
-      <img 
-        src={images["LogoEvolution"]}
-        className="logo-evolution"  
-      />
+
+      <figure>
+        <img 
+          src={images["LogoEvolution"]}
+          className="logo-evolution"  
+        />
+        <figcaption>Logo evolution</figcaption>
+      </figure>
+      
       <div className="style-guide-grid">
         
-        <div className="colours">
+        <div className="colours-container section">
           <h2 className="section-h">Colour Palette</h2>
           <p className="colour-description">The colours are chosen to reflect the simplicity, uniqueness and elegance of pootharekulu, while retaining a festive mood.</p>
           <div className="palette-container">
@@ -58,7 +63,7 @@ const ProjectFive = () => {
           </div>
         </div>
 
-        <div className="typography">
+        <div className="typography-container section">
           <h2 className="section-h">Typography</h2>
 
           <div className = "primary-secondary-type-container" >
@@ -66,15 +71,15 @@ const ProjectFive = () => {
 
           <h3 className="section-h primary-typeface-h">Primary Typeface</h3>
           <p className="primary-type-description">
-            Speak Pro is a simple, low-contrast and crisp sans-serif typeface. This is used in the logotype and bodies of text. Headers must be in the Heavy weight of the face while bodies of text must be in Bold. Additional information may use Speak Pro Light.
+            SpeakPro is a simple, low-contrast and crisp sans-serif typeface. This is used in the logotype and bodies of text. Headers must be in the Heavy weight of the face while bodies of text must be in Bold. Additional information may use SpeakPro Regular.
           </p>
-          <p className="primary-type-sample regular">Speak Pro Regular</p>
-          <p className="primary-type-sample bold">Speak Pro Bold</p>
-          <p className="primary-type-sample light">Speak Pro Light</p>
+          <p className="primary-type-sample-regular">Speak Pro Regular</p>
+          <p className="primary-type-sample-bold">Speak Pro Bold</p>
+          <p className="primary-type-sample-heavy">Speak Pro Heavy</p>
           </div>
 
 
-          <div className="secondary-type-container">
+          <div className="secondary-type-container section">
           <h3 className=" section-h primary-typeface-h">Secondary Typeface</h3>
           <p className="secondary-type-description">
             Borel Regular is a low-contrast, cursive typeface to emphasize the fluid, continuous stroke of the monogram. It is to be used only along with the Primary typeface for emphasis, additional imformation or callouts.
@@ -85,7 +90,7 @@ const ProjectFive = () => {
         </div>
         </div>
 
-        <div className="primary-logo-container">
+        <div className="primary-logo-container section">
           <h2 className="section-h">Primary Logo</h2>
           
           <div className = "logo-content-container" >
@@ -111,7 +116,7 @@ const ProjectFive = () => {
           
         </div>
 
-        <div className="monogram-container">
+        <div className="monogram-container section">
           <h2 className="section-h">Monogram</h2>
 
           <div className = "monogram-content-container" >
@@ -145,7 +150,7 @@ const ProjectFive = () => {
           
         </div>
 
-        <div className="graphic-elements">
+        <div className="graphic-elements section">
 
           <div>
             <h2 className="section-h">Graphic Elements</h2>
@@ -167,7 +172,7 @@ const ProjectFive = () => {
 
         </div>
 
-        <div className="packaging">
+        <div className="packaging section">
 
           <figure className= "front-figure">
             <figcaption>Front</figcaption>
@@ -212,7 +217,7 @@ const ProjectFive = () => {
           
         </div>
       </div>
-    </>
+    </div>
 
   )
 }

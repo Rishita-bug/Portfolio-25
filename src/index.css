@@ -7,5 +7,53 @@
 :root {
   --header-font: "Barlow Semi Condensed", sans-serif;
   --body-font: "Hanken Grotesk", sans-serif;
+  --kids: "Kids", sans-serif;
+  --speak-regular: "SpeakPro-regular", sans-serif;
+  --speak-bold: "SpeakPro-bold", sans-serif;
+  --speak-bold-italic: "SpeakPro-bold-italic", sans-serif;
+  --speak-heavy: "SpeakPro-heavy", sans-serif;
+  --borel: "Borel", sans-serif;
+
+
+  /*TYPOGRAPHIC SCALE*/
+  --tiny: clamp(0.7901rem, 0.7887rem + 0.0071vw, 0.8rem);
+  --small: clamp(0.8889rem, 0.873rem + 0.0794vw, 1rem);
+  --body: clamp(1rem, 0.9643rem + 0.1786vw, 1.25rem);
+  --h4: clamp(1.125rem, 1.0625rem + 0.3125vw, 1.5625rem);
+  --h3: clamp(1.2656rem, 1.1674rem + 0.4911vw, 1.9531rem);
+  --h2: clamp(1.4238rem, 1.2785rem + 0.7268vw, 2.4414rem);
+  --h1: clamp(1.6018rem, 1.3947rem + 1.0357vw, 3.0518rem);
+  --display: clamp(1.802rem, 1.5145rem + 1.4376vw, 3.8147rem);
 }
+
+@font-face {
+  font-family: "Kids";
+  src: url(./fonts/Kids-Regular.ttf);
+}
+
+@font-face {
+  font-family: "SpeakPro-regular";
+  src: url(./fonts/SpeakPro.ttf);
+}
+
+@font-face {
+  font-family: "SpeakPro-bold";
+  src: url(./fonts/SpeakPro-Bold.ttf);
+}
+
+@font-face {
+  font-family: "SpeakPro-bold-italic";
+  src: url(./fonts/SpeakPro-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: "SpeakPro-heavy";
+  src: url(./fonts/SpeakPro-Heavy.ttf);
+}
+
+@font-face {
+  font-family: "Borel";
+  src: url(./fonts/Borel-Regular.ttf);
+}
+
 
