@@ -30,43 +30,49 @@ const ProjectFive = () => {
       <div className="style-guide-grid">
         
         <div className="colours-container section">
+          
           <h2 className="section-h">Colour Palette</h2>
-          <p className="colour-description">The colours are chosen to reflect the simplicity, uniqueness and elegance of pootharekulu, while retaining a festive mood.</p>
-          <div className="palette-container">
-          
-          <div className="swatch-container">
-            <div className="swatch brown"></div>
-            <p className="hex-code">#844921</p>
-          </div>
 
-          
-          <div className="swatch-container">
-            <div className="swatch orange"></div>
-            <p className="hex-code">#F37921</p>
-          </div>
+          <div className = "colours-content-container">
+            <p className="colour-description">The colours are chosen to reflect the simplicity, uniqueness and elegance of pootharekulu, while retaining a festive mood.</p>
+            <div className="palette-container">
+            
+              <div className="swatch-container">
+                <div className="swatch brown"></div>
+                <p className="hex-code">#844921</p>
+              </div>
 
-          
-          <div className="swatch-container">
-            <div className="swatch yellow"></div>
-            <p className="hex-code">#F1EC76</p>
-          </div>
+              
+              <div className="swatch-container">
+                <div className="swatch orange"></div>
+                <p className="hex-code">#F37921</p>
+              </div>
 
-          
-          <div className="swatch-container">
-            <div className="swatch green"></div>
-            <p className="hex-code">#B1D689</p>
-          </div>
+              
+              <div className="swatch-container">
+                <div className="swatch yellow"></div>
+                <p className="hex-code">#F1EC76</p>
+              </div>
 
-          
-          <div className="swatch-container">
-            <div className="swatch purple"></div>
-            <p className="hex-code">#C0A0CB</p>
-          </div>
+              
+              <div className="swatch-container">
+                <div className="swatch green"></div>
+                <p className="hex-code">#B1D689</p>
+              </div>
+
+              
+              <div className="swatch-container">
+                <div className="swatch purple"></div>
+                <p className="hex-code">#C0A0CB</p>
+              </div>
+
+            </div>
 
           </div>
+          
         </div>
 
-        <div className="typography-container section">
+        <div className="typography-container">
           <h2 className="section-h">Typography</h2>
 
           <div className = "primary-secondary-type-container" >
