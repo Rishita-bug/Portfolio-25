@@ -54,6 +54,7 @@ import Project6Slide3 from './slides-test-img.png';
 import ProjectOne from './ProjectOne';
 import ProjectTwo from './ProjectFive';
 import ProjectFive from './ProjectFive';
+import ProjectThree from './ProjectThree-prism';
 
 const projects = [
 
@@ -102,11 +103,11 @@ const projects = [
       description: "Very short description about the project. Might go upto a second line, partly. Perhaps a little more.",
       headerImg: HeaderImg,
       about: "All about project 3",
-      brief: "This is the third project's brief.",
-      deliverables: "Something, more stuff, final stuff",
-      duration: "4 months",
+      brief: "Elevate everyday phone interactions that cause frustration into positive experiences.",
+      deliverables: "VOCs, Research Insights, Motion Graphics, Protoypes",
+      duration: "2.5 months",
       slides: [Project3Slide1, Project3Slide2, Project3Slide3],
-      component: ProjectOne, 
+      component: ProjectThree, 
     },
     {
       number:"4/6",

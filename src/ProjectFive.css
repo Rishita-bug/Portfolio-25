@@ -181,22 +181,22 @@
   align-self: end;
 }
 
-h2 {
+.project-five-container h2 {
   font-family: var(--header-font);
   font-size: var(--h2);
 }
 
-h3 {
+.project-five-container h3 {
   font-family: var(--header-font);
   font-size: var(--h3);
 }
 
-p {
+.project-five-container p {
   font-family: var(--body-font);
   font-size: var(--body);
 }
 
-figcaption {
+.project-five-container figcaption {
   font-family: var(--body-font);
   font-size: var(--tiny);
   font-weight: 300;
@@ -214,12 +214,12 @@ figcaption {
   padding-bottom: clamp(3rem, 8%, 90px);
 }
 
-h2 {
+.project-five-container h2 {
   padding-bottom: clamp(1.5rem, 4%, 45px);
 }
 
-h3,
-p,
+.project-five-container h3,
+.project-five-container p,
 .front,
 .back,
 .side,
@@ -271,7 +271,7 @@ p,
     grid-column: span 2;
   }
 
-  figcaption {
+  .project-five-container figcaption {
     height: 2em;
     overflow: hidden;
   }
