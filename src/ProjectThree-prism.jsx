@@ -91,18 +91,24 @@ const ProjectThree = () => {
             </ul>
           </div>
          
-          <div>
+          <div className = "categories-container">
             <div className = "category-a-container">
               <h4>Category A</h4>
-              <p>Users felt that using widgets is more time-efficient than finding and launching the respective app. Most common widgets used belong to apps that are not used too much and too frequently.</p>
-              <p>Widgets not being space-efficient  within a single homescreen causes frustration. Widgets go unnoticed when they aren’t on the primary homescreen, since apps are often accessed from the app drawer.</p>
-              <p>Users get used to seeing widgets on their screen, despite it covering their wallpaper. They strategically place these widgets according to the visuals of the wallpaper.</p>
-              <p>Figuring out which widget to use can often involve trial and error since users don’t often scrutinise their own activity.</p>
+              <div className = "category-a-grid">
+                <p>Users felt that using widgets is more time-efficient than finding and launching the respective app. Most common widgets used belong to apps that are not used too much and too frequently.</p>
+                <p>Widgets not being space-efficient  within a single homescreen causes frustration. Widgets go unnoticed when they aren’t on the primary homescreen, since apps are often accessed from the app drawer.</p>
+                <p>Users get used to seeing widgets on their screen, despite it covering their wallpaper. They strategically place these widgets according to the visuals of the wallpaper.</p>
+                <p>Figuring out which widget to use can often involve trial and error since users don’t often scrutinise their own activity.</p>
+              </div>
+              
             </div>
             <div className = "category-b-container">
               <h4>Category B</h4>
-              <p>Users have wallpapers with a minimal design or the same homescreen and lockscreen wallpapers.</p>
-              <p>Widgets often go unnoticed by users despite being on the homescreen.</p>
+              <div className = "category-b-grid">
+                <p>Users have wallpapers with a minimal design or the same homescreen and lockscreen wallpapers.</p>
+                <p>Widgets often go unnoticed by users despite being on the homescreen.</p>
+              </div>
+              
             </div>
           </div>
 
@@ -113,26 +119,30 @@ const ProjectThree = () => {
               <li>No. of Responses: 51</li>
               <li>Age Rage: 16-55*</li>
             </ul>
-            <div className = "survey-insight">
-              <img />
-              <p>Users consider aesthetics followed by convenience and frequency of usage while choosing widgets.</p>
+
+            <div className = "survey-insights-grid">
+              <div className = "survey-insight">
+                <img src={images['insights-1.1']}/>
+                <p>Users consider aesthetics followed by convenience and frequency of usage while choosing widgets.</p>
+              </div>
+              <div className = "survey-insight">
+                <img src={images['insights-1.2']}/>
+                <p>It is desirable to be able to customize the limited information shown in widgets.</p>
+              </div>
+              <div className = "survey-insight">
+                <img src={images['insights-1.3']}/>
+                <p>Though not at the forefront, being fun is a desireable quality in a widget.</p>
+              </div>
+              <div className = "survey-insight">
+                <img src={images['insights-1.4']}/>
+                <p>After lack of usage, the next driving factor for discarding widgets is the space occupied.</p>
+              </div>
+              <div className = "survey-insight">
+                <img src={images['insights-1.5']}/>
+                <p>People use widgets minimally, mostly system widgets.</p>
+              </div>
             </div>
-            <div className = "survey-insight">
-              <img />
-              <p>It is desirable to be able to customize the limited information shown in widgets.</p>
-            </div>
-            <div className = "survey-insight">
-              <img />
-              <p>Though not at the forefront, being fun is a desireable quality in a widget.</p>
-            </div>
-            <div className = "survey-insight">
-              <img />
-              <p>After lack of usage, the next driving factor for discarding widgets is the space occupied.</p>
-            </div>
-            <div className = "survey-insight">
-              <img />
-              <p>People use widgets minimally, mostly system widgets.</p>
-            </div>
+            
         </div>
       </div>
 

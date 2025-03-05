@@ -37,13 +37,127 @@
 
 .retrospective-study-info-container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: min-content 35ch;
   column-gap: 2em;
 }
+
+.category-a-container p {
+  background-color: #40c6f5;
+  border-radius: 8px;
+  color: white;
+  padding-block: 1.75em;
+  padding-inline: 1em;
+  text-wrap: balance;
+  max-width: 300px;
+}
+
+.category-b-container p {
+  background-color: #9379b8;
+  border-radius: 8px;
+  color: white;
+  padding-block: 1.75em;
+  padding-inline: 1em;
+  text-wrap: balance;
+  max-width: 300px;
+}
+
+.category-a-grid {
+  display: grid;
+  gap: 1.5em;
+  grid-template-columns: repeat(2, minmax(190px, max-content));
+}
+
+.category-b-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(190px, max-content));
+}
+
+.categories-container {
+  display: grid;
+  grid-template-columns: max-content auto;
+  column-gap: 3em;
+  max-width: 1500px;
+}
+
+.survey-insight img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+}
+
+.survey-insight {
+  display: grid;
+  grid-template-columns: minmax(45px, 75px) minmax(250px, 300px);
+  column-gap: 0.5em;
+  align-items: center;
+  padding-right: 2em;
+}
+
+.survey-insights-grid {
+  display: flex;
+  max-width: 1500px;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.converging-section { 
+  height: 90vh;
+}
+
+.converging-section p {
+  width: 50ch;
+}
+
+.converging-section::before {
+  content: "";
+  position: absolute;
+  left: -4vw;
+  right: -4vh;
+  background-image: url('./assets/Prism-assets/digital-wellbeing-bg.webp');
+  background-size: contain; 
+  background-position: center; 
+  background-repeat: no-repeat; /* Prevents tiling */
+  height: 90vh;
+}
+
+
+
+
+
 
 @media screen and (max-width: 900px) {
   .process-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    row-gap: 2em;
+    row-gap: 4em;
   }
+
+  .category-a-grid, .category-b-grid {
+    gap: 1em;
+  }
+
+}
+
+@media screen and (max-width: 1000px) {
+  .category-a-grid {
+    grid-template-columns: repeat(auto-fit, minmax(190px, max-content));
+  }
+
+  .categories-container {
+    display: grid;
+    grid-template-columns: auto;
+
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .survey-insights-grid {
+    justify-content: start;
+  }
+
+  .survey-insight {
+    grid-template-columns: minmax(35px, 55px) minmax(150px, 300px);
+    column-gap: 1em;
+}
 }
