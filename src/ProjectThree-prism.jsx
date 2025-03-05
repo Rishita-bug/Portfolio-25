@@ -156,14 +156,52 @@ const ProjectThree = () => {
       <div className="primary-research-2-section">
         <h2>Insights from User Interviews</h2>
         <div className = "primary-research-2-info">
-          {/*NO. OF INTERVIEWEES ETC*/}
+          <div>
+            <h4>No. of Interviewees:</h4>
+            <h4>Age Range:</h4>
+            <h4>Note:</h4>
+          </div>
+          <div>
+            <p>9</p>
+            <p>17-53 years</p>
+            <ul>
+              <li>All Interviewees were android users.</li>
+              <li>6/9 interviewees were Samsung smartphone users.</li>
+            </ul>
+          </div>
+          
         </div>
         <div className = "primary-research-2-insights">
-          <figure></figure>
-          <figure></figure>
-          <figure></figure>
-          <figure></figure>
-          <figure></figure>          
+          <figure>
+            <img src = {images['insights-2.1']}/>
+            <figcaption>
+              Users are proactive about managing their screentime. They often take assistance of Digital Wellbeing features and  third-party apps to attempt to manage their screentime.
+            </figcaption>
+          </figure>
+          <figure>
+            <img src = {images['insights-2.2']}/>
+            <figcaption>
+              Parents of Gen Alpha express concern about their children’s screentime, especially since COVID times. 
+            </figcaption>
+          </figure>
+          <figure>
+            <img src = {images['insights-2.3']}/>
+            <figcaption>
+              Users who make the effort of putting screentime widgets on their screen, often discard them as it causes feelings of anxiety and guilt.
+            </figcaption>
+          </figure>
+          <figure>
+            <img src = {images['insights-2.4']}/>
+            <figcaption>
+            Feelings of guilt and anxiety arise when users find themselves doomscrolling on different applications. This makes them view their phones as an evil against productivity and health.
+            </figcaption>
+          </figure>
+          <figure>
+            <img src = {images['insights-2.5']}/>
+            <figcaption>
+            Checking one’s screentime does not inspire a call-to-action. Users often experience initial anxiety at the quantitative data and then get desensitized to it.
+            </figcaption>
+          </figure>          
         </div>
       </div>
 
