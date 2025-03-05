@@ -1,0 +1,49 @@
+.p3-container {
+  margin-inline: 4vw;
+}
+
+.p3-container h2,
+.p3-container h3,
+.p3-container h4 {
+  font-family: var(--header-font);
+}
+
+.p3-container p,
+.p3-container li,
+.p3-container figcaption {
+  font-family: var(--body-font);
+}
+
+.process-grid span {
+  font-style: italic;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  column-gap: 2em;
+  row-gap: 3em;
+  max-width: 2000px;
+}
+
+.process-subsection {
+  text-wrap: balance;
+}
+
+.process-subsection li,
+.process-subsection p {
+  max-width: 45ch;
+}
+
+.retrospective-study-info-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 2em;
+}
+
+@media screen and (max-width: 900px) {
+  .process-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    row-gap: 2em;
+  }
+}

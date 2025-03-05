@@ -11,7 +11,7 @@ const images = Object.fromEntries(
 
 const ProjectThree = () => {
   return (
-    <div className="p3-component-container">
+    <div className="p3-container">
 
       <div className="methodology-section">
         <h2>Methodology</h2>
@@ -28,15 +28,15 @@ const ProjectThree = () => {
           <div className = "process-subsection">
             <h3>Primary Research-1</h3>
             <ul>
-              <li>Method: Interviews</li>
-              <li>Objective: Identifying opportunity areas for motion design intervention.</li>
+              <li><span>Method:</span> Interviews</li>
+              <li><span>Objective:</span> Identifying opportunity areas for motion design intervention.</li>
             </ul>
           </div>
 
           <div className = "process-subsection">
             <h3>Identifying Opportunities</h3>
             <ul>
-              <li>Wigdets</li>
+              <li>Widgets</li>
               <li>Digital Mindfulness</li>
               <li>Calling</li>
             </ul>
@@ -45,22 +45,22 @@ const ProjectThree = () => {
           <div className = "process-subsection">
             <h3>Primary Research-2: Studying Widgets</h3>
             <ul>
-              <li>Secondary Research: Existing widgets on homescreens of different smartphones.</li>
-              <li>Prmary Resesearch: Inverviews, Retrospective Study and Survey</li>
+              <li><span>Secondary Research:</span> Existing widgets on homescreens of different smartphones.</li>
+              <li><span>Primary Resesearch:</span> Inverviews, Retrospective Study and Survey</li>
             </ul>
           </div>
 
           <div className = "process-subsection">
             <h3>Rephrasing the Brief</h3>
             <ul>
-              <li>Diverging: Ideating for redesigning existing widget interactions and new Samsung app widgets</li>
-              <li>Converging: Screen-time widgets</li>
+              <li><span>Diverging:</span> Ideating for redesigning existing widget interactions and new Samsung app widgets</li>
+              <li><span>Converging:</span> Screen-time widgets</li>
             </ul>
           </div>
 
           <div className = "process-subsection">
             <h3>Ideation</h3>
-            <p>Method: Design matrix combining parametrs and features.</p>
+            <p><span>Method:</span> Design matrix combining parameters and features.</p>
           </div>
 
           <div className = "process-subsection">
