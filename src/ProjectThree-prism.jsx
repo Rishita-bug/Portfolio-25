@@ -208,9 +208,54 @@ const ProjectThree = () => {
 
       <div className="ideation-section">
         <h2>Ideation</h2>
-        <p>The following parameters intersected with features were considered while ideating for the solution.</p>
-        <div className = "ideation-subsection"></div>
-        <div className = "ideation-subsection"></div>
+        <p className="ideation-description">The following parameters intersected with features were considered while ideating for the solution.</p>
+        <div className = "ideation-section-grid">
+
+          <div className = "ideation-subsection parameters-section">
+            <figure>
+              <img src = {images['context']}/>
+              <figcaption>Context</figcaption>
+            </figure>
+            <figure>
+              <img src = {images['space-efficiency']}/>
+              <figcaption>Space Efficiency</figcaption>
+            </figure>
+            <figure>
+              <img src = {images['delight']}/>
+              <figcaption>Delight</figcaption>
+            </figure>
+            <figure>
+              <img src = {images['accountability']}/>
+              <figcaption>Accountability</figcaption>
+            </figure>
+          </div>
+          <h3 className = "h3-for-mobile">Parameters</h3>
+
+          <div className = "ideation-subsection">
+            <figure>
+              <img src = {images['timers']}/>
+              <figcaption>Timers/Goals</figcaption>
+            </figure>
+            <figure>
+              <img src = {images['visual-data']}/>
+              <figcaption>Visual Data</figcaption>
+            </figure>
+            <figure>
+              <img src = {images['perceptible']}/>
+              <figcaption className="change-in-data">Perceptible</figcaption>
+            </figure>
+            <figure>
+              <img src = {images['customizable']}/>
+              <figcaption>Customizable</figcaption>
+            </figure>
+          </div>
+          <h3 className = "h3-for-mobile">Features</h3>
+
+          <h3 className="h3-for-desktop">Parameters</h3>
+          <h3 className="h3-for-desktop">Features</h3>
+          
+        </div>
+        
       </div>
 
 

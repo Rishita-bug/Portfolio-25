@@ -23,6 +23,13 @@
   --h2: clamp(1.4238rem, 1.2785rem + 0.7268vw, 2.4414rem);
   --h1: clamp(1.6018rem, 1.3947rem + 1.0357vw, 3.0518rem);
   --display: clamp(1.802rem, 1.5145rem + 1.4376vw, 3.8147rem);
+
+
+  --shadow-color: 0deg 0% 0%;
+  --shadow-elevation-low:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.1),
+    0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.1),
+    1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.1);
 }
 
 @font-face {
