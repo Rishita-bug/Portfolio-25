@@ -6,6 +6,8 @@
   margin-inline: 4vw;
 }
 
+/*TYPOGRAPHY*/
+
 .p3-container h2,
 .p3-container h3,
 .p3-container h4 {
@@ -20,6 +22,85 @@
 
 .process-grid span {
   font-style: italic;
+}
+
+.p3-container h2 {
+  font-size: var(--h2);
+}
+
+.p3-container h3 {
+  font-size: var(--h3);
+}
+
+.p3-container h4 {
+  font-size: var(--h4);
+}
+
+.primary-research-2-info,
+.p3-container h5,
+.retrospective-study-info-container,
+.primary-research-1-subsection ul {
+  font-size: var(--tiny);
+  font-family: var(--body-font);
+}
+
+.pr-container h5 {
+  font-weight: 200;
+}
+
+/*SPACING*/
+.methodology-section,
+.primary-research-1-section,
+.converging-section,
+.primary-research-2-section,
+.ideation-section {
+  padding-bottom: clamp(4rem, 10%, 100px);
+}
+
+.p3-container h2 {
+  padding-bottom: clamp(1rem, 2%, 20px);
+}
+
+.process-grid h3 {
+  padding-bottom: clamp(1rem, 2%, 20px);
+  font-weight: 500;
+}
+
+.process-grid li {
+  padding-bottom: 0.5em;
+}
+
+.retrospective-study-info-container,
+.primary-research-1-subsection ul {
+  padding-top: 1em;
+  padding-bottom: clamp(1rem, 2%, 20px);
+}
+
+.primary-research-2-info {
+  padding-bottom: clamp(1rem, 2%, 20px);
+}
+
+.categories-container h4 {
+  padding-bottom: 0.5em;
+}
+
+.category-a-container,
+.category-b-container {
+  padding-bottom: clamp(1.5rem, 4%, 45px);
+}
+
+.h3-for-desktop {
+  padding-top: 1em;
+}
+
+/*GRIDS AND LAYOUT*/
+
+.section-description {
+  width: 60ch;
+  font-size: var(--tiny);
+  position: relative;
+  top: -1em;
+  padding-bottom: clamp(1rem, 2%, 20px);
 }
 
 .process-grid {
@@ -181,7 +262,7 @@
   width: 12vw;
   min-width: 100px;
   max-width: 300px;
-  border: 2px solid pink;
+  /* border: 2px solid pink; */
 }
 
 .ideation-subsection {
@@ -189,13 +270,14 @@
   grid-template-columns: repeat(2, minmax(120px, max-content));
   column-gap: 2em;
   row-gap: 1em;
-  border: 2px solid grey;
+  /* border: 2px solid grey; */
   justify-content: center;
 }
 
 .ideation-section-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
+  max-width: 2000px;
 }
 
 .h3-for-desktop {
@@ -212,11 +294,22 @@
   display: block;
 }
 
-@media screen and (max-width: 640px) {
+.ideation-subsection-2 {
+  position: relative;
+}
 
+.ideation-subsection-2::before {
+  content: "\00D7";
+  position: absolute;
+  font-size: var(--display);
+  top: 50%;
+}
+
+@media screen and (max-width: 640px) {
   .h3-for-mobile {
     display: block;
     justify-self: center;
+    padding-top: 0.5em;
   }
 
   .h3-for-desktop {
@@ -228,6 +321,13 @@
     grid-template-columns: 1fr;
   }
 
+  .ideation-subsection-2 {
+    padding-top: 2.5em;
+  }
+
+  .ideation-subsection-2::before {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 573px) {
@@ -244,7 +344,6 @@
     text-wrap: balance;
   }
 }
-
 
 @media screen and (max-width: 900px) {
   .process-grid {

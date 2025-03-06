@@ -79,12 +79,12 @@ const ProjectThree = () => {
 
       <div className="primary-research-1-section">
         <h2>Studying Widgets: Primary Research-2 Insights</h2>
-        <p>An inquiry into why, despite being seemingly accessible and time-saving, widgets are not popular among Android users.</p>
+        <p className = "section-description">An inquiry into why, despite being seemingly accessible and time-saving, widgets are not popular among Android users.</p>
 
         <div className="primary-research-1-subsection">
           <h3>Interviews and Restrospective Study</h3>
           <div className = "retrospective-study-info-container">
-            <h4>Interviewees</h4>
+            <h5>Interviewees</h5>
             <ul>
               <li>A: Experienced widget users</li>
               <li>B: Inexperienced widget users who were asked to use widgets for a week.</li>
@@ -149,7 +149,7 @@ const ProjectThree = () => {
 
       <div className="converging-section">
         <h2>Why Digital Wellbeing?</h2>
-        <p>In the post-COVID era, with the permeation of technology use in various aspects of users’ day-to-day, digital mindfulness emerges as a need of the hour. Screentime is one sphere of digital mindfulness that concerns users today.</p>
+        <p className = "section-description">In the post-COVID era, with the permeation of technology use in various aspects of users’ day-to-day, digital mindfulness emerges as a need of the hour. Screentime is one sphere of digital mindfulness that concerns users today.</p>
       </div>
 
 
@@ -157,9 +157,9 @@ const ProjectThree = () => {
         <h2>Insights from User Interviews</h2>
         <div className = "primary-research-2-info">
           <div>
-            <h4>No. of Interviewees:</h4>
-            <h4>Age Range:</h4>
-            <h4>Note:</h4>
+            <h5>No. of Interviewees:</h5>
+            <h5>Age Range:</h5>
+            <h5>Note:</h5>
           </div>
           <div>
             <p>9</p>
@@ -208,10 +208,10 @@ const ProjectThree = () => {
 
       <div className="ideation-section">
         <h2>Ideation</h2>
-        <p className="ideation-description">The following parameters intersected with features were considered while ideating for the solution.</p>
+        <p className="ideation-description section-description">The following parameters intersected with features were considered while ideating for the solution.</p>
         <div className = "ideation-section-grid">
 
-          <div className = "ideation-subsection parameters-section">
+          <div className = "ideation-subsection">
             <figure>
               <img src = {images['context']}/>
               <figcaption>Context</figcaption>
@@ -231,7 +231,7 @@ const ProjectThree = () => {
           </div>
           <h3 className = "h3-for-mobile">Parameters</h3>
 
-          <div className = "ideation-subsection">
+          <div className = "ideation-subsection ideation-subsection-2">
             <figure>
               <img src = {images['timers']}/>
               <figcaption>Timers/Goals</figcaption>
