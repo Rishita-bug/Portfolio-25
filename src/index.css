@@ -16,6 +16,7 @@
 
   /*TYPOGRAPHIC SCALE*/
   --tiny: clamp(0.7901rem, 0.7887rem + 0.0071vw, 0.8rem);
+  --medium-small: clamp(0.8395rem, 0.83085rem + 0.04325vw, 0.9rem);
   --small: clamp(0.8889rem, 0.873rem + 0.0794vw, 1rem);
   --body: clamp(1rem, 0.9643rem + 0.1786vw, 1.25rem);
   --h4: clamp(1.125rem, 1.0625rem + 0.3125vw, 1.5625rem);

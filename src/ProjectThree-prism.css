@@ -54,7 +54,8 @@
 .converging-section,
 .primary-research-2-section,
 .ideation-section {
-  padding-bottom: clamp(4rem, 10%, 100px);
+  /* padding-bottom: clamp(4rem, 10%, 100px); */
+  padding-bottom: clamp(8rem, 16%, 100px);
 }
 
 .p3-container h2 {

@@ -32,7 +32,7 @@ const ProjectOne = () => {
       <div className = "scope-container section">
         <h2 className = "section-title">Scope</h2>
         <div className = " scope-content section-content">
-          <p>The project began as an open-ended exploration into personalization. Over time, the scope narrowed down to Personalization Curation of content in smartphones to ensure that the devised Guidelines for desigining personalized user experiences were illustrated through tangible examples.</p>
+          <p className = "scope-description">The project began as an open-ended exploration into personalization. Over time, the scope narrowed down to Personalization Curation of content in smartphones to ensure that the devised Guidelines for desigining personalized user experiences were illustrated through tangible examples.</p>
           <div className= "initial-focus scope-subsection">
             <h3 className = "subsection-h3">Initial Focus</h3>
             <div className = "subsection-grid">
@@ -68,7 +68,7 @@ const ProjectOne = () => {
                   <li>Can something be ”too personalized”? Where do users draw the line?</li>
                 </ul>
               </div>
-              <div className = "question-category">
+              <div className = "question-category last-question">
                 <img src = {images['measuring-icon']}/>
                 <h4>Measuring Personalization</h4>
                 <ul>

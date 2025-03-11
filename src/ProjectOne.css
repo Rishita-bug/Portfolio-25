@@ -1,3 +1,4 @@
+/*GRIDS AND LAYOUT*/
 .genesis-container {
   width: 100%;
 }
@@ -7,18 +8,31 @@
   height: 100%;
   object-fit: contain;
   width: minmax(300px, 40vw);
+  object-position: bottom;
 }
 
 .genesis-content {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(472px, max-content));
   align-items: end;
   column-gap: 1em;
 }
 
+.genesis-text {
+  width: 90%;
+}
+
+.genesis-big-text {
+  width: 80%;
+}
+
+.scope-description {
+  width: 58ch;
+}
+
 .initial-focus img {
-  width: 50%;
+  width: 40%;
   object-fit: contain;
   justify-self: center;
   max-width: 200px;
@@ -35,16 +49,17 @@
 
 .initial-focus .subsection-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  grid-template-rows: auto min-content;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   width: 100%;
   column-gap: 2em;
+  row-gap: 4em;
   max-width: 2000px;
   /* text-wrap: balance; */
 }
 
 .research-questions img {
   width: 50%;
+  height: 100%;
   object-fit: contain;
   justify-self: center;
 }
@@ -60,6 +75,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(220px, 1fr));
   column-gap: 2em;
+  row-gap: 2em;
   max-width: 2000px;
 }
 
@@ -70,7 +86,7 @@
 }
 
 .emerging-focus img {
-  width: 45%;
+  width: 40%;
   object-fit: cover;
   justify-self: center;
 }
@@ -81,7 +97,6 @@
 }
 
 .opportunity {
-  border: 2px solid orange;
   display: grid;
   justify-items: center;
   text-align: center;
@@ -103,10 +118,13 @@
 
 .methodology-content {
   width: 100%;
+  max-width: 2000px;
 }
 
 .methodology-content img {
-  width: 75%;
+  display: block;
+  margin: auto;
+  width: 88%;
   object-fit: contain;
 }
 
@@ -114,16 +132,201 @@
   max-width: 45ch;
 }
 
+.takeaways-container ul {
+  max-width: 55ch
+}
+
+/*TYPOGRAPHY*/
+.p1-container .section-title {
+  font-family: var(--header-font);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.scope-content h3 {
+  font-family: var(--header-font);
+  font-weight: 550;
+  text-transform: uppercase;
+  font-size: var(--body);
+}
+
+.genesis-big-text {
+  font-family: var(--body-font);
+  font-size: var(--h1);
+  font-weight: 220;
+  line-height: 1.09;
+  color: rgb(72, 131, 219);
+}
+
+.genesis-text, 
+.initial-focus figcaption,
+.takeaways-container ul {
+  font-family: var(--body-font);
+  font-size: var(--body);
+  line-height: 1.2;
+}
+
+.scope-description {
+  font-family: var(--body-font);
+  font-size: var(--medium-small);
+}
+
+.research-questions h4,
+.approach-container h4 {
+  font-family: var(--body-font);
+  font-size: var(--h4);
+  line-height: 1.09;
+}
+
+.research-questions ul,
+.emerging-focus p,
+.approach-container p {
+  font-family: var(--body-font);
+  font-size: var(--medium-small);
+  line-height: 1.25;
+}
+
+.emerging-focus h4 {
+  font-family: var(--header-font);
+  font-size: var(--h4);
+  font-weight: 420;
+}
+
+
+
+/*SPACING*/
+.p1-container {
+  margin-inline: 4vw;
+}
+
+.p1-container .section {
+  padding-bottom: clamp(8rem, 16%, 100px);
+}
+
+.genesis-container {
+  padding-top: clamp(8rem, 16%, 100px);
+}
+
+.scope-description,
+.genesis-text {
+  padding-top: clamp(1rem, 2%, 20px);
+}
+
+.subsection-h3 {
+  padding-top: clamp(4rem, 8%, 60px);
+  padding-bottom: clamp(1rem, 2%, 20px);
+}
+
+.research-questions h4,
+.approach-container h4 {
+  padding-bottom: 0.5em;
+}
+
+.research-questions li {
+  padding-bottom: 0.25em;
+}
+
+.genesis-container .section-title,
+.approach-container .section-title,
+.methodology-container .section-title,
+.takeaways-container .section-title {
+  padding-bottom: clamp(1.85rem, 3.5%, 36px);
+}
+
+.emerging-focus h4 {
+  padding-top: clamp(1rem, 2%, 20px);
+  padding-bottom: clamp(0.5rem, 1%, 10px);
+}
+
+
+.takeaways-container li {
+  padding-bottom: 0.75em;
+}
+
+/*ORNAMENTS*/
 .section-title {
   position: relative;
 }
 
 .section-title::before {
   content: "";
-  height: 3px;
+  height: 4.2px;
   width: 1.85em;
   position: absolute;
-  top: -6px;
+  top: -10px;
   left: 2px;
   background-color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 1042px) {
+  .genesis-container img {
+    object-position: center;
+    justify-self: center;
+  }
+
+  .genesis-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .genesis-big-text {
+    padding-top: 1em;
+  }
+
+  .research-questions .subsection-grid {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    width: 100%;
+  }
+
+  .question-category {
+    justify-self: center;
+  }
+
+  .emerging-focus .subsection-grid {
+    margin-inline: auto;
+  }
+
+  .research-questions .subsection-grid {
+    margin-inline: auto;
+  }
+}
+
+@media screen and (max-width: 980px) {
+
+
+  .question-category {
+    justify-self: center;
+  }
+
+  .emerging-focus .subsection-grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    row-gap: 4em;
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  .emerging-focus p {
+    width: 72%;
+    min-width: 320px;
+    max-width: 60ch;
+  }
+
+  .emerging-focus img {
+    width: 25%;
+  }
+
+}
+
+@media (min-width: 620px) and (max-width: 948px) {
+
+  .last-question {
+    grid-column: span 2;
+    width: 50%;
+  }
+
+}
+
+@media screen and (max-width: 790px) {
+  
 }
