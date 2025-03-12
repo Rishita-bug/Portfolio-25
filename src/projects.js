@@ -124,7 +124,7 @@ const projects = [
       deliverables: "Something, more stuff, final stuff",
       duration: "3 months",
       slides: [Project4Slide1, Project4Slide2, Project4Slide3, Project4Slide4, Project4Slide45, Project4Slide5, Project4Slide6],
-      component: ProjectFour, 
+      component: ProjectOne, 
     },
     {
       number:"5/6",

@@ -124,6 +124,7 @@
 
 .approach-container h4 {
   width: 70%;
+  min-width: 256px;
 }
 
 .methodology-content {
@@ -280,6 +281,10 @@
   font-weight: 700;
 }
 
+.approach-content p::after {
+  content: ".";
+}
+
 @media screen and (max-width: 1042px) {
   .genesis-container img {
     object-position: center;
@@ -369,5 +374,68 @@
     text-align: left;
     width: 80%;
     justify-self: start;
+  }
+}
+
+@media screen and (max-width: 737px) {
+  .approach-content span {
+    display: none;
+  }
+
+  .approach-content {
+    grid-template-columns: unset;
+  }
+
+  .approach-text-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    column-gap: 1em;
+    width: 100%;
+    direction: rtl;
+  }
+
+  .approach-container h4 {
+    width: unset;
+    min-width: unset;
+    text-align: left;
+    justify-self: end;
+    padding-right: 2em;
+  }
+
+  .approach-content p {
+    max-width: unset;
+    text-align: right;
+    justify-self: end;
+    padding-left: 2em;
+    unicode-bidi: plaintext;
+    text-wrap: balance;
+  }
+}
+
+@media screen and (max-width: 613px) {
+  .approach-text-container {
+    display: unset;
+  }
+
+  .approach-content h4 {
+    padding: unset;
+    padding-bottom: 0.25em;
+  }
+
+  .approach-container p {
+    text-align: unset;
+    padding: unset;
+  }
+
+  .takeaways-container ul {
+    list-style: none;
+    text-indent: 1ch;
+  }
+
+  .takeaways-container li::before {
+    content: "->";
+    font-weight: 900;
+    position: relative;
+    left: -5px;
   }
 }

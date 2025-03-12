@@ -105,21 +105,21 @@ const ProjectOne = () => {
       <div className = "approach-container section">
         <h2 className = "section-title">Approach</h2>
         <div className = " approach-content section-content">
-          <div>
-            <h4>Staggered introduction of the smartphone:</h4>
-            <p>Leveraging the open-ended nature of the brief, introduction of the smartphone into the research was delayed until the second phase.</p>
+          <div className = "approach-text-container">
+            <h4>Staggered introduction of the smartphone<span>:</span></h4>
+            <p>Leveraging the open-ended nature of the brief, introduction of the smartphone was delayed until the second phase</p>
           </div>
-          <div>
-            <h4>Qualitative research method & Diverse participant pool:</h4>
-            <p>Conducted near-conversational interviews to gain deep insights. 31 participants were interviewed over 3 progressively narrow phases—both in-person and remotely.</p>
+          <div className = "approach-text-container">
+            <h4>Qualitative research method & Diverse participant pool<span>:</span></h4>
+            <p>Conducted near-conversational interviews to gain deep insights. 31 participants were interviewed over 3 progressively narrow phases—both in-person and remotely</p>
           </div>
-          <div>
-            <h4>Structured research phases:</h4>
-            <p>Clearly defined objectives for each phase ensured a structured approach.</p>
+          <div className = "approach-text-container">
+            <h4>Structured research phases<span>:</span></h4>
+            <p>Clearly defined objectives for each phase ensured a structured approach</p>
           </div>
-          <div>
-            <h4>Goal:</h4>
-            <p>To developed a holistic, unbiased understanding of “Personalization” to identify real-world opportunities for intelligent smartphones while addressing user and practitioner concerns.</p>
+          <div className = "approach-text-container">
+            <h4>Goal<span>:</span></h4>
+            <p>To developed a holistic, unbiased understanding of “Personalization” to identify real-world opportunities for intelligent smartphones while addressing user and practitioner concerns</p>
           </div>
         </div>
       </div>
