@@ -12,14 +12,6 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-
-  /*transparency gradient
-  -webkit-mask-image: linear-gradient(to bottom, black, transparent);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: top;
-  mask-image: linear-gradient(to bottom, black, transparent);
-  mask-repeat: no-repeat;
-  mask-position: top;*/
 }
 
 .carousel-container {

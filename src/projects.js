@@ -53,6 +53,7 @@ import Project6Slide3 from './slides-test-img.png';
 
 import ProjectOne from './ProjectOne';
 import ProjectTwo from './ProjectFive';
+import ProjectFour from './ProjectFour';
 import ProjectFive from './ProjectFive';
 import ProjectThree from './ProjectThree-prism';
 
@@ -124,7 +125,7 @@ const projects = [
       deliverables: "Something, more stuff, final stuff",
       duration: "3 months",
       slides: [Project4Slide1, Project4Slide2, Project4Slide3, Project4Slide4, Project4Slide45, Project4Slide5, Project4Slide6],
-      component: ProjectOne, 
+      component: ProjectFour, 
     },
     {
       number:"5/6",

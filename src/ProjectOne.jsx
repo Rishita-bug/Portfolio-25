@@ -110,7 +110,7 @@ const ProjectOne = () => {
             <p>Leveraging the open-ended nature of the brief, introduction of the smartphone was delayed until the second phase</p>
           </div>
           <div className = "approach-text-container">
-            <h4>Qualitative research method & Diverse participant pool<span>:</span></h4>
+            <h4>Qualitative research method & diverse participant pool<span>:</span></h4>
             <p>Conducted near-conversational interviews to gain deep insights. 31 participants were interviewed over 3 progressively narrow phases—both in-person and remotely</p>
           </div>
           <div className = "approach-text-container">

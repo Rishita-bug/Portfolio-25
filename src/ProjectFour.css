@@ -1,0 +1,11 @@
+
+.p4-container {
+  margin-inline: 4vw;
+  padding-bottom: 4em;
+}
+
+.p4-container img {
+  object-fit: contain;
+  width: 100%;
+  padding-top: 8em;
+}

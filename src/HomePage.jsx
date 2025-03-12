@@ -130,7 +130,7 @@ function WorkSection({ref}){
           if(entry.isIntersecting) {
             setIsWorkVisible(true)
           }
-      }, {threshold: 0.1}
+      }, {threshold: 0.2}
     )
 
     if (workSectionRef.current) {
