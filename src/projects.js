@@ -90,7 +90,7 @@ const projects = [
       deliverables: "Something, more stuff, final stuff",
       duration: "5 months",
       slides: [Project2Slide1, Project2Slide2, Project2Slide3, Project2Slide4, Project2Slide5, Project2Slide6, Project2Slide7, Project2Slide8, Project2Slide9, Project2Slide10, Project2Slide11, Project2Slide12, Project2Slide13, Project2Slide14, Project2Slide15, Project2Slide16],
-      component: ProjectOne, 
+      component: ProjectTwo, 
     },
     {
       number:"3/6",
@@ -124,7 +124,7 @@ const projects = [
       deliverables: "Something, more stuff, final stuff",
       duration: "3 months",
       slides: [Project4Slide1, Project4Slide2, Project4Slide3, Project4Slide4, Project4Slide45, Project4Slide5, Project4Slide6],
-      component: ProjectOne, 
+      component: ProjectFour, 
     },
     {
       number:"5/6",

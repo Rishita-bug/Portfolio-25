@@ -17,13 +17,14 @@ const ProjectOne = () => {
         <h2 className = "section-title">Project Genesis</h2>
         <div className = " genesis-content section-content">
           <img src = {images['genesis-img']}/>
-          <div>
+          <div className = "genesis-text-container">
             <p className = "genesis-big-text">
               what makes a mass manufactered product belong to its user?
             </p>
-            <p className = "genesis-text">
-              Smartphones are mass manufactured products. They are identical to each of its own kind, until their ownership is claimed by a user. Over time, with usage, each smartphone becomes completely distinct from another. One would find it disorienting to use another’s device. The smartphone’s pervasiveness into the minutae of individuals’ day-to-day calls for effective and ethical personalization of these products.
-            </p>
+            <p className = "genesis-text intro-p1">
+              Smartphones are mass manufactured products. They are identical to each of its own kind, until their ownership is claimed by a user. Over time, with usage, each smartphone becomes completely distinct from another. One would find it disorienting to use another’s device.</p>
+            <p className = "genesis-text intro-p2">The smartphone’s pervasiveness into the minutae of individuals’ day-to-day calls for effective and ethical personalization of these products.</p>
+            
           </div>
           
         </div>
@@ -38,15 +39,15 @@ const ProjectOne = () => {
             <div className = "subsection-grid">
               <figure>
                 <img src = {images['theory-icon']}/>
-                <figcaption>Understanding the theoretical concept of personalization.</figcaption>
+                <figcaption>Understanding the <span>theoretical concept</span> of personalization.</figcaption>
               </figure>
               <figure>
                 <img src = {images['define-icon']}/>
-                <figcaption>Defining personalization and what it can do.</figcaption>
+                <figcaption><span>Defining</span> personalization and what it can do.</figcaption>
               </figure>
               <figure>
                 <img src = {images['interact-icon']}/>
-                <figcaption>Understanding how users engage with personalization around them (through everyday-life and products/services).</figcaption>
+                <figcaption>Understanding <span>how users engage</span> with personalization around them (through everyday-life and products/services).</figcaption>
               </figure>
             </div>
           </div>
@@ -57,23 +58,23 @@ const ProjectOne = () => {
                 <img src = {images['perception-icon']}/>
                 <h4>Perceived Personalization</h4>
                 <ul>
-                  <li>What does “personalized” mean to users?</li>
-                  <li>What affects how personalized something is to users?</li>
+                  <li>What does “personalized” mean <span>to users</span>?</li>
+                  <li>What affects <span>how personalized</span> something is to users?</li>
                 </ul>
               </div>
               <div className = "question-category">
                 <img src = {images['ethics-icon']}/>
                 <h4>Ethical Considerations</h4>
                 <ul>
-                  <li>Can something be ”too personalized”? Where do users draw the line?</li>
+                  <li>Can something be <span>”too personalized”</span>? Where do users draw the line?</li>
                 </ul>
               </div>
               <div className = "question-category last-question">
                 <img src = {images['measuring-icon']}/>
                 <h4>Measuring Personalization</h4>
                 <ul>
-                  <li>How can personalization be made more user-friendly?</li>
-                  <li>What makes personalization acceptable, and then effective to users?</li>
+                  <li>How can personalization be made more <span>user-friendly?</span></li>
+                  <li>What makes personalization <span>acceptable</span>, and then <span>effective</span> to users?</li>
                 </ul>
               </div>
             </div>
@@ -84,17 +85,17 @@ const ProjectOne = () => {
               <div className = "opportunity">
                 <img src = {images['curation-icon']}/>
                 <h4>Personalized Curation</h4>
-                <p>Enhance smartphone functionality by developing intelligent content curation systems that understand user intent, optimize content organization, and facilitate effortless discovery, ultimately transforming devices into powerful personal knowledge management tools.</p>
+                <p>Enhance smartphone functionality by developing intelligent content curation systems that understand <span>user intent</span>, optimize content <span>organization</span>, and facilitate <span>effortless discovery</span>, ultimately transforming devices into powerful <span>personal knowledge management tools</span>.</p>
               </div>
               <div className = "opportunity">
                 <img src = {images['cohesion-icon']}/>
                 <h4>Personalized Cohesion</h4>
-                <p>A personal device that functions as autonomous, data-driven ecosystem, anticipating user needs and delivering a cohesive experience through intelligent interaction between applications, content, and data.</p>
+                <p>A personal device that functions as autonomous, data-driven ecosystem, <span>anticipating user needs</span> and delivering a <span>cohesive experience</span> through <span>intelligent interaction between applications, content, and data.</span></p>
               </div>
               <div className = "opportunity">
                 <img src = {images['connection-icon']}/>
                 <h4>Personalized Connection</h4>
-                <p>Revolutionize digital communication by developing technology that recognizes the unique dynamics between individuals, enabling more meaningful and efficient interactions across various platforms.</p>
+                <p>Revolutionize digital communication by developing technology that recognizes the unique dynamics between individuals, enabling more <span>meaningful and efficient digital interactions</span> across various platforms.</p>
               </div>
             </div>
           </div>
