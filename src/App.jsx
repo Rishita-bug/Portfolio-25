@@ -8,6 +8,10 @@ import SandpitPage from './Sandpit.jsx'
 import ProjectPage from './Project.jsx'
 import Footer from './Footer.jsx'
 
+import $ from "jquery";
+window.$ = $; // Ensure jQuery is available globally
+
+
 
 function Layout() {
   return(
