@@ -14,34 +14,12 @@ function SandpitPage() {
   return(
     <div className = "sandpit-container">
 
-      {/* <div className = "sandpit-row-1">
-        <figure className = "spaces-container">
-        <figcaption>How my spaces shrunk and grew during lockdown as a zine.</figcaption>
-          <img className = "spaces-img" src = {images['spaces']}/>
-        </figure>
-        <figure className = "woodcut-container">
-          <img className = "woodcut-img" src = {images['woodcut']}/>
-          <figcaption>Last moments in an old flat we used to call home, as a woodcut print.</figcaption>
-        </figure>
-      </div> */}
-
       <div className = "sandpit-grid-1">
         <p className = "spaces-p">How my spaces shrunk and grew during lockdown as a zine.</p>
         <img className = "spaces-img" src = {images['spaces']}/>
         <img className = "woodcut-img" src = {images['woodcut']}/>
         <p className = "woodcut-p">Last moments in an old flat we used to call home, as a woodcut print.</p>
       </div>
-
-      {/* <div className = "sandpit-row-2">
-        <figure className = "book-container">
-          <img className = "book-img"  src = {images['book-spread']}/>
-          <figcaption>A children’s book about the origin story of the phases of the moon. Written and illustrated by hand, Inspired by the work of Maurice Sendak.</figcaption>
-        </figure>
-        <figure className = "kalamkari-container">
-          <img className = "kalamkari-img"  src = {images['kalamkari']}/>
-          <figcaption>Kalamkari inspired illustration done for Chitrakatha ‘21 merchandise</figcaption>
-        </figure>
-      </div> */}
 
       <div className = "sandpit-grid-2">
         <p className = "spread-p">A children’s book about the origin story of the phases of the moon. Written and illustrated by hand, Inspired by the work of Maurice Sendak.</p>
@@ -50,39 +28,19 @@ function SandpitPage() {
         <p className = "kalamkari-p">Kalamkari inspired illustration done for Chitrakatha ‘21 merchandise</p>
       </div>
 
-      {/* <div className = "sandpit-row-3">
-        <figure className = "ladoo-container">
-          <img className = "ladoo-img"/>
-          <figcaption>How-to-make-motichoor-ladoo infographic</figcaption>
-        </figure>
-        <figure className = "parents-container">
-          <img className = "parents-gif"/>
-          <figcaption>Meet my parents!</figcaption>
-        </figure>
-        <figure className = "animate-container">
-          <img className = "cake-gif"/>
-          <img className = "dot-gif"/>
-          <figcaption>Been dipping my toes in Adobe Animate lately</figcaption>
-        </figure>
-        <figure className = "scoby-container">
-          <img className = "scoby-img"/>
-          <figcaption> Painting on kombucha bioleather for Luminous Lore for Concious Collective ‘24, inspired by Bomallata Lamps.</figcaption>
-        </figure>
-      </div> */}
-
       <div className = "sandpit-grid-3">
         <p className = "ladoo-p">How-to-make-motichoor-ladoo infographic</p>
-        <img className = "ladoo-img"/>
-        <img className = "parents-gif"/>
+        <img className = "ladoo-img"  src = {images['ladoo']}/>
+        <img className = "parents-gif"  src = {images['foot-rub-gif']}/>
         <p className='parents-p'>Meet my parents!</p>
-        <img className = "cake-gif"/>
-        <img className = "dot-gif"/>
+        <img className = "cake-gif"  src = {images['blank-space-cake']}/>
+        <img className = "dot-gif"  src = {images['first-ever-omg']}/>
         <p className = "animate-p">Been dipping my toes in Adobe Animate lately</p>
-        <img className = "scoby-img"/>
+        <img className = "scoby-img"  src = {images['scoby']}/>
         <p className='scoby-p'>Painting on kombucha bioleather for Luminous Lore for Concious Collective ‘24, inspired by Bomallata Lamps.</p>
       </div>
 
-      <div className = "sandpit-row-4">
+      {/* <div className = "sandpit-row-4">
         <figure className = "storyboard-container">
           <img className = "storyboard-img"/>
           <figcaption>A screenplay about an inquisitive Gulmohar flower who must hold on till the end of Monsoon to watch a neighbouring Dahlia bloom.</figcaption>
@@ -91,7 +49,7 @@ function SandpitPage() {
           <img className = "khm-gif"/>
           <figcaption>Experimental stop motion done for De rerum natura, KHM Germany.</figcaption>
         </figure>
-      </div>
+      </div> */}
 
     </div>
   )
