@@ -51,6 +51,13 @@ function SandpitPage() {
         </figure>
       </div> */}
 
+      <div className = 'sandpit-row-4'>
+        <img className = "storyboard-img" src = {images['storyboard']}/>
+        <p className = 'storyboard-p'>A screenplay about an inquisitive Gulmohar flower who must hold on till the end of Monsoon to watch a neighbouring Dahlia bloom.</p>
+        <img className = 'khm-gif' src={images['khm']}/>
+        <p className = 'khm-p'>Experimental stop motion done for De rerum natura, KHM Germany.</p>
+      </div>
+
     </div>
   )
 }

@@ -4,13 +4,13 @@
 
 .sandpit-container p {
   font-family: var(--body-font);
-  font-size: var(--medium-small);
-  line-height: 1.09;
+  font-size: var(--tiny);
+  line-height: 1.2;
 }
 
 .sandpit-container {
-  margin-inline: 2vw;
-  padding-top: 4em;
+  margin-inline: 4.5vw;
+  padding-top: 6em;
 }
 
 .sandpit-grid-1 {
@@ -29,7 +29,7 @@
   /* border: 2px solid blue; */
   margin-top: auto;
   text-align: right;
-  padding-right: 0.5em;
+  padding-right: 0.75em;
 }
 
 .spaces-img {
@@ -50,14 +50,14 @@
   display: inline-block;
   width: 100%;
   height: auto;
-  padding-left: 2em;
+  padding-left: 2.5em;
 }
 
 .woodcut-p {
   grid-area: woodcut-p;
   /* border: 2px solid blue; */
   margin-top: auto;
-  padding-left: 0.5em;
+  padding-left: 0.75em;
 }
 
 .woodcut-img,
@@ -78,7 +78,7 @@
 .spread-p {
   grid-area: spread-p;
   text-align: right;
-  padding-right: 0.5em;
+  padding-right: 0.75em;
   margin-top: auto;
   /* border: 2px solid limegreen; */
 }
@@ -88,8 +88,8 @@
   width: 100%;
   height: auto;
   grid-area: spread-img;
-  padding-right: 2em;
-  padding-top: 2em;
+  padding-right: 2.5em;
+  padding-top: 2.5em;
   /* border: 2px solid limegreen; */
 }
 
@@ -104,7 +104,7 @@
 
 .kalamkari-p {
   grid-area: kalamkari-p;
-  padding-left: 0.5em;
+  padding-left: 0.75em;
   margin-top: auto;
   /* border: 2px solid limegreen; */
 }
@@ -114,12 +114,11 @@
   width: 100%;
   grid-template-areas: 
   "ladoo-p ladoo-img parents-gif parents-p parents-p"
-  "empty-2 empty-8 scoby-img scoby-img scoby-p"
+  "ladoo-p ladoo-img scoby-img scoby-img scoby-p"
   "cake-gif dot-gif scoby-img scoby-img scoby-p"
   "empty-4 animate-p empty-5 empty-6 empty-7"
   ;
   grid-template-columns: 1fr 1fr 1.5fr 1.5fr 1fr;
-  padding-top: 4em;
   
 }
 
@@ -128,8 +127,9 @@
   text-align: right;
   margin-left: auto;
   margin-top: auto;
-  padding-right: 0.5em;
+  padding-right: 0.75em;
   text-wrap: balance;
+  padding-bottom: 2.5em;
 
 }
 
@@ -138,19 +138,20 @@
   width: 100%;
   grid-area: ladoo-img;
   margin-top: auto;
+  padding-bottom: 2.5em;
 }
 
 .parents-gif {
   object-fit: contain;
   width: 100%;
   grid-area: parents-gif;
-  padding: 1.5em;
+  padding: 2em;
 }
 
 .parents-p {
   grid-area: parents-p;
   margin-block: auto;
-  padding-left: 0.5em;
+  padding-left: 0.75em;
 }
 
 .cake-gif {
@@ -178,5 +179,40 @@
 
 .scoby-p {
   grid-area: scoby-p;
-  padding-left: 0.5em;
+  padding-left: 0.75em;
+}
+
+.sandpit-row-4 {
+  display: grid;
+  grid-template-areas: 
+  "empty-1 empty-1 khm-p khm-gif"
+  "storyboard-img storyboard-img khm-p khm-gif"
+  "storyboard-p empty-2 empty-2 empty-2"
+  ;
+  grid-template-columns: 1.5fr 1fr 0.85fr 2fr;
+  padding-top: 2em;
+}
+
+.storyboard-img {
+  object-fit: contain;
+  width: 100%;
+  grid-area: storyboard-img;
+  padding-top: 2em;
+}
+
+.storyboard-p {
+  grid-area: storyboard-p;
+}
+
+.khm-p {
+  grid-area: khm-p;
+  text-align: right;
+  margin-left: auto;
+  padding-right: 0.75em;
+}
+
+.khm-gif {
+  grid-area: khm-gif;
+  object-fit: contain;
+  width: 100%;
 }
