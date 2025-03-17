@@ -1,4 +1,5 @@
 import React from 'react'
+import './Sandpit.css'
 
 const images = Object.fromEntries(
   Object.entries(import.meta.glob("./assets/Sandpit-assets/*.{png,webp,gif}", {eager: true}))
@@ -13,29 +14,43 @@ function SandpitPage() {
   return(
     <div className = "sandpit-container">
 
-      <div className = "sandpit-row-1">
+      {/* <div className = "sandpit-row-1">
         <figure className = "spaces-container">
-          <img className = "spaces-img"/>
-          <figcaption>How my spaces shrunk and grew during lockdown as a zine.</figcaption>
+        <figcaption>How my spaces shrunk and grew during lockdown as a zine.</figcaption>
+          <img className = "spaces-img" src = {images['spaces']}/>
         </figure>
         <figure className = "woodcut-container">
-          <img className = "woodcut-img"/>
+          <img className = "woodcut-img" src = {images['woodcut']}/>
           <figcaption>Last moments in an old flat we used to call home, as a woodcut print.</figcaption>
         </figure>
+      </div> */}
+
+      <div className = "sandpit-grid-1">
+        <p className = "spaces-p">How my spaces shrunk and grew during lockdown as a zine.</p>
+        <img className = "spaces-img" src = {images['spaces']}/>
+        <img className = "woodcut-img" src = {images['woodcut']}/>
+        <p className = "woodcut-p">Last moments in an old flat we used to call home, as a woodcut print.</p>
       </div>
 
-      <div className = "sandpit-row-2">
+      {/* <div className = "sandpit-row-2">
         <figure className = "book-container">
-          <img className = "book-img"/>
+          <img className = "book-img"  src = {images['book-spread']}/>
           <figcaption>A children’s book about the origin story of the phases of the moon. Written and illustrated by hand, Inspired by the work of Maurice Sendak.</figcaption>
         </figure>
         <figure className = "kalamkari-container">
-          <img className = "kalamkari-img"/>
+          <img className = "kalamkari-img"  src = {images['kalamkari']}/>
           <figcaption>Kalamkari inspired illustration done for Chitrakatha ‘21 merchandise</figcaption>
         </figure>
+      </div> */}
+
+      <div className = "sandpit-grid-2">
+        <p className = "spread-p">A children’s book about the origin story of the phases of the moon. Written and illustrated by hand, Inspired by the work of Maurice Sendak.</p>
+        <img className = "spread-img"  src = {images['book-spread']}/>
+        <img className = "kalamkari-img"  src = {images['kalamkari']}/>
+        <p className = "kalamkari-p">Kalamkari inspired illustration done for Chitrakatha ‘21 merchandise</p>
       </div>
 
-      <div className = "sandpit-row-3">
+      {/* <div className = "sandpit-row-3">
         <figure className = "ladoo-container">
           <img className = "ladoo-img"/>
           <figcaption>How-to-make-motichoor-ladoo infographic</figcaption>
@@ -53,6 +68,18 @@ function SandpitPage() {
           <img className = "scoby-img"/>
           <figcaption> Painting on kombucha bioleather for Luminous Lore for Concious Collective ‘24, inspired by Bomallata Lamps.</figcaption>
         </figure>
+      </div> */}
+
+      <div className = "sandpit-grid-3">
+        <p className = "ladoo-p">How-to-make-motichoor-ladoo infographic</p>
+        <img className = "ladoo-img"/>
+        <img className = "parents-gif"/>
+        <p className='parents-p'>Meet my parents!</p>
+        <img className = "cake-gif"/>
+        <img className = "dot-gif"/>
+        <p className = "animate-p">Been dipping my toes in Adobe Animate lately</p>
+        <img className = "scoby-img"/>
+        <p className='scoby-p'>Painting on kombucha bioleather for Luminous Lore for Concious Collective ‘24, inspired by Bomallata Lamps.</p>
       </div>
 
       <div className = "sandpit-row-4">
