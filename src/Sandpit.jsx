@@ -40,22 +40,13 @@ function SandpitPage() {
         <p className='scoby-p'>Painting on kombucha bioleather for Luminous Lore for Concious Collective ‘24, inspired by Bomallata Lamps.</p>
       </div>
 
-      {/* <div className = "sandpit-row-4">
-        <figure className = "storyboard-container">
-          <img className = "storyboard-img"/>
-          <figcaption>A screenplay about an inquisitive Gulmohar flower who must hold on till the end of Monsoon to watch a neighbouring Dahlia bloom.</figcaption>
-        </figure>
-        <figure className = "khm-container">
-          <img className = "khm-gif"/>
-          <figcaption>Experimental stop motion done for De rerum natura, KHM Germany.</figcaption>
-        </figure>
-      </div> */}
-
       <div className = 'sandpit-row-4'>
         <img className = "storyboard-img" src = {images['storyboard']}/>
         <p className = 'storyboard-p'>A screenplay about an inquisitive Gulmohar flower who must hold on till the end of Monsoon to watch a neighbouring Dahlia bloom.</p>
         <img className = 'khm-gif' src={images['khm']}/>
         <p className = 'khm-p'>Experimental stop motion done for De rerum natura, KHM Germany.</p>
+        <img className = "parents-gif-mob"  src = {images['foot-rub-gif']}/>
+        <p className='parents-p-mob'>Meet my parents!</p>
       </div>
 
     </div>
