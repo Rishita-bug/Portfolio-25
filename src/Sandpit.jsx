@@ -1,4 +1,4 @@
-import React from 'react'
+import {React, useState, useEffect} from 'react'
 import './Sandpit.css'
 
 const images = Object.fromEntries(
@@ -9,15 +9,64 @@ const images = Object.fromEntries(
   })
 )
 
+function Modal ({imgClicked, isModalVisible, closeModal}) {
+
+  return (
+    isModalVisible &&
+    <div className = "modal-container">
+      <button className = "close-modal-btn" onClick = {closeModal}>Close</button>
+      <img className = "modal-img" src = {images[`${imgClicked}-module`]}/>
+    </div>
+  )
+}
 
 function SandpitPage() {
+
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [selectedImg, setSelectedImg] = useState(null);
+
+  const openModal = (imgName) => {
+    setSelectedImg(imgName)
+    setIsModalVisible(true)
+  }
+
+  useEffect(() => {
+    if (isModalVisible) {
+      document.body.style.overflow = "hidden"; // Prevent scrolling
+    } else {
+      document.body.style.overflow = "auto"; // Restore scrolling
+    }
+
+    // Cleanup to reset overflow when component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isModalVisible]);
+
   return(
+    <>
+    <Modal
+    imgClicked = {selectedImg}
+    isModalVisible = {isModalVisible}      
+    closeModal = {() => {
+      setSelectedImg(null)
+      setIsModalVisible(false)
+    }}
+  ></Modal>
     <div className = "sandpit-container">
 
       <div className = "sandpit-grid-1">
         <p className = "spaces-p">How my spaces shrunk and grew during lockdown as a zine.</p>
-        <img className = "spaces-img" src = {images['spaces']}/>
-        <img className = "woodcut-img" src = {images['woodcut']}/>
+        <img 
+          data-imgname = 'spaces'
+          onClick = {(e) => openModal(e.target.dataset.imgname)}
+          className = "spaces-img" 
+          src = {images['spaces']} />
+        <img 
+          data-imgname = 'woodcut'
+          onClick = {(e) => openModal(e.target.dataset.imgname)}
+          className = "woodcut-img" 
+          src = {images['woodcut']}/>
         <p className = "woodcut-p">Last moments in an old flat we used to call home, as a woodcut print.</p>
       </div>
 
@@ -45,11 +94,12 @@ function SandpitPage() {
         <p className = 'storyboard-p'>A screenplay about an inquisitive Gulmohar flower who must hold on till the end of Monsoon to watch a neighbouring Dahlia bloom.</p>
         <img className = 'khm-gif' src={images['khm']}/>
         <p className = 'khm-p'>Experimental stop motion done for De rerum natura, KHM Germany.</p>
-        <img className = "parents-gif-mob"  src = {images['foot-rub-gif']}/>
-        <p className='parents-p-mob'>Meet my parents!</p>
+        <img className = "parents-gif-med"  src = {images['foot-rub-gif']}/>
+        <p className='parents-p-med'>Meet my parents!</p>
       </div>
 
     </div>
+    </>
   )
 }
 
