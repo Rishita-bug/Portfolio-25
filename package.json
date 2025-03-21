@@ -13,12 +13,16 @@
   "author": "Rishita",
   "license": "MIT",
   "dependencies": {
+    "@react-pdf-viewer/core": "^3.12.0",
+    "@react-pdf-viewer/default-layout": "^3.12.0",
     "gsap": "^3.12.7",
     "jquery": "^3.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-pdf": "^9.2.1",
     "react-router-dom": "^7.1.2",
     "react-swipeable": "^7.0.2",
+    "turn.js": "^1.0.5",
     "vite": "^6.0.7"
   },
   "devDependencies": {

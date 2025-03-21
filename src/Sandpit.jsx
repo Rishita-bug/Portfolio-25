@@ -1,5 +1,5 @@
-import {React, useState, useEffect} from 'react'
-import './Sandpit.css'
+import {React, useState, useEffect} from 'react';
+import './Sandpit.css';
 
 const images = Object.fromEntries(
   Object.entries(import.meta.glob("./assets/Sandpit-assets/*.{png,webp,gif}", {eager: true}))
@@ -10,15 +10,16 @@ const images = Object.fromEntries(
 )
 
 function Modal ({imgClicked, isModalVisible, closeModal}) {
-
   return (
     isModalVisible &&
     <div className = "modal-container">
-      <button className = "close-modal-btn" onClick = {closeModal}>Close</button>
-      <img className = "modal-img" src = {images[`${imgClicked}-module`]}/>
+      <button className = "close-modal-btn" onClick = {closeModal}>&#10006;</button>
+    {imgClicked === "book-spread" ? <iframe src = "/HasTheMoonGoneMissing.pdf" /> : 
+      <img className = "modal-img" src = {images[`${imgClicked}-module`]}/>}
     </div>
   )
 }
+
 
 function SandpitPage() {
 
@@ -28,6 +29,7 @@ function SandpitPage() {
   const openModal = (imgName) => {
     setSelectedImg(imgName)
     setIsModalVisible(true)
+    console.log(imgName);
   }
 
   useEffect(() => {
@@ -46,13 +48,13 @@ function SandpitPage() {
   return(
     <>
     <Modal
-    imgClicked = {selectedImg}
-    isModalVisible = {isModalVisible}      
-    closeModal = {() => {
-      setSelectedImg(null)
-      setIsModalVisible(false)
-    }}
-  ></Modal>
+      imgClicked = {selectedImg}
+      isModalVisible = {isModalVisible}      
+      closeModal = {() => {
+        setSelectedImg(null)
+        setIsModalVisible(false)
+      }}>     
+    </Modal>
     <div className = "sandpit-container">
 
       <div className = "sandpit-grid-1">
@@ -72,7 +74,11 @@ function SandpitPage() {
 
       <div className = "sandpit-grid-2">
         <p className = "spread-p">A children’s book about the origin story of the phases of the moon. Written and illustrated by hand, Inspired by the work of Maurice Sendak.</p>
-        <img className = "spread-img"  src = {images['book-spread']}/>
+        <img 
+          className = "spread-img"  
+          data-imgname = "book-spread"
+          src = {images['book-spread']}
+          onClick = {(e) => openModal(e.target.dataset.imgname)}/>
         <img className = "kalamkari-img"  src = {images['kalamkari']}/>
         <p className = "kalamkari-p">Kalamkari inspired illustration done for Chitrakatha ‘21 merchandise</p>
       </div>
