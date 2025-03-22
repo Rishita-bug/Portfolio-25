@@ -275,7 +275,6 @@ iframe {
   filter: drop-shadow(0px 3px 13px);
 }
 
-
 @media screen and (max-width: 968px) {
   .sandpit-container {
     margin-inline: 6vw;
@@ -450,7 +449,6 @@ iframe {
 }
 
 @media screen and (max-with: 549px) {
-
   .sandpit-grid-1 > *,
   .sandpit-grid-2 > *,
   .sandpit-grid-3 > *,
@@ -464,5 +462,4 @@ iframe {
     grid-template-areas: unset;
     grid-template-columns: unset;
   }
-
 }

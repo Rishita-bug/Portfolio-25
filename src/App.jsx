@@ -7,12 +7,14 @@ import AboutPage from './About.jsx'
 import SandpitPage from './Sandpit.jsx'
 import ProjectPage from './Project.jsx'
 import Footer from './Footer.jsx'
+import ScrollToTop from './ScrollTop.jsx'
 
 
 
 function Layout() {
   return(
     <div>
+      <ScrollToTop />
       <Navbar />
       <Outlet />
       <Footer />
