@@ -264,6 +264,16 @@
   padding-top: 6em;
 }
 
+iframe {
+  display: block;
+  border: none;
+  margin-inline: auto;
+  width: 85%;
+  height: 90%;
+  margin-block: auto;
+  padding-bottom: 4em;
+  filter: drop-shadow(0px 3px 13px);
+}
 
 
 @media screen and (max-width: 968px) {

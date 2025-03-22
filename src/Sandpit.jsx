@@ -10,15 +10,23 @@ const images = Object.fromEntries(
 )
 
 function Modal ({imgClicked, isModalVisible, closeModal}) {
+
   return (
     isModalVisible &&
     <div className = "modal-container">
       <button className = "close-modal-btn" onClick = {closeModal}>&#10006;</button>
-    {imgClicked === "book-spread" ? <iframe src = "/HasTheMoonGoneMissing.pdf" /> : 
-      <img className = "modal-img" src = {images[`${imgClicked}-module`]}/>}
+    {imgClicked === "book-spread" ? 
+      <iframe 
+        className = "modal-content" 
+        src = "/HasTheMoonGoneMissing.pdf#scrollbar=0view=FitH&zoom=page-fit" /> : 
+      <img 
+        className = "modal-img modal-content" 
+        src = {images[`${imgClicked}-module`]}/>}
     </div>
   )
 }
+
+
 
 
 function SandpitPage() {
@@ -42,6 +50,31 @@ function SandpitPage() {
     // Cleanup to reset overflow when component unmounts
     return () => {
       document.body.style.overflow = "auto";
+    };
+  }, [isModalVisible]);
+
+  useEffect(() => {
+    const handleCloseModalAlt = (event) => {
+      if (!event.target.closest(".modal-content")) {
+        setIsModalVisible(false);
+      }
+    };
+
+    /*React schedules a re-render when isModalVisible is set to true 
+    after clicking on image, but doesn't execute it.
+    Meanwhile, useEffect is runs before the modal is rendered,
+    and the event bubbles upto the document and stopPropogation has no effect.*/
+  
+    if (isModalVisible) {
+      setTimeout(() => {
+        document.addEventListener("click", handleCloseModalAlt);
+      }, 0);
+    } else {
+      document.removeEventListener("click", handleCloseModalAlt);
+    }
+  
+    return () => {
+      document.removeEventListener("click", handleCloseModalAlt);
     };
   }, [isModalVisible]);
 
