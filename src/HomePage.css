@@ -13,9 +13,10 @@
 .hero-text {
   padding-top: 10vh;
   font-family: var(--header-font);
-  font-size: clamp(28px, 5vw, 120px);
+  /* font-size: clamp(28px, 5vw, 120px); */
+  font-size: var(--display);
   width: clamp(200px, 60%, 1200px);
-  padding-bottom: 2%;
+  padding-bottom: 0.5em;
   font-weight: 600;
   text-wrap: balance;
   line-height: 1.1em;
@@ -23,11 +24,19 @@
 
 .about-site {
   font-family: var(--body-font);
-  width: 40vw;
-  max-width: 1200px;
+  /* width: 40vw; */
+  width: 80%;
+  max-width: 50ch;
   min-width: 200px;
-  font-size: clamp(10px, 2vw, 3rem);
+  font-size: var(--h4);
   text-wrap: balance;
+  font-weight: 350;
+  line-height: 1.09;
+}
+
+.about-site span {
+  font-family: var(--kids);
+  font-size: var(--h2);
 }
 
 .project-number {

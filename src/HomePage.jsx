@@ -14,7 +14,7 @@ function HeroSection(){
         A designer-storyteller in the avid pursuit of human-ness in design.
       </h1>
       <p className="about-site">
-        Here you can find selected work, musings, and ways to reach out to me.
+        Here you will find selected work, <span>musings</span>, and ways to reach out to me.
       </p>
       <img className="hero-visual"></img>
     </header>
