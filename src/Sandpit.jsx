@@ -112,13 +112,23 @@ function SandpitPage() {
           data-imgname = "book-spread"
           src = {images['book-spread']}
           onClick = {(e) => openModal(e.target.dataset.imgname)}/>
-        <img className = "kalamkari-img"  src = {images['kalamkari']}/>
+        <img 
+          className = "kalamkari-img"
+          data-imgname = "kalamkari"  
+          src = {images['kalamkari']}
+          onClick = {(e) => openModal(e.target.dataset.imgname)}/>
         <p className = "kalamkari-p">Kalamkari inspired illustration done for Chitrakatha ‘21 merchandise</p>
+        <img className = "parents-gif-mob"  src = {images['foot-rub-gif']}/>
+        <p className='parents-p-mob'>Meet my parents!</p>
       </div>
 
       <div className = "sandpit-grid-3">
         <p className = "ladoo-p">How-to-make-motichoor-ladoo infographic</p>
-        <img className = "ladoo-img"  src = {images['ladoo']}/>
+        <img 
+        className = "ladoo-img"
+        data-imgname = "ladoo"  
+        src = {images['ladoo']}
+        onClick ={(e) => openModal(e.target.dataset.imgname)}/>
         <img className = "parents-gif"  src = {images['foot-rub-gif']}/>
         <p className='parents-p'>Meet my parents!</p>
         <img className = "cake-gif"  src = {images['blank-space-cake']}/>
