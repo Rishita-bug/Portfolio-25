@@ -57,6 +57,13 @@ import ProjectFour from './ProjectFour';
 import ProjectFive from './ProjectFive';
 import ProjectThree from './ProjectThree-prism';
 
+import Project1Thumbnail from './assets/Thumbnails/personalization-thumbnail.webp';
+import Project2Thumbnail from './assets/Thumbnails/outandabout-thumbnail.webp';
+import Project3Thumbnail from './assets/Thumbnails/prism-thumbnail.webp';
+import Project4Thumbnail from './assets/Thumbnails/ashore-thumbnail.webp';
+import Project5Thumbnail from './assets/Thumbnails/papereku-thumbnail.webp';
+import Project6Thumbnail from './assets/Thumbnails/parksy-thumbnail.webp';
+
 const projects = [
 
     {
@@ -65,7 +72,7 @@ const projects = [
       title: "Personalization in Intelligent Mobile Devices",
       year: "2024",
       id: 1,
-      source: TestImage,
+      source: Project1Thumbnail,
       tags: ["ux research", "ux design"],
       description: "Very short description about the project. Might go upto a second line, partly. Perhaps a little more.",
       headerImg: HeaderImg,
@@ -82,7 +89,7 @@ const projects = [
       title: "Out & About: Commute Guide",
       year: "2023",
       id: 2,
-      source: TestImage,
+      source: Project2Thumbnail,
       tags: ["information design", "graphic design", "ux research"],
       description: "Very short description about the project. Might go upto a second line, partly. Perhaps a little more.",
       headerImg: HeaderImg,
@@ -96,10 +103,10 @@ const projects = [
     {
       number:"3/6",
       path:'/project-3',
-      title: "Motion Design for Digital Wellbeing Widgets",
+      title: "Motion Design for Widgets",
       year: "2023",
       id: 3,
-      source: TestImage,
+      source: Project3Thumbnail,
       tags: ["ux research", "motion design"],
       description: "Very short description about the project. Might go upto a second line, partly. Perhaps a little more.",
       headerImg: HeaderImg,
@@ -116,7 +123,7 @@ const projects = [
       title: "Ashore: Board Game Design",
       year: "2022",
       id: 4,
-      source: TestImage,
+      source: Project4Thumbnail,
       tags: ["game design", "graphic design"],
       description: "Very short description about the project. Might go upto a second line, partly. Perhaps a little more.",
       headerImg: HeaderImg,
@@ -133,7 +140,7 @@ const projects = [
       title: "Papereku: Visual Identity",
       year: "2022",
       id: 5,
-      source: TestImage,
+      source: Project5Thumbnail,
       tags: ["brand identity", "graphic design"],
       description: "Very short description about the project. Might go upto a second line, partly. Perhaps a little more.",
       headerImg: HeaderImg,
@@ -150,7 +157,7 @@ const projects = [
       title: "Dads, Daughters and their Parks",
       year: "2021",
       id: 6,
-      source: TestImage,
+      source: Project6Thumbnail,
       tags: ["graphic design", "experimental typography"],
       description: "Very short description about the project. Might go upto a second line, partly. Perhaps a little more.",
       headerImg: HeaderImg,

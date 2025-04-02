@@ -70,7 +70,7 @@ function SandpitPage() {
         document.addEventListener("click", handleCloseModalAlt);
       }, 0);
     } else {
-      document.removeEventListener("click", handleCloseModalAlt);cd portfolio-25
+      document.removeEventListener("click", handleCloseModalAlt);
     }
   
     return () => {
