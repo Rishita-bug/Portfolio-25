@@ -5,6 +5,13 @@
   font-size: 1.1rem;
 }
 
+.footer-wrapper {
+  background-color: rgb(104, 104, 147);
+  width: 100%;
+  margin-left: 0;
+  padding-left: 0;
+}
+
 .footer-container {
   font-family: var(--body-font);
   font-weight: 300;
@@ -22,7 +29,7 @@
     "typeface email"
     "copyright copyright"
   ;
-  background-color: rgb(104, 104, 147);
+
 }
 
 .credits-line {
@@ -76,7 +83,7 @@
      "typeface email"
      "copyright copyright"
     ;
-    margin-top: 12em;
+    /* margin-top: 12em; */
     position: relative;
     bottom: 0;
    }

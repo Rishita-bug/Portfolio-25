@@ -244,6 +244,7 @@
   width: 100vw;
   overflow: auto;
   height: 100vh;
+  padding-bottom: 8em;
 }
 
 .close-modal-btn {

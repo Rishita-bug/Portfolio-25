@@ -22,7 +22,7 @@ body {
   left: 0;
   right: 0;
   background-color: hsl(0, 0%, 100%, 0.8);
-  backdrop-filter: blur(1rem);
+  backdrop-filter: blur(20px);
   position: fixed;
   top: 0px;
   z-index: 9999;

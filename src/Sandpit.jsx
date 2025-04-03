@@ -134,7 +134,11 @@ function SandpitPage() {
         <img className = "cake-gif"  src = {images['blank-space-cake']}/>
         <img className = "dot-gif"  src = {images['first-ever-omg']}/>
         <p className = "animate-p">Been dipping my toes in Adobe Animate lately</p>
-        <img className = "scoby-img"  src = {images['scoby']}/>
+        <img 
+        className = "scoby-img"
+        data-imgname = "scoby" 
+        onClick = {(e) => openModal(e.target.dataset.imgname)} 
+        src = {images['scoby']}/>
         <p className='scoby-p'>Painting on kombucha bioleather for Luminous Lore for Concious Collective ‘24, inspired by Bomallata Lamps.</p>
       </div>
 

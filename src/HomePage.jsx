@@ -4,8 +4,6 @@ import './index.css';
 import './HomePage.css';
 import {Link} from 'react-router-dom';
 import projects from './projects';
-import TestImage from './test-image.jpg';
-
 
 function HeroSection(){
   return(
@@ -77,7 +75,7 @@ const ProjectThumbnails = forwardRef(({id, source, path}, ref) => {
       ref = {ref}
     >
     <img src = {source} className="thumbnail-img"></img>
-    <Link to={path} className="view-more-link">View more</Link>
+    <Link to={path} className="view-more-link"></Link>
     </div>
   )
 })
@@ -100,6 +98,22 @@ function WorkSection({ref}){
   const thumbnailRefs = useRef([]); //create an array of refs to observe
 
   useEffect(() => {
+
+    // function getRootMargin() {
+    //   if (window.innerWidth > 1440) { // Large desktop screens
+    //     return '-35% 0px -55% 0px'; // Adjusted values for bigger viewports
+    //   } else if (window.innerWidth > 1024) { // Standard laptop screens
+    //     return '-25% 0px -45% 0px';
+    //   } else { // Smaller screens
+    //     return '-20% 0px -40% 0px';
+    //   }
+    // }
+
+    // const observerOptions = {
+    //   rootMargin: getRootMargin(),
+    //   threshold: [0.2], 
+    // };
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -111,10 +125,7 @@ function WorkSection({ref}){
         } 
       });
     },
-    { 
-      rootMargin: '-25% 0px -45% 0px',
-      threshold: [0.2],
-    }
+    {rootMargin: '-25% 0px -45% 0px', threshold: 0.2}
   );
 
   //observe all thumbnails
@@ -191,7 +202,8 @@ function WorkSection({ref}){
                                 // store it in the thumbnailRefs.current array at the position index."
               />
             {/* </Link> */}
-              <hr className={currentProject?.id === project.id ? "active-hr" : "inactive-hr" } />
+            <div>
+            <hr className={currentProject?.id === project.id ? "active-hr" : "inactive-hr" } />
               <ProjectTags
                 className={currentProject?.id === project.id ? "active-tags" : "inactive-tags" }
                 tags = {project.tags}
@@ -200,6 +212,7 @@ function WorkSection({ref}){
                 className={currentProject?.id === project.id ? "active-description" : "inactive-description" }
                 description={project.description}
               />
+              </div>
             </div>
           )
         })

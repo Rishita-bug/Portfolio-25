@@ -218,6 +218,7 @@
   scroll-behavior: smooth; /* Smooth scrolling */
   -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
   scrollbar-width: none; /* Hide scrollbar in Firefox */
+  filter: drop-shadow(0px 3px 13px rgba(172, 172, 172, 0.5));
 }
 
 .slide-img {
@@ -243,10 +244,17 @@
 
 .prev-slide-button {
   padding-left: 20px;
+  padding-right: 0.5em;
 }
 
 .next-slide-button {
   padding-right: 20px;
+  padding-left: 0.5em;
+}
+
+.next-slide-button:hover,
+.prev-slide-button:hover {
+  font-weight: 700;
 }
 
 .prev-slide-button::before {
