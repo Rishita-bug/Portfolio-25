@@ -29,6 +29,7 @@ body {
   transform: translateY(0);
   transition: transform 0.2s ease-in-out;
   box-shadow: 0 1px 12px rgba(73, 73, 247, 0.2);
+  max-width: 100vw;
 }
 
 .nav-hidden {

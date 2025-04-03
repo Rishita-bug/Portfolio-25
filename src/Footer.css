@@ -6,16 +6,20 @@
 }
 
 .footer-wrapper {
-  background-color: rgb(104, 104, 147);
-  width: 100%;
+  /* background-color: #657cc4; */
+  position: relative;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(101, 124, 196, 0.6) 100%);
+  width: 100vw;
   margin-left: 0;
   padding-left: 0;
+  padding-top: 4em;
 }
 
 .footer-container {
   font-family: var(--body-font);
   font-weight: 300;
-  font-size: 0.7rem;
+  font-size: var(--small);
   padding-left: 1.1rem;
   padding-right: 1.1rem;
   padding-bottom: 1rem;
@@ -29,7 +33,7 @@
     "typeface email"
     "copyright copyright"
   ;
-
+  color: #323232;
 }
 
 .credits-line {
@@ -115,7 +119,7 @@
     justify-items: center;
     align-content: center;
     grid-area: copyright;
-    padding-top: 1em;
+    padding-top: 0.5em;
    }
 
 }

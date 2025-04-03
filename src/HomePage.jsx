@@ -202,6 +202,8 @@ function WorkSection({ref}){
                                 // store it in the thumbnailRefs.current array at the position index."
               />
             {/* </Link> */}
+            {isWide ?
+            (
             <div>
             <hr className={currentProject?.id === project.id ? "active-hr" : "inactive-hr" } />
               <ProjectTags
@@ -212,7 +214,18 @@ function WorkSection({ref}){
                 className={currentProject?.id === project.id ? "active-description" : "inactive-description" }
                 description={project.description}
               />
-              </div>
+              </div>) :
+
+              <>
+              <hr className={currentProject?.id === project.id ? "active-hr" : "inactive-hr" } />
+              <ProjectTags
+                className={currentProject?.id === project.id ? "active-tags" : "inactive-tags" }
+                tags = {project.tags}
+              />
+              <ProjectDescription
+                className={currentProject?.id === project.id ? "active-description" : "inactive-description" }
+                description={project.description}
+              /></>}
             </div>
           )
         })
