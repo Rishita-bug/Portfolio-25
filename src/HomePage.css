@@ -29,7 +29,7 @@
   width: 80%;
   max-width: 50ch;
   min-width: 200px;
-  font-size: var(--h4);
+  font-size: var(--body);
   text-wrap: balance;
   font-weight: 350;
   line-height: 1.09;
@@ -200,6 +200,11 @@ hr {
     left: 0; /* Match alignment to the leftmost position */
   }
 
+  .hero-section {
+    margin-left: 4vw;
+    padding-top: 3em;
+  }
+
   .project-number {
     padding-bottom: clamp(2.1rem, 4vw, 6rem);
     font-weight: 250;
@@ -269,6 +274,7 @@ hr {
     width: 80%;
     min-width: 250px;
     padding-top: 2%;
+    max-width: 55ch;
   }
 
   .sticky-titles-container {
@@ -283,18 +289,25 @@ hr {
     z-index: 999;
     width: max-content;
     font-size: clamp(1.55rem, 2.7vw, 6rem);
-    margin-left: -4.6%;
+    margin-left: -4.4%;
   }
 
   .project-title {
     font-size: inherit;
     font-weight: 300;
-    /* text-shadow: 2px 2px 3px rgba(97, 97, 97, 0.3); */
     font-weight: 400;
     padding-top: unset;
-    max-width: 35vw;
-    /* text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8); */
-    text-shadow: 2px 4px 3px rgba(255, 255, 255, 0.5);
+    max-width: 32vw;
+    background: radial-gradient(
+      ellipse 80% 60% at center,
+      rgba(255, 255, 255, 0.2) 10%,
+      rgba(255, 255, 255, 0) 70%
+    );
+    backdrop-filter: blur(0.1em);
+    -webkit-backdrop-filter: blur(0.1em);
+    border-radius: 0.25em; 
+    padding-bottom: 0.15em;
+    padding-right: 1ch;
   }
 
   .project-number {
@@ -329,14 +342,14 @@ hr {
   }
 
   .thumbnail-container {
-    filter: grayscale(80%) brightness(90%) contrast(70%);
+    filter: grayscale(80%);
     mix-blend-mode: multiply;
     transition: filter 0.25s ease;
   }
 
   .thumbnail-container:has(:hover),
   .thumbnail-img {
-    filter: grayscale(0%) brightness(100%) contrast(100%)
+    filter: grayscale(0%) 
       drop-shadow(0px 3px 13px rgba(172, 172, 172, 0.5));
   }
 
@@ -360,8 +373,89 @@ hr {
   }
 }
 
-@media screen and (min-width: 1970px) {
+@media screen and (min-width: 862px) {
+  hero-section {
+    width: unset;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+
+  .hero-section {
+    margin-top: 8em;
+    margin-left: 4vw;
+  }
+
+  .work-section-container {
+    margin-inline: unset;
+    margin-inline: 3vw;
+  }
+
   .project-grid {
     column-gap: 2em;
+  }
+
+  .project-description {
+    max-width: 55ch;
+  }
+
+  .about-site {
+    font-size: var(--h3);
+    line-height: 1.09;
+    text-wrap: unset;
+    max-width: 40ch;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+
+  .hero-section {
+    margin-top: 10em;
+    margin-left: 5vw;
+  }
+
+  .hero-text {
+    font-size: 4.5em;
+  }
+
+  .about-site {
+    font-size: 2.36em;
+    max-width: 35ch;
+  }
+
+  .work-section-container {
+    margin-inline: unset;
+    margin-inline: 2vw;
+  }
+
+  .project-grid {
+    column-gap: 2.25em;
+  }
+
+  .project-description {
+    max-width: 66ch;
+  }
+}
+
+@media  screen and (min-width: 3200px) {
+  
+  .hero-section {
+    margin-top: 14em;
+    margin-left: 6vw;
+  }
+
+  .hero-text {
+    font-size: 6.25em;
+    width: unset;
+    max-width: 45ch;
+  }
+
+  .about-site {
+    font-size: 3em;
+    max-width: 34ch;
+  }
+
+  .about-site span {
+    font-size: 1.36em;
   }
 }
