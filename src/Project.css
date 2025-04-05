@@ -1,3 +1,22 @@
+.header-img-container {
+  position: relative;
+  top: -1rem;
+  width: 100%;
+  opacity: 1;
+  height: 40vh;
+}
+
+.header-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.title {
+  padding-top: 4em;
+}
+
 .title,
 .overview-headers {
   font-family: var(--header-font);
@@ -110,22 +129,6 @@
 
 .pagination-list li {
   padding: 10px 10px;
-}
-
-.header-img-container {
-  position: relative;
-  top: -1rem;
-  width: 100%;
-  background-color: rgb(174, 174, 174);
-  opacity: 1;
-  height: 30vh;
-}
-
-.header-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: bottom;
 }
 
 .overview-container {
@@ -355,7 +358,7 @@
 
   .title {
     padding-top: 2rem;
-    font-size: clamp(2.5rem, 3vw, 5rem); 
+    font-size: clamp(2.5rem, 3vw, 5rem);
     padding-left: 0;
     margin-left: 0;
     grid-area: title-1;
@@ -424,14 +427,14 @@
     width: 100%;
     background-color: rgb(174, 174, 174);
     opacity: 1;
-    height: 30vh;
+    height: 40vh;
   }
 
   .header-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: bottom;
   }
 
   .pagination-container {

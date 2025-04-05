@@ -1,0 +1,24 @@
+
+.project-two-container img {
+  object-fit: contain;
+  display: block;
+}
+
+.brochure-cover, .brochure-full {
+  width: 100%;
+  height: auto;
+}
+
+.brochure-cover {
+  padding-top: 4em;
+}
+
+.brochure-map {
+  width: 60%;
+  height: auto;
+  margin-inline: auto;
+}
+
+.project-two-container {
+  padding-bottom: 6em;
+}

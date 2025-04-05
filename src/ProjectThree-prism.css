@@ -3,7 +3,8 @@
 }
 
 .p3-container {
-  margin-inline: 4vw;
+  margin-inline: 6vw;
+  margin-top: 6em;
 }
 
 /*TYPOGRAPHY*/
@@ -403,5 +404,3 @@
     column-gap: 1em;
   }
 }
-
-

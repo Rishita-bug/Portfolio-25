@@ -2,9 +2,16 @@
 import TestImage from './test-image.jpg';
 import HeaderImg from './halftone-test2.png';
 
+import Project2Header from './assets/Header-imgs/outandabout-header.webp'
+import PersonalizationHeader from './assets/Header-imgs/personalization-header.webp'
+import PrismHeader from './assets/Header-imgs/prism-header.webp'
+import AshoreHeader from './assets/Header-imgs/ashore-header.webp'
+import ParksyHeader from './assets/Header-imgs/parksy-header.webp'
+
 import Project1Slide1 from './slides-test-img.png';
 import Project1Slide2 from './slides-test-img2.jpg';
 import Project1Slide3 from './slides-test-img3.png';
+
 
 import Project2Slide1 from './assets/out&about-process-1.png';
 import Project2Slide2 from './assets/out&about-process-2.png';
@@ -52,7 +59,7 @@ import Project6Slide2 from './slides-test-img.png';
 import Project6Slide3 from './slides-test-img.png';
 
 import ProjectOne from './ProjectOne';
-import ProjectTwo from './ProjectFive';
+import ProjectTwo from './ProjectTwo';
 import ProjectFour from './ProjectFour';
 import ProjectFive from './ProjectFive';
 import ProjectThree from './ProjectThree-prism';
@@ -75,7 +82,7 @@ const projects = [
       source: Project1Thumbnail,
       tags: ["ux research", "ux design"],
       description: "My graduation project done as a part of a 6 month internship at Samsung Research Institute that explores personalization with a backdrop of Galaxy AI.",
-      headerImg: HeaderImg,
+      headerImg: PersonalizationHeader,
       about: "This project was done as a part of my 6 month internship as SRI-B.",
       brief: "Gather and leverage insights from user adoption and response to personalized experiences (physical and digital) to develop design principles and concepts for effective personalization in intelligent mobile devices to enhance everyday experiences of Millennials and Gen Z.",
       deliverables: "Design guidelines, Prototypes",
@@ -92,11 +99,11 @@ const projects = [
       source: Project2Thumbnail,
       tags: ["information design", "graphic design", "ux research"],
       description: "A guide to help new joinees commute in and around NID Andhra Pradesh's transit campus, as a part of a welcome kit.",
-      headerImg: HeaderImg,
-      about: "All about project 2",
-      brief: "This is the second project's brief.",
-      deliverables: "Something, more stuff, final stuff",
-      duration: "5 months",
+      headerImg: Project2Header,
+      about: "The aim of this classroom assignment was to understand and experience the UX process. Commuting in and around a transit campus in a semi-remote location can initially be challenging for new joinees, students as well as staff and visiting faculty. A guide serves as a support mechanism to help users feel welcome and confident in their first few commutes in the area.",
+      brief: "As a part of a welcome kit to be provided to new joinees, design a guide to aid in transportation in and around the NID AP's transit campus.",
+      deliverables: "Undefined",
+      duration: "2 weeks",
       slides: [Project2Slide1, Project2Slide2, Project2Slide3, Project2Slide4, Project2Slide5, Project2Slide6, Project2Slide7, Project2Slide8, Project2Slide9, Project2Slide10, Project2Slide11, Project2Slide12, Project2Slide13, Project2Slide14, Project2Slide15, Project2Slide16],
       component: ProjectTwo, 
     },
@@ -109,8 +116,8 @@ const projects = [
       source: Project3Thumbnail,
       tags: ["ux research", "motion design"],
       description: "Motion design to enhance everyday smartphone interactions, done as a part of the PRISM programme with SRI-B",
-      headerImg: HeaderImg,
-      about: "All about project 3",
+      headerImg: PrismHeader,
+      about: "A fun exploration of putting animation at work, backed by in-depth, revelatory UX research.",
       brief: "Elevate everyday phone interactions that cause frustration into positive experiences.",
       deliverables: "VOCs, Research Insights, Motion Graphics, Protoypes",
       duration: "2.5 months",
@@ -126,11 +133,11 @@ const projects = [
       source: Project4Thumbnail,
       tags: ["game design", "graphic design"],
       description: "A board game where players play against an antagonist and time to save an island and its people from submerging as sea levels rise.",
-      headerImg: HeaderImg,
+      headerImg: AshoreHeader,
       about: "All about project 4",
       brief: "To design an educational board game for children that's engaging, playable and relevant to their curriculum.",
       deliverables: "Something, more stuff, final stuff",
-      duration: "3 months",
+      duration: "1.5 week",
       slides: [Project4Slide1, Project4Slide2, Project4Slide3, Project4Slide4, Project4Slide45, Project4Slide5, Project4Slide6],
       component: ProjectFour, 
     },
@@ -160,7 +167,7 @@ const projects = [
       source: Project6Thumbnail,
       tags: ["graphic design", "experimental typography"],
       description: "A short book written and illustrated in the glyphs of Varta, a typographic exploration.",
-      headerImg: HeaderImg,
+      headerImg: ParksyHeader,
       about: "Done as a conclusion to a Typography course, this project intends to be a practice in typesetting and publication design. Through experiemental type and the use of digital and physical media, it explores a father-daughter relationship through evening walks in a city's parks over the years. It explores the importance of having such spaces for one to feel closer to the natural world amid urban frenzy.",
       brief: "To design and typeset a small book, applying principles of publication design, including grid systems, hierarchy, and readability. The project aimed to develop an understanding of typography in long-form content.",
       deliverables: "Printed, hand-bound book",
