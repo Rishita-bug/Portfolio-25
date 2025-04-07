@@ -58,6 +58,7 @@
   font-weight: 400;
   font-size: 1.7rem;
   padding-top: 0.5rem;
+  pointer-events: none;
 }
 
 .tags-list {
@@ -265,7 +266,7 @@ hr {
     grid-area: tag;
     padding: 0px;
     font-size: var(--body);
-    /* padding-top: 2%; */
+    padding-top: 0.5em;
   }
 
   .project-description {
@@ -275,6 +276,7 @@ hr {
     min-width: 250px;
     padding-top: 2%;
     max-width: 55ch;
+    padding-right: 2em;
   }
 
   .sticky-titles-container {
@@ -305,7 +307,7 @@ hr {
     );
     backdrop-filter: blur(0.1em);
     -webkit-backdrop-filter: blur(0.1em);
-    border-radius: 0.25em; 
+    border-radius: 0.25em;
     padding-bottom: 0.15em;
     padding-right: 1ch;
   }
@@ -349,8 +351,7 @@ hr {
 
   .thumbnail-container:has(:hover),
   .thumbnail-img {
-    filter: grayscale(0%) 
-      drop-shadow(0px 3px 13px rgba(172, 172, 172, 0.5));
+    filter: grayscale(0%) drop-shadow(0px 3px 13px rgba(172, 172, 172, 0.5));
   }
 
   hr {
@@ -380,7 +381,6 @@ hr {
 }
 
 @media screen and (min-width: 1920px) {
-
   .hero-section {
     margin-top: 8em;
     margin-left: 4vw;
@@ -408,7 +408,6 @@ hr {
 }
 
 @media screen and (min-width: 2560px) {
-
   .hero-section {
     margin-top: 10em;
     margin-left: 5vw;
@@ -437,8 +436,7 @@ hr {
   }
 }
 
-@media  screen and (min-width: 3200px) {
-  
+@media screen and (min-width: 3200px) {
   .hero-section {
     margin-top: 14em;
     margin-left: 6vw;

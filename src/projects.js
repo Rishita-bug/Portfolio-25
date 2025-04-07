@@ -2,11 +2,11 @@
 import TestImage from './test-image.jpg';
 import HeaderImg from './halftone-test2.png';
 
-import Project2Header from './assets/Header-imgs/outandabout-header.webp'
-import PersonalizationHeader from './assets/Header-imgs/personalization-header.webp'
+import Project2Header from './assets/Header-imgs/outandabout-header.jpg'
+import PersonalizationHeader from './assets/Header-imgs/personalization-header.jpg'
 import PrismHeader from './assets/Header-imgs/prism-header.webp'
-import AshoreHeader from './assets/Header-imgs/ashore-header.webp'
-import ParksyHeader from './assets/Header-imgs/parksy-header.webp'
+import AshoreHeader from './assets/Header-imgs/ashore-header.jpg'
+import ParksyHeader from './assets/Header-imgs/parksy-header.png'
 
 import Project1Slide1 from './slides-test-img.png';
 import Project1Slide2 from './slides-test-img2.jpg';

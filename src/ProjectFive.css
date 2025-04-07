@@ -209,6 +209,10 @@
 
 /*SPACING*/
 
+.primary-mockup {
+  padding-top: 6em;
+}
+
 .project-five-container .section,
 .primary-secondary-type-container {
   padding-bottom: clamp(3rem, 8%, 90px);

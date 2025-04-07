@@ -14,7 +14,7 @@ const ProjectFive = () => {
  
   return (
     <div className = "project-five-container">
-      <img className="primary-mockup section"/>
+      <img className="primary-mockup section" src = {images['hero-mockup']}/>
 
       <div className="gif-section section">
       <figure>
