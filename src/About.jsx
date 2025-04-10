@@ -2,8 +2,27 @@ import React from 'react'
 import {useRef, useState, useEffect} from 'react'
 import './About.css'
 import ProfileImg from './profile-img.jpg'
+import Resume from './RishitaB-resume.pdf'
 
 function AboutPage() { 
+
+  
+    
+    const email = "rishitabaghel@gmail.com"
+    const[isCopied, setIsCopied] = useState(false);
+
+    function handleCopy () {
+      navigator.clipboard.writeText(email)
+        .then(() => {
+          setIsCopied(true)
+          setTimeout(() => {setIsCopied(false)}, 1200)
+        })
+        .catch(() => {
+          console.log("Couldn\'t copy email")
+        })
+    }
+
+  
 
   return(
     <div className="about-page-container">
@@ -11,8 +30,9 @@ function AboutPage() {
       
       <div className="p-container">
         <div className="links-container">
-          <a className= "rotate-link" href="#">email</a>
-          <a className= "rotate-link" href="#">resume</a>
+          <p className = {isCopied ? "tooltip tooltip-visible" : "tooltip"}>email copied to clipboard</p>
+          <p className= "rotate-link email-link" onClick = {handleCopy}>email</p>
+          <a className= "rotate-link resume-link" href={Resume} target='_blank'>resume</a>
         </div>
         <p className="para">
         I’m a 2024 Communication Design graduate from 
