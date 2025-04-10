@@ -1,5 +1,5 @@
 import React from 'react'
-import {useRef, useState, useEffect} from 'react'
+import {useState} from 'react'
 import './About.css'
 import ProfileImg from './profile-img.jpg'
 import Resume from './RishitaB-resume.pdf'

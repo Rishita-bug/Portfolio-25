@@ -2,7 +2,7 @@ import React from 'react'
 import {useState, useEffect, useRef} from "react" 
 import { useParams, Link } from 'react-router-dom'
 import{ useSwipeable } from 'react-swipeable'
-import './Project.css'
+import './Project-revised.css'
 import projects from './projects'
 import FullscreenIcon from './fullscreen-icon.svg'
 import ExitFullscreenIcon from './esc-fullscreen-icon.png'

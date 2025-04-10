@@ -3,7 +3,8 @@
 }
 
 .project-five-container {
-  margin-inline: 4vw;
+  margin-inline: auto;
+  max-width: 2000px;
 }
 
 /*TYPOGRAPHY*/
@@ -295,5 +296,11 @@
 
   .packaging {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 2400px) {
+  .project-five-container {
+    padding-inline: 6vw;
   }
 }

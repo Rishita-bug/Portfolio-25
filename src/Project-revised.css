@@ -26,11 +26,11 @@
 
 .overview-text {
   font-family: var(--body-font);
-  font-size: var(--body);
+  font-size: var(--medium-small);
 }
 
 .overview-headers {
-  font-size: 0.9rem;
+  font-size: var(--medium-small);
   margin-left: 1vw;
   padding-left: 1rem;
   padding-right: 0.5rem;
@@ -41,7 +41,6 @@
 .brief-text,
 .deliverables-text,
 .duration-text {
-  font-size: 0.9rem;
   margin-right: 1vw;
   padding-bottom: 2rem;
   padding-left: 1rem;
@@ -99,8 +98,7 @@
 }
 
 .title {
-  margin-left: calc(1vw + 1rem);
-  font-size: 2rem;
+  /* margin-left: calc(1vw + 1rem); */
   font-weight: 300;
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
@@ -112,7 +110,7 @@
 .next-project-link {
   text-decoration: none;
   color: black;
-  font-size: 0.9rem;
+  font-size: var(--h4);
   font-weight: 350;
 }
 
@@ -162,7 +160,8 @@
 .about-text {
   grid-area: about-text;
   padding-bottom: 2rem;
-  padding-left: calc(1vw + 1rem);
+  max-width: 500px;
+  /* padding-left: calc(1vw + 1rem); */
 }
 
 .about-h {
@@ -201,15 +200,6 @@
   margin-top: 2rem;
   margin-inline: 0.5rem;
 }
-
-/* .slide-img-container {
-  background-color: lightblue;
-  aspect-ratio: 936 / 500;
-  max-width: 1000px;
-  min-width: 90vw;
-  width: 100%;
-  position: relative;
-} */
 
 .slide-img-container {
   display: flex;
@@ -315,114 +305,42 @@
     display: block;
   }
 
-  .overview-headers {
-    padding: 0;
-    margin-left: 0;
-  }
-
-  .about-h,
-  .brief-h,
-  .deliverables-h,
-  .duration-h,
-  .brief-text,
-  .deliverables-text,
-  .duration-text,
-  .about-text {
-    background-color: unset;
-    grid-area: auto;
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .about-h,
-  .brief-h,
-  .deliverables-h,
-  .duration-h {
-    font-weight: 400;
-    font-size: unset;
-  }
-
-  .brief-text,
-  .deliverables-text,
-  .duration-text,
-  .about-text {
-    font-size: unset;
-    padding-left: 0;
-    margin-left: 0;
-    padding-right: 0;
-    margin-right: 0;
-  }
-
-  .brief-text::after,
-  .deliverables-text::after {
-    content: none;
+  .deliverables-text::after,
+  .brief-text::after {
     display: none;
   }
 
-  .title {
-    padding-top: 2rem;
-    /* font-size: clamp(2.5rem, 3vw, 5rem); */
-    padding-left: 0;
-    margin-left: 0;
-    grid-area: title-1;
-    min-width: 500px;
+  .overview-container > * {
+    background-color: unset;
   }
 
   .overview-container {
-    /* margin-inline: 4vw; */
-    display: grid;
-    grid-template-areas: none;
-    /* grid-template-columns: min-content 40vw min-content 1fr; */
-    grid-template-columns: 1fr 4fr 1fr 4fr;
-    grid-template-rows: auto;
+    grid-template-areas: unset;
     grid-template-areas:
-      "empty title-1 emty wmpty"
+      "title title title title"
       "about-h about-text brief-h brief-text"
       "about-h about-text deliverables-h deliverables-text"
       "about-h about-text duration-h duration-text";
-    align-items: start;
-    justify-items: baseline;
-    /* column-gap: 1.5em; */
-    font-size: clamp(0.9rem, 1.05vw, 2.75rem);
-    padding-top: clamp(0.5rem, 2%, 0.75rem);
+    grid-template-columns: 1fr 4.2fr 1fr 4fr;
+    row-gap: 1em;
+    max-width: 2000px;
+    margin-inline: auto;
+    padding-top: 2em;
   }
 
-  .about-h {
-    grid-area: about-h;
-    padding-left: 0;
-    margin-left: 0;
+  .overview-container > * {
+    margin: 0;
+    padding: 0;
   }
 
-  .about-text {
-    grid-area: about-text;
-    width: 90%;
+  .title {
+    padding-bottom: 0.25em;
   }
 
-  .brief-h {
-    grid-area: brief-h;
-    align-self: start;
-    padding-top: 0;
-  }
-
+  .about-text,
   .brief-text {
-    grid-area: brief-text;
-    padding-top: 0;
-  }
-
-  .deliverables-h {
-    grid-area: deliverables-h;
-  }
-
-  .deliverables-text {
-    grid-area: deliverables-text;
-  }
-
-  .duration-h {
-    grid-area: duration-h;
-  }
-
-  .duration-text {
-    grid-area: duration-text;
+    text-wrap: auto;
+    max-width: 70ch;
   }
 
   .header-img-container {
@@ -487,7 +405,7 @@
 
   .slide-img-container {
     width: 80vw;
-    max-width: 2000px; 
+    max-width: 2000px;
   }
 
   .slide-img {
@@ -505,5 +423,19 @@
 
   .adjacent-project-link {
     transform: translateY(-4px);
+  }
+}
+
+@media screen and (max-width: 2400px) {
+  .overview-container {
+    padding-inline: 6vw;
+  }
+
+  .about-text {
+    padding-right: 2em;
+  }
+
+  .overview-headers {
+    padding-right: 1em;
   }
 }

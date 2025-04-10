@@ -3,8 +3,10 @@
 }
 
 .p3-container {
-  margin-inline: 6vw;
+  margin-inline: auto;
+  max-width: 2000px;
   margin-top: 6em;
+  border: 2px solid red;
 }
 
 /*TYPOGRAPHY*/
@@ -164,7 +166,7 @@
   display: grid;
   grid-template-columns: max-content auto;
   column-gap: 3em;
-  max-width: 1500px;
+  max-width: 2000px;
 }
 
 .survey-insight img {
@@ -183,7 +185,7 @@
 
 .survey-insights-grid {
   display: flex;
-  max-width: 1500px;
+  max-width: 2000px;
   gap: 2em;
   flex-wrap: wrap;
   justify-content: center;
@@ -374,13 +376,6 @@
     justify-content: space-around;
     min-width: 280px;
   }
-
-  /* .primary-research-2-insights figure {
-    border: 2px solid grey;
-    border-radius: 1em;
-    padding: 2em;
-    width: 75vw;
-  } */
 }
 
 @media screen and (max-width: 1000px) {
@@ -402,5 +397,11 @@
   .survey-insight {
     grid-template-columns: minmax(35px, 55px) minmax(150px, 300px);
     column-gap: 1em;
+  }
+}
+
+@media screen and (max-width: 2400px) {
+  .p3-container {
+    padding-inline: 6vw;
   }
 }
