@@ -60,9 +60,11 @@ import Project6Slide3 from './slides-test-img.png';
 
 import ProjectOne from './ProjectOne';
 import ProjectTwo from './ProjectTwo';
+import ProjectThree from './ProjectThree-prism';
 import ProjectFour from './ProjectFour';
 import ProjectFive from './ProjectFive';
-import ProjectThree from './ProjectThree-prism';
+import ProjectSix from './ProjectSix';
+
 
 import Project1Thumbnail from './assets/Thumbnails/personalization-thumbnail.webp';
 import Project2Thumbnail from './assets/Thumbnails/outandabout-thumbnail.webp';
@@ -173,7 +175,7 @@ const projects = [
       deliverables: "Printed, hand-bound book",
       duration: "1 week",
       slides: [Project6Slide1, Project6Slide2, Project6Slide3],
-      component: ProjectOne, 
+      component: ProjectSix, 
     }
   ];
 

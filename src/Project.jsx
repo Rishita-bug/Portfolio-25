@@ -314,7 +314,7 @@ function ProjectPage() {
     <>
       <HeaderImg headerImgSrc={projectInView.headerImg} />
       <ProjectOverview projectInView = {projectInView} />
-      {projectInView.id !== 3 && projectInView.id !== 1 &&
+      {projectInView.id !== 3 && projectInView.id !== 1 && projectInView.id !== 6 &&
       <ProcessSlides projectInView={projectInView} id = {id} />}
       <DynamicContent />
       <Pagination projectInView={projectInView} id = {id} />
