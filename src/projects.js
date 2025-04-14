@@ -1,5 +1,4 @@
 
-import TestImage from './test-image.jpg';
 import HeaderImg from './halftone-test2.png';
 
 import Project2Header from './assets/Header-imgs/outandabout-header.jpg'
@@ -7,10 +6,6 @@ import PersonalizationHeader from './assets/Header-imgs/personalization-header.j
 import PrismHeader from './assets/Header-imgs/prism-header.webp'
 import AshoreHeader from './assets/Header-imgs/ashore-header.jpg'
 import ParksyHeader from './assets/Header-imgs/parksy-header.png'
-
-import Project1Slide1 from './slides-test-img.png';
-import Project1Slide2 from './slides-test-img2.jpg';
-import Project1Slide3 from './slides-test-img3.png';
 
 
 import Project2Slide1 from './assets/out&about-process-1.png';
@@ -30,9 +25,6 @@ import Project2Slide14 from './assets/out&about-process-14.gif';
 import Project2Slide15 from './assets/out&about-process-15.png';
 import Project2Slide16 from './assets/out&about-process-16.png';
 
-import Project3Slide1 from './slides-test-img.png';
-import Project3Slide2 from './slides-test-img.png';
-import Project3Slide3 from './slides-test-img.png';
 
 import Project4Slide1 from './assets/ashore-process-1.png';
 import Project4Slide2 from './assets/ashore-process-2.png';
@@ -54,9 +46,6 @@ import Project5Slide8 from './assets/papereku-process-8.webp';
 import Project5Slide9 from './assets/papereku-process-9.webp';
 import Project5Slide10 from './assets/papereku-process-10.webp';
 
-import Project6Slide1 from './slides-test-img.png';
-import Project6Slide2 from './slides-test-img.png';
-import Project6Slide3 from './slides-test-img.png';
 
 import ProjectOne from './ProjectOne';
 import ProjectTwo from './ProjectTwo';
@@ -89,7 +78,6 @@ const projects = [
       brief: "Gather and leverage insights from user adoption and response to personalized experiences (physical and digital) to develop design principles and concepts for effective personalization in intelligent mobile devices to enhance everyday experiences of Millennials and Gen Z.",
       deliverables: "Design guidelines, Prototypes",
       duration: "6 months",
-      slides: [Project1Slide1, Project1Slide2, Project1Slide3],
       component: ProjectOne, 
     },
     {
@@ -123,7 +111,6 @@ const projects = [
       brief: "Elevate everyday phone interactions that cause frustration into positive experiences.",
       deliverables: "VOCs, Research Insights, Motion Graphics, Protoypes",
       duration: "2.5 months",
-      slides: [Project3Slide1, Project3Slide2, Project3Slide3],
       component: ProjectThree, 
     },
     {
@@ -136,7 +123,7 @@ const projects = [
       tags: ["game design", "graphic design"],
       description: "A board game where players play against an antagonist and time to save an island and its people from submerging as sea levels rise.",
       headerImg: AshoreHeader,
-      about: "All about project 4",
+      about: "Ashore started as a classroom project that we continued to develop",
       brief: "To design an educational board game for children that's engaging, playable and relevant to their curriculum.",
       deliverables: "Something, more stuff, final stuff",
       duration: "1.5 week",
@@ -174,7 +161,6 @@ const projects = [
       brief: "To design and typeset a small book, applying principles of publication design, including grid systems, hierarchy, and readability. The project aimed to develop an understanding of typography in long-form content.",
       deliverables: "Printed, hand-bound book",
       duration: "1 week",
-      slides: [Project6Slide1, Project6Slide2, Project6Slide3],
       component: ProjectSix, 
     }
   ];

@@ -104,8 +104,11 @@
   margin-top: 1rem;
   float: left;
   clip-path: inset(0 round 100px);
+  -webkit-clip-path: inset(0 round 100px);
   shape-outside: inset(0 round 100px);
+  -webkit-shape-outside: inset(0 round 100px);
   max-width: 250px;
+  display: block;
 }
 
 .work,
@@ -241,5 +244,9 @@
   .tooltip {
     left: -2em;
     bottom: -4em;
+  }
+
+  .profile-img {
+    margin-top: 2em;
   }
 }

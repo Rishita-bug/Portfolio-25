@@ -8,13 +8,12 @@
 .hero-section {
   height: 100vh;
   height: 100svh;
-  padding-inline: 4vw;
+  padding-inline: 6vw;
 }
 
 .hero-text {
   padding-top: 10vh;
   font-family: var(--header-font);
-  /* font-size: clamp(28px, 5vw, 120px); */
   font-size: var(--display);
   width: clamp(200px, 60%, 1200px);
   padding-bottom: 0.5em;
@@ -25,7 +24,6 @@
 
 .about-site {
   font-family: var(--body-font);
-  /* width: 40vw; */
   width: 80%;
   max-width: 50ch;
   min-width: 200px;
@@ -86,8 +84,7 @@
   display: grid;
   gap: 0.5rem;
   margin-bottom: 3rem;
-  margin-left: 1.1rem;
-  margin-right: 1.1rem;
+  margin-inline: 6vw;
   grid-template-areas:
     "number img-1"
     "year img-2"

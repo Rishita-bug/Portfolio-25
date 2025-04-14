@@ -446,9 +446,14 @@
   }
 }
 
+@media screen and (max-width: 538px) {
+  .genesis-content {
+    grid-template-columns: unset;
+  }
+}
+
 @media screen and (max-width: 2400px) {
   .p1-container {
     padding-inline: 6vw;
   }
 }
-
