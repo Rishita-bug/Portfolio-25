@@ -9,7 +9,7 @@ function HeroSection(){
   return(
     <header className="hero-section">
       <h1 className="hero-text">
-        A designer-storyteller in the avid pursuit of human-ness in design.
+        A designer-storyteller in the avid pursuit of human&#8209;ness in design.
       </h1>
       <p className="about-site">
         Here you will find selected work, <span>musings</span>, and ways to reach out to me.

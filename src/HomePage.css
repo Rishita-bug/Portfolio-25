@@ -8,7 +8,7 @@
 .hero-section {
   height: 100vh;
   height: 100svh;
-  padding-left: 4vw;
+  padding-inline: 4vw;
 }
 
 .hero-text {
@@ -455,5 +455,18 @@ hr {
 
   .about-site span {
     font-size: 1.36em;
+  }
+}
+
+@media screen and (max-width: 504px) {
+  .about-site {
+    width: unset;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .hero-text {
+    padding-top: 14vh;
   }
 }

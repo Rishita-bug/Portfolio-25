@@ -2,6 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+
+}
+
+button, p, img {
+    -webkit-touch-callout: none;        /* iOS long-press menu */
+    -webkit-user-select: none;          /* Prevents weird text highlighting */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 :root {

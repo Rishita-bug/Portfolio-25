@@ -34,7 +34,7 @@
   margin-left: 1vw;
   padding-left: 1rem;
   padding-right: 0.5rem;
-  background-color: rgb(222, 222, 222);
+  background-color: rgba(101, 124, 196, 0.25);
   font-weight: 600;
 }
 
@@ -45,7 +45,7 @@
   padding-bottom: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  background-color: rgb(222, 222, 222);
+  background-color: rgba(101, 124, 196, 0.25);
 }
 
 .brief-text::after {
@@ -198,7 +198,7 @@
   justify-content: center;
   gap: 0.4rem;
   margin-top: 2rem;
-  margin-inline: 0.5rem;
+  /* margin-inline: 0.5rem; */
 }
 
 .slide-img-container {

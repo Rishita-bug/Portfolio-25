@@ -13,7 +13,7 @@
   display: none;
 }
 
-.links-container { 
+.links-container {
   position: sticky;
   z-index: 100;
   height: 0;
@@ -58,10 +58,6 @@
   box-sizing: content-box;
   width: fit-content;
   cursor: pointer;
-}
-
-.resume-link {
-  /* border: 2px solid red; */
 }
 
 .email-link {
@@ -124,9 +120,6 @@
 .education::after {
   content: "education";
   font-family: var(--body-font);
-  /* font-size: 0.6rem; */
-  /* font-size: 0.8rem; */
-  /* font-size: 1rem; */
   font-size: min(0.7em, 0.9rem);
   font-weight: 500;
   position: absolute;
@@ -204,7 +197,7 @@
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 650px) {
   .education::after,
   .work::after,
   .approach::after,
@@ -212,6 +205,15 @@
   .self::after,
   .other::after {
     display: none;
+  }
+
+  .about-page-container {
+    width: 60%;
+  }
+
+  .about-page-container {
+    width: 80%;
+    padding-right: 1.1em;
   }
 
   .links-container {
@@ -229,5 +231,15 @@
     color: black;
     font-size: 0.8em;
     font-variant: small-caps;
+    cursor: pointer;
+  }
+
+  .links-container-mobile {
+    position: relative;
+  }
+
+  .tooltip {
+    left: -2em;
+    bottom: -4em;
   }
 }

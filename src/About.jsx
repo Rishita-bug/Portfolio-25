@@ -53,8 +53,9 @@ function AboutPage() {
         </p>
       </div>
       <div className="links-container-mobile">
-          <a className= "rotate-link-mobile" href="#">email</a>
-          <a className= "rotate-link-mobile" href="#">resume</a>
+          <p className= "rotate-link-mobile"  onClick = {handleCopy}>email</p>
+          <p className = {isCopied ? "tooltip tooltip-visible" : "tooltip"}>email copied to clipboard</p>
+          <a className= "rotate-link-mobile" href={Resume}>resume</a>
         </div>
     </div>
   )
