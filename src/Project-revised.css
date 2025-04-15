@@ -4,6 +4,7 @@
   width: 100%;
   opacity: 1;
   height: 40vh;
+  background-color: rgba(101, 124, 196, 0.25);
 }
 
 .header-img {
@@ -11,6 +12,12 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  opacity: 1;
+  transition: opacity 0.25s ease-in;
+}
+
+.header-img-hidden {
+  opacity: 0;
 }
 
 .title {
@@ -31,7 +38,7 @@
 
 .overview-headers {
   font-size: var(--medium-small);
-  margin-left: 1vw;
+  /* margin-left: 1vw; */
   padding-left: 1rem;
   padding-right: 0.5rem;
   background-color: rgba(101, 124, 196, 0.25);
@@ -41,7 +48,7 @@
 .brief-text,
 .deliverables-text,
 .duration-text {
-  margin-right: 1vw;
+  /* margin-right: 1vw; */
   padding-bottom: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -159,7 +166,7 @@
 
 .about-text {
   grid-area: about-text;
-  padding-bottom: 2rem;
+  padding-bottom: 2.5em;
   max-width: 500px;
   /* padding-left: calc(1vw + 1rem); */
 }
@@ -197,7 +204,7 @@
   position: relative;
   justify-content: center;
   gap: 0.4rem;
-  margin-top: 2rem;
+  margin-top: 4em;
   /* margin-inline: 0.5rem; */
 }
 
@@ -347,7 +354,6 @@
     position: relative;
     top: 0;
     width: 100%;
-    background-color: rgb(174, 174, 174);
     opacity: 1;
     height: 40vh;
   }
@@ -399,7 +405,7 @@
   }
 
   .carousel-container {
-    margin-top: 5rem;
+    margin-top: 10rem;
     margin-inline: 1rem;
   }
 
@@ -423,6 +429,13 @@
 
   .adjacent-project-link {
     transform: translateY(-4px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header-img-container {
+    padding-top: calc(1.5rem + 1.2rem);
+    height: 32vh;
   }
 }
 

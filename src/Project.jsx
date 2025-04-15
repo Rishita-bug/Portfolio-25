@@ -8,15 +8,6 @@ import FullscreenIcon from './fullscreen-icon.svg'
 import ExitFullscreenIcon from './esc-fullscreen-icon.png'
 
 
-function HeaderImg({headerImgSrc}) {
-  return(
-    <div className="header-img-container" >
-      <img className="header-img" src={headerImgSrc}></img>
-    </div>
-    
-  )
-}
-
 function ProjectOverview() {
   const { id } = useParams();
   const projectInView = projects.find((p) => p.id === parseInt(id) );
@@ -301,18 +292,34 @@ function Pagination({projectInView, id}) {
 
 
 function ProjectPage() {
+
   const { id } = useParams();
   const projectInView = projects.find((p) => p.id === Number(id) );
   const DynamicContent = projectInView.component;
+
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [currentSrc, setCurrentSrc] = useState('');
+
+
+  useEffect(() => {
+    setIsLoaded(false);
+    const newSrc = projectInView.headerImg
+    setCurrentSrc(newSrc)
+  }, [projectInView])
 
   if (!projectInView) {
     return <h2>Page Not Found</h2>;
   }
 
-
-  return(
+  return (
     <>
-      <HeaderImg headerImgSrc={projectInView.headerImg} />
+      <div className="header-img-container">
+        <img 
+          className= {isLoaded ? "header-img" : "header-img-hidden"} 
+          src= {currentSrc}
+          onLoad= {()=> {setIsLoaded(true)}} />
+      </div>
+
       <ProjectOverview projectInView = {projectInView} />
       {projectInView.id !== 3 && projectInView.id !== 1 && projectInView.id !== 6 &&
       <ProcessSlides projectInView={projectInView} id = {id} />}

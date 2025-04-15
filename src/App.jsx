@@ -31,11 +31,6 @@ const router = createBrowserRouter([
       { path: '/sandpit', element: <SandpitPage /> },
       { path: '/about', element: <AboutPage /> },
       { path: '/work/:id', element: <ProjectPage /> },
-      // { path: '/work/Project Title 2', element: <Project2Page /> },
-      // { path: '/work/Project Title 3', element: <Project3Page /> },
-      // { path: '/work/Project Title 4', element: <Project4Page /> },
-      // { path: '/work/Project Title 5', element: <Project5Page /> },
-      // { path: '/work/Project Title 6', element: <Project6Page /> },
     ],
   },
 ]);
