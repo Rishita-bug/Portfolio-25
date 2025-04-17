@@ -47,6 +47,8 @@ function ProcessSlides({projectInView, id}) {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const slideContainerRef = useRef(null);
+  const slidePreviewRef = useRef(null);
+  const previewContainerRef = useRef(null);
   
   const PrevSlide = () => {
 
@@ -214,37 +216,58 @@ function ProcessSlides({projectInView, id}) {
 }, [currentSlideIndex]);
 
   const handlers = useSwipeable({
-    onSwipedLeft: NextSlide,  // Swipe left for next slide
-    onSwipedRight: PrevSlide, // Swipe right for previous slide
+    onSwipedLeft: NextSlide,  
+    onSwipedRight: PrevSlide, 
     preventScrollOnSwipe: true,
-    trackMouse: true, // Enables swipe using mouse as well
+    trackMouse: true, 
   });
+
+  const handlePreviewNav = (previewIndex) => {
+    setCurrentSlideIndex(previewIndex)
+  }
+
+  
 
 
   return (
-    <div className="carousel-container">
-    <button className="prev-slide-button" onClick= {PrevSlide}></button>
-    <div className="slide-img-container" ref= {slideContainerRef}>
-      {projectInView.slides.map((slide, index) => (
-        <img
-          className="slide-img"
-          src={slide}
-          key={index}
-        />
-      ))}
-        {isFullscreen && 
+    <div className = "carousel-wrapper">
+      
+      <div className="carousel-container">
+      <button className="prev-slide-button" onClick= {PrevSlide}></button>
+      <p>{currentSlideIndex + 1}/{projectInView.slides.length}</p>
+      <div className="slide-img-container" ref= {slideContainerRef}>
+        {projectInView.slides.map((slide, index) => (
+          <img
+            className="slide-img"
+            src={slide}
+            key={index}
+          />
+        ))}
+          {isFullscreen && 
+            <img 
+              className="exit-fullscreen-icon" 
+              src={ExitFullscreenIcon} 
+              onClick={toggleFullscreen} />
+          }
+      </div>
+      <img 
+          className = "fullscreen-btn"
+          src = {!isFullscreen ? FullscreenIcon : ExitFullscreenIcon}
+          onClick={toggleFullscreen}
+          />
+      <button className="next-slide-button" onClick= {NextSlide}></button>
+      </div>
+      <div className = "slides-preview-container" ref = {previewContainerRef}>
+        {projectInView.slides.map((preview, index) => (
           <img 
-            className="exit-fullscreen-icon" 
-            src={ExitFullscreenIcon} 
-            onClick={toggleFullscreen} />
-        }
-    </div>
-    <img 
-        className = "fullscreen-btn"
-        src = {!isFullscreen ? FullscreenIcon : ExitFullscreenIcon}
-        onClick={toggleFullscreen}
-        />
-    <button className="next-slide-button" onClick= {NextSlide}></button>
+          className = {currentSlideIndex == index ? "slide-preview-current slide-preview" : "slide-preview"}
+          src = {preview}
+          key={index}
+          onClick = {() => handlePreviewNav(index)}
+          ref = {slidePreviewRef}
+          />
+        ))}
+      </div>
     </div>
   )
 }

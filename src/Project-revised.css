@@ -284,7 +284,7 @@
 
 .exit-fullscreen-icon {
   position: fixed;
-  width: 16px;
+  width: 1.5em;
   bottom: 1rem;
   right: 1rem;
   cursor: pointer;
@@ -304,6 +304,46 @@
 
 .active-project-link {
   text-decoration: underline;
+}
+
+.slides-preview-container {
+  display: flex;
+  max-width: 80%;
+  margin-inline: auto;
+  gap: 1em;
+  margin-top: 1.25em;
+  overflow-y: hidden;
+  /* border: 2px solid red; */
+  align-items: center;
+}
+
+.slide-preview {
+  display: block;
+  object-fit: contain;
+  height: 7vh;
+  max-height: 360px;
+  width: auto;
+  border: 1px solid rgb(184, 184, 184);
+  cursor: pointer;
+}
+
+.slide-preview-current {
+  height: 8.5vh;
+}
+
+.carousel-container {
+  position: relative;
+}
+
+.carousel-container p {
+  position: absolute;
+  font-family: var(--header-font);
+  font-size: var(--small);
+  font-weight: 300;
+  right: auto;
+  top: -1.75em;
+  z-index: 999;
+  opacity: 0.75;
 }
 
 /*bigger screens*/
@@ -328,7 +368,7 @@
       "about-h about-text brief-h brief-text"
       "about-h about-text deliverables-h deliverables-text"
       "about-h about-text duration-h duration-text";
-    grid-template-columns: 1fr 4.2fr 1fr 4fr;
+    grid-template-columns: max-content 4.2fr 1fr 4fr;
     row-gap: 1em;
     max-width: 2000px;
     margin-inline: auto;
@@ -346,7 +386,7 @@
 
   .about-text,
   .brief-text {
-    text-wrap: auto;
+    text-wrap: balance;
     max-width: 70ch;
   }
 
@@ -429,6 +469,22 @@
 
   .adjacent-project-link {
     transform: translateY(-4px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .slides-preview-container {
+    display: none;
+  }
+
+  .carousel-container p {
+    top: unset;
+    bottom: -1.75em;
+  }
+
+  .fullscreen-btn {
+    right: unset;
+    right: 4.4em;
   }
 }
 

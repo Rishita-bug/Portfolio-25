@@ -33,6 +33,11 @@ function SandpitPage() {
 
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedImg, setSelectedImg] = useState(null);
+  // const [loaded, setLoaded] = useState(false);
+
+  // useEffect (() => {
+  //   setLoaded(false);
+  // }, [])
 
   const openModal = (imgName) => {
     setSelectedImg(imgName)
@@ -92,12 +97,15 @@ function SandpitPage() {
 
       <div className = "sandpit-grid-1">
         <p className = "spaces-p">How my spaces shrunk and grew during lockdown as a zine.</p>
-        <img 
-          data-imgname = 'spaces'
-          onClick = {(e) => openModal(e.target.dataset.imgname)}
-          className = "spaces-img" 
-          src = {images['spaces']} />
-        <img 
+         
+         <img 
+         data-imgname = 'spaces'
+         onClick = {(e) => openModal(e.target.dataset.imgname)}
+        //  onLoad = {() => setLoaded(true)}
+         className = "spaces-img"
+         src = {images['spaces']} />
+        
+        <img
           data-imgname = 'woodcut'
           onClick = {(e) => openModal(e.target.dataset.imgname)}
           className = "woodcut-img" 
