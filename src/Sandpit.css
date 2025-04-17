@@ -23,15 +23,6 @@
 
 .sandpit-container img {
   cursor: pointer;
-  position: relative;
-  background-clip: content-box;
-  opacity: 1;
-  transition: opacity 2s ease-in;
-}
-
-.img-loading {
-  opacity: 0;
-  background-color: rgba(101, 124, 196, 0.25);
 }
 
 
@@ -245,18 +236,6 @@
   object-fit: contain;
   width: 100%;
 }
-
-/* .sandpit-container img {
-  overflow: hidden;
-  object-fit: cover;
-  transform: scale(1);
-  transition: transform 0.3s ease;
-}
-
-.sandpit-container img:hover {
-  transform: scale(1.2);
-  z-index: 999;
-} */
 
 /*MODALS*/
 

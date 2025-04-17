@@ -33,11 +33,6 @@ function SandpitPage() {
 
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedImg, setSelectedImg] = useState(null);
-  // const [loaded, setLoaded] = useState(false);
-
-  // useEffect (() => {
-  //   setLoaded(false);
-  // }, [])
 
   const openModal = (imgName) => {
     setSelectedImg(imgName)
@@ -101,7 +96,6 @@ function SandpitPage() {
          <img 
          data-imgname = 'spaces'
          onClick = {(e) => openModal(e.target.dataset.imgname)}
-        //  onLoad = {() => setLoaded(true)}
          className = "spaces-img"
          src = {images['spaces']} />
         
