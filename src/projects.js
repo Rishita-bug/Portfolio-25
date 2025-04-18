@@ -8,22 +8,39 @@ import AshoreHeader from './assets/Header-imgs/ashore-header.jpg'
 import ParksyHeader from './assets/Header-imgs/parksy-header.png'
 
 
-import Project2Slide1 from './assets/out&about-process-1.png';
-import Project2Slide2 from './assets/out&about-process-2.png';
-import Project2Slide3 from './assets/out&about-process-3.png';
-import Project2Slide4 from './assets/out&about-process-4.png';
-import Project2Slide5 from './assets/out&about-process-5.png';
-import Project2Slide6 from './assets/out&about-process-6.png';
-import Project2Slide7 from './assets/out&about-process-7.png';
-import Project2Slide8 from './assets/out&about-process-8.png';
-import Project2Slide9 from './assets/out&about-process-9.png';
-import Project2Slide10 from './assets/out&about-process-10.png';
-import Project2Slide11 from './assets/out&about-process-11.png';
-import Project2Slide12 from './assets/out&about-process-12.png';
-import Project2Slide13 from './assets/out&about-process-13.png';
+// import Project2Slide1 from './assets/out&about-process-1.webp';
+// import Project2Slide2 from './assets/out&about-process-2.webp';
+// import Project2Slide3 from './assets/out&about-process-3.webp';
+// import Project2Slide4 from './assets/out&about-process-4.webp';
+// import Project2Slide5 from './assets/out&about-process-5.webp';
+// import Project2Slide6 from './assets/out&about-process-6.webp';
+// import Project2Slide7 from './assets/out&about-process-7.webp';
+// import Project2Slide8 from './assets/out&about-process-8.webp';
+// import Project2Slide9 from './assets/out&about-process-9.webp';
+// import Project2Slide10 from './assets/out&about-process-10.webp';
+// import Project2Slide11 from './assets/out&about-process-11.webp';
+// import Project2Slide12 from './assets/out&about-process-12.webp';
+// import Project2Slide13 from './assets/out&about-process-13.webp';
+// import Project2Slide14 from './assets/out&about-process-14.gif';
+// import Project2Slide15 from './assets/out&about-process-15.webp';
+// import Project2Slide16 from './assets/out&about-process-16.webp';
+
+const Project2Slide1 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-1.webp?updatedAt=1744967541763';
+const Project2Slide2 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-2.webp?updatedAt=1744967541579';
+const Project2Slide3 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-3.webp?updatedAt=1744967539225';
+const Project2Slide4 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-4.webp?updatedAt=1744967541765';
+const Project2Slide5 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-5.webp?updatedAt=1744967539643';
+const Project2Slide6 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-6.webp?updatedAt=1744967545568';
+const Project2Slide7 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-7.webp?updatedAt=1744967539540';
+const Project2Slide8 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-8.webp?updatedAt=1744967539869';
+const Project2Slide9 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-9.webp?updatedAt=1744967546891';
+const Project2Slide10 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-10.webp?updatedAt=1744967546524';
+const Project2Slide11 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-11.webp?updatedAt=1744967544540';
+const Project2Slide12 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-12.webp?updatedAt=1744967541549';
+const Project2Slide13 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-13.webp?updatedAt=1744967544736';
 import Project2Slide14 from './assets/out&about-process-14.gif';
-import Project2Slide15 from './assets/out&about-process-15.png';
-import Project2Slide16 from './assets/out&about-process-16.png';
+const Project2Slide15 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-15.webp?updatedAt=1744967541166';
+const Project2Slide16 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-16.webp?updatedAt=1744967541600';
 
 
 import Project4Slide1 from './assets/ashore-process-1.png';
@@ -107,7 +124,7 @@ const projects = [
       tags: ["ux research", "motion design"],
       description: "Motion design to enhance everyday smartphone interactions, done as a part of the PRISM programme with SRI-B",
       headerImg: PrismHeader,
-      about: "Being mentored by patient, insightful professionals working in the industry led to great learning, most of all interpreting a brief with an open and exploratory mindset, questioning the assumptions within the brief and redefining what’s being asked (what is pleasantness?). It eventually led to a fun exploration of putting animation at work, backed by in-depth, revelatory UX research.",
+      about: "Being mentored by professionals working in the industry fuelled great learning, most of all, interpreting a brief with an open and exploratory mindset, questioning the assumptions within the brief and redefining what’s being asked (what is pleasantness?). It eventually led to a fun exploration of putting animation at work, backed by in-depth, revelatory UX research.",
       brief: "Elevate everyday phone interactions that cause frustration into positive experiences.",
       deliverables: "VOCs, Research Insights, Motion Graphics, Protoypes",
       duration: "2.5 months",
@@ -123,7 +140,7 @@ const projects = [
       tags: ["game design", "graphic design"],
       description: "A board game where players play against an antagonist and time to save an island and its people from submerging as sea levels rise.",
       headerImg: AshoreHeader,
-      about: "Ashore started as a classroom project that we continued to developDesigning for challenge and just the right amount of friction, instead of ease was a refreshing perspective I experienced in this project. Designing for “players” vs “users” made friction fun, not a flaw. The constraint of the brief being and educational game made us push the boundaries of what it means to educate, the shift from subject/chapter-based, compartmentalised learning to real-world relevance, and the role of play in fostering awareness.",
+      about: "Designing for challenge and just the right amount of friction, instead of ease was a refreshing perspective I experienced in this project. Designing for “players” vs “users” made friction fun, not a flaw. The constraint of the brief being and educational game made us push the boundaries of what it means to educate, the shift from subject/chapter-based, compartmentalised learning to real-world relevance, and the role of play in fostering awareness.",
       brief: "To design an educational board game for children that's engaging, playable and relevant to their curriculum.",
       deliverables: "Board game visualization, Game Mechanics, Rulebook",
       duration: "1.5 week",

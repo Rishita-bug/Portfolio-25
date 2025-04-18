@@ -22,9 +22,7 @@
 }
 
 .sandpit-container img {
-  cursor: pointer;
 }
-
 
 .sandpit-grid-1 {
   display: grid;

@@ -9,7 +9,7 @@ function ProjectSix (){
         scrolling="no" 
         class="fp-iframe" 
         style={{ border: '0px', width: '80%', height: '100vh', boxShadow: 'unset' }}
-        src="https://heyzine.com/flip-book/2ebc62a37e.html">
+        src="https://heyzine.com/flip-book/a847af7813.html">
       </iframe>
     </div>
   )

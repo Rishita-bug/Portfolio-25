@@ -2,7 +2,8 @@ import React from 'react'
 import {useState} from 'react'
 import './About.css'
 import ProfileImg from './profile-img.jpg'
-import Resume from './RishitaB-resume.pdf'
+import AboutHeader from './about-header.jpg'
+import Resume from './RishitaB-resume-edited.pdf'
 
 function AboutPage() { 
 
@@ -25,9 +26,17 @@ function AboutPage() {
   
 
   return(
+    <div className = 'set-relative'>
+    <div className = "about-header-container"><img className = "about-header-img" src = {AboutHeader}/></div>
+
     <div className="about-page-container">
+      <div className = "profile-img-container">
+        <img 
+          className="profile-img" 
+          src= {ProfileImg} 
+        />
+      </div>
       <h2 className="greeting">hello!</h2>
-      
       <div className="p-container">
         <div className="links-container">
           <p className = {isCopied ? "tooltip tooltip-visible" : "tooltip"}>email copied to clipboard</p>
@@ -39,12 +48,6 @@ function AboutPage() {
         <span className = "education"> National Institute </span> 
         of Design, Andhra Pradesh with a fungal enthusiasm for 
         <span className="work"> UX&nbsp;design and research. </span> 
-        <span className="img-span">        
-          <img 
-            className="profile-img" 
-            src= {ProfileImg} 
-          />
-        </span>  
           During my time in Design school I stumbled upon visual design, film, animation, graphic narrative, UX, branding and various other offshoots of the discipline, making my approach to design <span className="approach">process-driven, analytical yet rooted&nbsp;in&nbsp;storytelling.</span>
         </p>
 
@@ -56,7 +59,9 @@ function AboutPage() {
           <p className= "rotate-link-mobile"  onClick = {handleCopy}>email</p>
           <p className = {isCopied ? "tooltip tooltip-visible" : "tooltip"}>email copied to clipboard</p>
           <a className= "rotate-link-mobile" href={Resume}>resume</a>
-        </div>
+      </div>
+      <p className = "about-footnote">Thanks for stopping by my digital abode! This site is an evolving space, still maturing in accessibility, usability and joy.</p>
+    </div>
     </div>
   )
 }
