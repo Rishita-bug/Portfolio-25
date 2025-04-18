@@ -1,11 +1,18 @@
 
-import HeaderImg from './halftone-test2.png';
+// import HeaderImg from './halftone-test2.png';
 
-import Project2Header from './assets/Header-imgs/outandabout-header.jpg'
-import PersonalizationHeader from './assets/Header-imgs/personalization-header.jpg'
-import PrismHeader from './assets/Header-imgs/prism-header.webp'
-import AshoreHeader from './assets/Header-imgs/ashore-header.jpg'
-import ParksyHeader from './assets/Header-imgs/parksy-header.png'
+// import Project2Header from './assets/Header-imgs/outandabout-header.jpg'
+// import PersonalizationHeader from './assets/Header-imgs/personalization-header.jpg'
+// import PrismHeader from './assets/Header-imgs/prism-header.webp'
+// import AshoreHeader from './assets/Header-imgs/ashore-header.jpg'
+// import ParksyHeader from './assets/Header-imgs/parksy-header.png'
+
+const Project2Header = 'https://ik.imagekit.io/pfolio25/pfolio_header_imgs/outandabout-header_converted.webp'
+const PersonalizationHeader = 'https://ik.imagekit.io/pfolio25/pfolio_header_imgs/personalization-header_converted.webp'
+const PrismHeader = 'https://ik.imagekit.io/pfolio25/pfolio_header_imgs/prism-header.webp'
+const AshoreHeader = 'https://ik.imagekit.io/pfolio25/pfolio_header_imgs/ashore-header_converted.webp'
+const ParksyHeader = 'https://ik.imagekit.io/pfolio25/pfolio_header_imgs/parksy-header_converted.webp'
+const HeaderImg = 'https://ik.imagekit.io/pfolio25/pfolio_header_imgs/halftone-test2_converted.webp'
 
 
 // import Project2Slide1 from './assets/out&about-process-1.webp';
@@ -25,43 +32,54 @@ import ParksyHeader from './assets/Header-imgs/parksy-header.png'
 // import Project2Slide15 from './assets/out&about-process-15.webp';
 // import Project2Slide16 from './assets/out&about-process-16.webp';
 
-const Project2Slide1 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-1.webp?updatedAt=1744967541763';
-const Project2Slide2 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-2.webp?updatedAt=1744967541579';
-const Project2Slide3 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-3.webp?updatedAt=1744967539225';
-const Project2Slide4 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-4.webp?updatedAt=1744967541765';
-const Project2Slide5 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-5.webp?updatedAt=1744967539643';
-const Project2Slide6 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-6.webp?updatedAt=1744967545568';
-const Project2Slide7 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-7.webp?updatedAt=1744967539540';
-const Project2Slide8 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-8.webp?updatedAt=1744967539869';
-const Project2Slide9 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-9.webp?updatedAt=1744967546891';
-const Project2Slide10 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-10.webp?updatedAt=1744967546524';
-const Project2Slide11 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-11.webp?updatedAt=1744967544540';
-const Project2Slide12 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-12.webp?updatedAt=1744967541549';
-const Project2Slide13 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-13.webp?updatedAt=1744967544736';
+const Project2Slide1 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-1.webp';
+const Project2Slide2 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-2.webp';
+const Project2Slide3 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-3.webp';
+const Project2Slide4 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-4.webp';
+const Project2Slide5 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-5.webp';
+const Project2Slide6 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-6.webp';
+const Project2Slide7 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-7.webp';
+const Project2Slide8 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-8.webp';
+const Project2Slide9 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-9.webp';
+const Project2Slide10 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-10.webp';
+const Project2Slide11 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-11.webp';
+const Project2Slide12 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-12.webp';
+const Project2Slide13 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-13.webp';
 import Project2Slide14 from './assets/out&about-process-14.gif';
-const Project2Slide15 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-15.webp?updatedAt=1744967541166';
-const Project2Slide16 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-16.webp?updatedAt=1744967541600';
+const Project2Slide15 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-15.webp';
+const Project2Slide16 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/out&about-process-16.webp';
 
 
-import Project4Slide1 from './assets/ashore-process-1.png';
-import Project4Slide2 from './assets/ashore-process-2.png';
-import Project4Slide3 from './assets/ashore-process-3.png';
-import Project4Slide4 from './assets/ashore-process-4.png';
+import Project4Slide1 from './assets/ashore-process-1.webp';
+import Project4Slide2 from './assets/ashore-process-2.webp';
+import Project4Slide3 from './assets/ashore-process-3.webp';
+import Project4Slide4 from './assets/ashore-process-4.webp';
 import Project4Slide45 from './assets/ashore-process-4.5.png';
-import Project4Slide5 from './assets/ashore-process-5.png';
-import Project4Slide6 from './assets/ashore-process-6.png';
+import Project4Slide5 from './assets/ashore-process-5.webp';
+import Project4Slide6 from './assets/ashore-process-6.webp';
 
 
-import Project5Slide1 from './assets/papereku-process-1.webp';
-import Project5Slide2 from './assets/papereku-process-2.webp';
-import Project5Slide3 from './assets/papereku-process-3.webp';
-import Project5Slide4 from './assets/papereku-process-4.webp';
-import Project5Slide5 from './assets/papereku-process-5.webp';
-import Project5Slide6 from './assets/papereku-process-6.webp';
-import Project5Slide7 from './assets/papereku-process-7.webp';
-import Project5Slide8 from './assets/papereku-process-8.webp';
-import Project5Slide9 from './assets/papereku-process-9.webp';
-import Project5Slide10 from './assets/papereku-process-10.webp';
+// import Project5Slide1 from './assets/papereku-process-1.webp';
+// import Project5Slide2 from './assets/papereku-process-2.webp';
+// import Project5Slide3 from './assets/papereku-process-3.webp';
+// import Project5Slide4 from './assets/papereku-process-4.webp';
+// import Project5Slide5 from './assets/papereku-process-5.webp';
+// import Project5Slide6 from './assets/papereku-process-6.webp';
+// import Project5Slide7 from './assets/papereku-process-7.webp';
+// import Project5Slide8 from './assets/papereku-process-8.webp';
+// import Project5Slide9 from './assets/papereku-process-9.webp';
+// import Project5Slide10 from './assets/papereku-process-10.webp';
+
+const Project5Slide1 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/papereku-process-1.webp';
+const Project5Slide2 ='https://ik.imagekit.io/pfolio25/pfolio_slides_assets/papereku-process-2.webp';
+const Project5Slide3 ='https://ik.imagekit.io/pfolio25/pfolio_slides_assets/papereku-process-3.webp';
+const Project5Slide4 ='https://ik.imagekit.io/pfolio25/pfolio_slides_assets/papereku-process-4.4ebp';
+const Project5Slide5 ='https://ik.imagekit.io/pfolio25/pfolio_slides_assets/papereku-process-5.webp';
+const Project5Slide6 ='https://ik.imagekit.io/pfolio25/pfolio_slides_assets/papereku-process-6.webp';
+const Project5Slide7 ='https://ik.imagekit.io/pfolio25/pfolio_slides_assets/papereku-process-7.webp';
+const Project5Slide8 ='https://ik.imagekit.io/pfolio25/pfolio_slides_assets/papereku-process-8.webp';
+const Project5Slide9 ='https://ik.imagekit.io/pfolio25/pfolio_slides_assets/papereku-process-9.webp';
+const Project5Slide10 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/papereku-process-10.webp';
 
 
 import ProjectOne from './ProjectOne';
