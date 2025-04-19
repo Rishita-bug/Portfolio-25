@@ -343,17 +343,22 @@
   }
 
   .emerging-focus .subsection-grid {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     row-gap: 4em;
-    width: 80%;
+    width: 84%;
     margin-inline: auto;
   }
 
   .emerging-focus p {
-    width: 72%;
-    min-width: 320px;
-    max-width: 60ch;
+    width: 80%;
+    /* min-width: 320px; */
+    max-width: 55ch;
+    text-wrap: balance;
   }
+
+  /* .opportunity:nth-child(3) {
+    grid-column: span 2;
+  } */
 
   .emerging-focus img {
     width: 25%;
