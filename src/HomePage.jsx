@@ -6,12 +6,19 @@ import {Link} from 'react-router-dom';
 import projects from './projects';
 
 function HeroSection(){
+  const [isHeroVisible, setIsHeroVisible] = useState(false);
+
+  useEffect((
+  ) => {
+    setIsHeroVisible(true)
+  }, [])
+
   return(
-    <header className="hero-section">
-      <h1 className="hero-text">
+    <header className={`hero-section ${isHeroVisible ? "hero-visible" : "hero-not-visible"}`}>
+      <h1 className= "hero-text">
         A designer-storyteller in the avid pursuit of human&#8209;ness in design.
       </h1>
-      <p className="about-site">
+      <p className= {`about-site ${isHeroVisible ? "about-visible" : "about-not-visible"}`}>
         Here you will find selected work, <span>musings</span>, and ways to reach out to me.
       </p>
       <img className="hero-visual"></img>

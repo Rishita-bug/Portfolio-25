@@ -11,6 +11,24 @@
   padding-inline: 6vw;
 }
 
+.hero-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.25s ease-in, transform 0.3s ease-in;
+}
+
+.about-visible{
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.45s ease-in, transform 0.5s ease-in;
+}
+
+.hero-not-visible,
+.about-not-visible {
+  opacity: 0;
+  transform: translateY(0.5em) ;
+}
+
 .hero-text {
   padding-top: 10vh;
   font-family: var(--header-font);
@@ -31,6 +49,7 @@
   text-wrap: balance;
   font-weight: 350;
   line-height: 1.09;
+  transform: translateY(0);
 }
 
 .about-site span {
