@@ -2,6 +2,10 @@
   border: 2px solid orange;
 }
 
+.sandpit-img {
+  cursor: pointer;
+}
+
 .parents-gif-med,
 .parents-p-med,
 .parents-gif-mob,
