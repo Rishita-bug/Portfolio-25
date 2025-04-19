@@ -73,7 +73,7 @@ import Project4Slide6 from './assets/ashore-process-6.webp';
 const Project5Slide1 = 'https://ik.imagekit.io/pfolio25/pfolio_slides_assets/papereku-process-1.webp';
 const Project5Slide2 ='https://ik.imagekit.io/pfolio25/pfolio_slides_assets/papereku-process-2.webp';
 const Project5Slide3 ='https://ik.imagekit.io/pfolio25/pfolio_slides_assets/papereku-process-3.webp';
-const Project5Slide4 ='https://ik.imagekit.io/pfolio25/pfolio_slides_assets/papereku-process-4.4ebp';
+const Project5Slide4 ='https://ik.imagekit.io/pfolio25/pfolio_slides_assets/papereku-process-4.webp';
 const Project5Slide5 ='https://ik.imagekit.io/pfolio25/pfolio_slides_assets/papereku-process-5.webp';
 const Project5Slide6 ='https://ik.imagekit.io/pfolio25/pfolio_slides_assets/papereku-process-6.webp';
 const Project5Slide7 ='https://ik.imagekit.io/pfolio25/pfolio_slides_assets/papereku-process-7.webp';
