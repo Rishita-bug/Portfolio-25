@@ -372,14 +372,14 @@ hr {
 }
 
 @media screen and (min-width: 862px) {
-  hero-section {
+  .hero-section {
     width: unset;
   }
 }
 
 @media screen and (min-width: 1920px) {
   .hero-section {
-    margin-top: 8em;
+    padding-top: 8em;
     margin-left: 4vw;
   }
 
@@ -406,7 +406,7 @@ hr {
 
 @media screen and (min-width: 2560px) {
   .hero-section {
-    margin-top: 10em;
+    padding-top: 10em;
     margin-left: 5vw;
   }
 
@@ -435,7 +435,7 @@ hr {
 
 @media screen and (min-width: 3200px) {
   .hero-section {
-    margin-top: 14em;
+    padding-top: 14em;
     margin-left: 6vw;
   }
 
