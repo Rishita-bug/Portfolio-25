@@ -17,7 +17,7 @@
   transition: opacity 0.25s ease-in, transform 0.3s ease-in;
 }
 
-.about-visible{
+.about-visible {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.45s ease-in, transform 0.5s ease-in;
@@ -26,7 +26,7 @@
 .hero-not-visible,
 .about-not-visible {
   opacity: 0;
-  transform: translateY(0.5em) ;
+  transform: translateY(0.5em);
 }
 
 .hero-text {

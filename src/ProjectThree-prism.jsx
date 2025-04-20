@@ -258,8 +258,27 @@ const ProjectThree = () => {
         
       </div>
 
-
-
+      <div className = "credits-container">
+        <h3>Credits</h3>
+        <div className = "credits-content">
+          <div>
+            <h4 className = "credits-h1">Research & Synthesis</h4>
+            <p className = "credits-p1">Vaidehi Shirsath, Ritika Varma, Rishita Baghel</p>
+          </div>
+          <div>
+            <h4 className = "credits-h2">Rough prototypes</h4>
+            <p className = "credits-p2">Rishita Baghel</p>
+          </div>
+          <div>
+            <h4 className = "credits-h3">Final prototypes</h4>
+            <p className = "credits-p3">Vaidehi Shirsath, Ritika Verma, Sahil Betigeri, Shabeer S, Arjun Sanu, Rishita Baghel </p>
+          </div>
+          <div>
+          <h4 className = "credits-h4">Documentation</h4>
+          <p className = "credits-p4">Rishita Baghel</p>
+          </div> 
+          </div>
+      </div>
     </div>
   )
 }
