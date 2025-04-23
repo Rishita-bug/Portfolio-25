@@ -52,6 +52,32 @@ body {
   font-family: "Kids";
   font-size: var(--h2);
   padding-left: 4vw;
+  color: inherit;
+  text-decoration: none;
+}
+
+.home-link span {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.68, -0.55, 0.27, 1.55);;
+}
+
+.home-link:hover span {
+  animation: jump 0.5s ease forwards;
+}
+
+.home-link span:nth-child(1) { animation-delay: 0s; }
+.home-link span:nth-child(2) { animation-delay: 0.1s; }
+.home-link span:nth-child(3) { animation-delay: 0.15s; }
+.home-link span:nth-child(4) { animation-delay: 0.2s; }
+.home-link span:nth-child(5) { animation-delay: 0.2s; }
+.home-link span:nth-child(6) { animation-delay: 0.15s; }
+.home-link span:nth-child(7) { animation-delay: 0.1s; }
+.home-link span:nth-child(8) { animation-delay: 0s; }
+
+@keyframes jump {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
 }
 
 .nav-link {

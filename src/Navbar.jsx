@@ -60,7 +60,17 @@ function Navbar() {
     <div 
       className={`navbar-container ${isNavbarVisible ? '' : 'nav-hidden'}`}  
     >
-      <a className="home-link">rishita b.</a>
+      <NavLink to = '/' className="home-link">
+        <span>r</span>
+        <span>i</span>      
+        <span>s</span>
+        <span>h</span>
+        <span>i</span>
+        <span>t</span>
+        <span>a </span> 
+        <span>b</span>
+        <span>.</span>      
+      </NavLink>
 
       <div className="menu-icon-container" onClick={toggleNav}>
         <img 
