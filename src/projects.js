@@ -109,7 +109,7 @@ const projects = [
       tags: ["ux research", "ux design"],
       description: "My graduation project done as a part of a 6 month internship at Samsung Research Institute that explores personalization with a backdrop of Galaxy AI.",
       headerImg: PersonalizationHeader,
-      about: "I was graciously given the exciting opportunity to work from ground-up on a complex and relevant topic, and was allowed to organically define and redefine the brief. It’s also what made it challenging. Working solo, systematically narrowing down to deliver collaterals, and managing and documenting a 6-month project broadened my horizons. I learnt the significance of a fluid UX process that adapts to the brief, timeline, the product and the nature of users’ interaction with it.",
+      about: "I was given the opportunity to work from ground-up on a complex and relevant topic, and was allowed to organically define and redefine the brief. It’s also what made it challenging. Working solo, systematically narrowing down to deliver collaterals, and managing and documenting a 6-month project broadened my horizons. I learnt the significance of a fluid UX process that adapts to the brief, timeline, the product and the nature of users’ interaction with it.",
       brief: "Gather and leverage insights from user adoption and response to personalized experiences (physical and digital) to develop design principles and concepts for effective personalization in intelligent mobile devices to enhance everyday experiences of Millennials and Gen Z.",
       deliverables: "Design guidelines, Prototypes",
       duration: "6 months",
