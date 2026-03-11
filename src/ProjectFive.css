@@ -185,16 +185,20 @@
 .project-five-container h2 {
   font-family: var(--header-font);
   font-size: var(--h2);
+  font-weight: 420;
 }
 
 .project-five-container h3 {
   font-family: var(--header-font);
   font-size: var(--h3);
+  font-weight: 420;
 }
 
 .project-five-container p {
   font-family: var(--body-font);
   font-size: var(--body);
+  font-weight: var(--fw-regular);
+  color: var(--text-secondary);
 }
 
 .project-five-container figcaption {
@@ -211,7 +215,7 @@
 /*SPACING*/
 
 .primary-mockup {
-  padding-top: 6em;
+  padding-top: 8em;
 }
 
 .project-five-container .section,
@@ -302,5 +306,34 @@
 @media screen and (max-width: 2400px) {
   .project-five-container {
     padding-inline: 6vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .project-five-container {
+    padding-inline: 12vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-five-container {
+    padding-inline: 5vw;
+  }
+
+  .primary-secondary-type-container {
+    grid-template-columns: 1fr;
+  }
+
+  .monogram-content-container {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .graphic-elements {
+    grid-template-columns: 1fr;
+  }
+
+  .colours-content-container {
+    grid-template-columns: 1fr;
   }
 }

@@ -1,0 +1,214 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 8px;
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #666;
+  padding: 0.25rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.modal-title {
+  font-family: var(--header-font);
+  font-size: var(--h3);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.modal-description {
+  font-family: var(--body-font);
+  font-size: var(--body);
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-weight: 330;
+}
+
+.status-message {
+  font-family: var(--body-font);
+  font-size: var(--small);
+  padding: 0.875rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-family: var(--body-font);
+  font-size: var(--small);
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.form-group input {
+  font-family: var(--body-font);
+  font-size: var(--body);
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: white;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #333;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.form-group input.error {
+  border-color: #d9534f;
+}
+
+.form-group input.error:focus {
+  box-shadow: 0 0 0 3px rgba(217, 83, 79, 0.1);
+}
+
+.form-group .error-message {
+  font-family: var(--body-font);
+  font-size: var(--small);
+  color: #d9534f;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.submit-button {
+  font-family: var(--body-font);
+  font-size: var(--body);
+  font-weight: 500;
+  padding: 0.875rem 1.5rem;
+  background-color: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  margin-top: 0.5rem;
+}
+
+.submit-button:hover {
+  background-color: #333;
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}
+
+.submit-button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.submit-button:disabled:hover {
+  background-color: #666;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .modal-title {
+    font-size: var(--h4);
+  }
+
+  .modal-description {
+    font-size: var(--small);
+  }
+
+  .form-group label {
+    font-size: var(--medium-small);
+  }
+
+  .form-group input {
+    font-size: var(--small);
+  }
+
+  .submit-button {
+    font-size: var(--small);
+  }
+}

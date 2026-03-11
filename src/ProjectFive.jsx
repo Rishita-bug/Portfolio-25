@@ -1,13 +1,30 @@
 import React from "react";
 import './ProjectFive.css';
 
-const images = Object.fromEntries(
-  Object.entries(import.meta.glob("./assets/ProjectFive-assets/*.{png,webp,gif}", {eager: true}))
-  .map(([path, module]) => {
-    const fileName = path.split("/").pop().replace(/\.(png|webp|gif)$/, "");
-    return [fileName, module.default]
-  })
-) 
+const CDN_5 = 'https://ik.imagekit.io/pfolio25/pfolio_project_assets/papereku-assets';
+const TR_5 = '?tr=f-auto,q-80';
+
+const images = {
+  'hero-mockup':               `${CDN_5}/hero-mockup.webp${TR_5}`,
+  'LogoEvolution':             `${CDN_5}/LogoEvolution.gif`,
+  'logo-clear-space':          `${CDN_5}/logo-clear-space.webp${TR_5}`,
+  'logo-colour':               `${CDN_5}/logo-colour.webp${TR_5}`,
+  'resized-clear-space':       `${CDN_5}/resized-clear-space.webp${TR_5}`,
+  'resized-22':                `${CDN_5}/resized-22.webp${TR_5}`,
+  'monogram-bezier':           `${CDN_5}/monogram-bezier.webp${TR_5}`,
+  'monogram-clear-space':      `${CDN_5}/monogram-clear-space.webp${TR_5}`,
+  'monogram-colour':           `${CDN_5}/monogram-colour.webp${TR_5}`,
+  'monogram-icons':            `${CDN_5}/monogram-icons.webp${TR_5}`,
+  'graphic-elements-vector':   `${CDN_5}/graphic-elements-vector.webp${TR_5}`,
+  'graphics-grid':             `${CDN_5}/graphics-grid.webp${TR_5}`,
+  'packaging_template':        `${CDN_5}/packaging_template.webp${TR_5}`,
+  'front-1':                   `${CDN_5}/front-1.webp${TR_5}`,
+  'front-2':                   `${CDN_5}/front-2.webp${TR_5}`,
+  'front-3':                   `${CDN_5}/front-3.webp${TR_5}`,
+  'back':                      `${CDN_5}/back.webp${TR_5}`,
+  'side':                      `${CDN_5}/side.webp${TR_5}`,
+  'top-resized':               `${CDN_5}/top-resized.webp${TR_5}`,
+};
 
 
 const ProjectFive = () => {

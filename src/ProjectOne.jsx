@@ -11,137 +11,129 @@ const images = Object.fromEntries(
 
 const ProjectOne = () => {
   return (
-    <div className = "p1-container">
+    <div className="p1-container">
 
-      <div className = "genesis-container section">
-        <h2 className = "section-title">Project Genesis</h2>
-        <div className = " genesis-content section-content">
-          <img src = {images['genesis-img']}/>
-          <div className = "genesis-text-container">
-            <p className = "genesis-big-text">
-              what makes a mass manufactered product belong to its user?
-            </p>
-            <p className = "genesis-text intro-p1">
-              Smartphones are mass manufactured products. They are identical to each of its own kind, until their ownership is claimed by a user. Over time, with usage, each smartphone becomes completely distinct from another. One would find it disorienting to use another’s device.</p>
-            <p className = "genesis-text intro-p2">The smartphone’s pervasiveness into the minutae of individuals’ day-to-day calls for effective and ethical personalization of these products.</p>
-            
+      {/* Genesis */}
+      <div className="p1-section p1-introduction">
+        <span className="p1-label">Introduction</span>
+        <div className="p1-section-content">
+          <div className="p1-title-desc">
+            <h2 className="p1-section-title">What makes a mass manufactured product belong to its user?</h2>
+            <div className="p1-section-desc">
+              <p>Smartphones are identical to each of its own kind, until their ownership is claimed by a user. <span className="p1-highlight p1-highlight--marker">Over time, with usage, each smartphone becomes completely distinct from another.</span> One would find it disorienting to use another's device.</p>
+              <p>The smartphone's pervasiveness into the minutae of individuals' day‑to‑day calls for effective and ethical personalization of these products.</p>
+            </div>
           </div>
-          
+          <img src={images['genesis-img']} alt="Genesis" className="p1-introduction-img" />
         </div>
       </div>
-      
-      <div className = "scope-container section">
-        <h2 className = "section-title">Scope</h2>
-        <div className = " scope-content section-content">
-          <p className = "scope-description">The project began as an open-ended exploration into personalization. Over time, the scope narrowed down to Personalization Curation of content in smartphones to ensure that the devised Guidelines for desigining personalized user experiences were illustrated through tangible examples.</p>
-          <div className= "initial-focus scope-subsection">
-            <h3 className = "subsection-h3">Initial Focus</h3>
-            <div className = "subsection-grid">
-              <figure>
-                <img src = {images['theory-icon']}/>
-                <figcaption>Understanding the <span>theoretical concept</span> of personalization.</figcaption>
-              </figure>
-              <figure>
-                <img src = {images['define-icon']}/>
-                <figcaption><span>Defining</span> personalization and what it can do.</figcaption>
-              </figure>
-              <figure>
-                <img src = {images['interact-icon']}/>
-                <figcaption>Understanding <span>how users engage</span> with personalization around them (through everyday-life and products/services).</figcaption>
-              </figure>
+
+      {/* Initial Focus */}
+      <div className="p1-section p1-challenge">
+        <span className="p1-label">Challenge</span>
+        <div className="p1-section-content">
+          <div className="p1-title-desc">
+            <h2 className="p1-section-title">Defining Personalization at a System Level</h2>
+            <div className="p1-section-desc">
+              <p>As AI capabilities expanded, <span className="p1-highlight p1-highlight--marker">"personalization" was widely referenced but loosely defined.</span> Before proposing new features, we needed clarity on what personalization should mean at a system level.</p>
             </div>
           </div>
-          <div className= "research-questions scope-subsection">
-            <h3 className = "subsection-h3">Research Questions</h3>
-            <div className = "subsection-grid">
-              <div className = "question-category">
-                <img src = {images['perception-icon']}/>
-                <h4>Perceived Personalization</h4>
-                <ul>
-                  <li>What does “personalized” mean <span>to users</span>?</li>
-                  <li>What affects <span>how personalized</span> something is to users?</li>
-                </ul>
-              </div>
-              <div className = "question-category">
-                <img src = {images['ethics-icon']}/>
-                <h4>Ethical Considerations</h4>
-                <ul>
-                  <li>Can something be <span>”too personalized”</span>? Where do users draw the line?</li>
-                </ul>
-              </div>
-              <div className = "question-category last-question">
-                <img src = {images['measuring-icon']}/>
-                <h4>Measuring Personalization</h4>
-                <ul>
-                  <li>How can personalization be made more <span>user-friendly?</span></li>
-                  <li>What makes personalization <span>acceptable</span>, and then <span>effective</span> to users?</li>
-                </ul>
-              </div>
+          <div className="p1-challenge-grid">
+          <figure className="p1-figure">
+            <img src={images['theory-icon']} alt="" className="p1-figure-img" />
+            <figcaption>Understanding the theoretical concept of personalization.</figcaption>
+          </figure>
+          <figure className="p1-figure">
+            <img src={images['define-icon']} alt="" className="p1-figure-img" />
+            <figcaption>Defining personalization and what it can do.</figcaption>
+          </figure>
+          <figure className="p1-figure">
+            <img src={images['interact-icon']} alt="" className="p1-figure-img" />
+            <figcaption>Understanding how users engage with personalized experiences.</figcaption>
+          </figure>
+        </div>
+        </div>
+      </div>
+
+      {/* Research Questions */}
+      <div className="p1-section p1-research-questions">
+        <span className="p1-label">Framework</span>
+        <div className="p1-framework-content">
+          <div className="p1-framework-title-desc">
+            <h2 className="p1-section-title">Primary Research</h2>
+            <div className="p1-section-desc">
+              <p>I conducted user interviews with a pool of 30 participants, both in-person and remotely. The objective was to answer the following questions in each phase of primary research.</p>
             </div>
           </div>
-          <div className= "emerging-focus scope-subsection">
-            <h3 className = "subsection-h3">Emerging Focus</h3>
-            <div className = "subsection-grid">
-              <div className = "opportunity">
-                <img src = {images['curation-icon']}/>
-                <h4>Personalized Curation</h4>
-                <p>Enhance smartphone functionality by developing intelligent content curation systems that understand <span>user intent</span>, optimize content <span>organization</span>, and facilitate <span>effortless discovery</span>, ultimately transforming devices into powerful <span>personal knowledge management tools</span>.</p>
+          <div className="p1-framework-grid">
+            <div className="p1-research-questions-card">
+              <div className="p1-research-questions-text">
+                <h4 className="p1-research-questions-title">Perceived Personalization</h4>
+                <ul className="p1-research-questions-list">
+                  <li>What does "personalized" mean to users?</li>
+                  <li>What affects how personalized something is to users?</li>
+                </ul>
               </div>
-              <div className = "opportunity">
-                <img src = {images['cohesion-icon']}/>
-                <h4>Personalized Cohesion</h4>
-                <p>A personal device that functions as autonomous, data-driven ecosystem, <span>anticipating user needs</span> and delivering a <span>cohesive experience</span> through <span>intelligent interaction between applications, content, and data.</span></p>
+              <div className="p1-card-icon-container"><i className="bi bi-eye p1-card-icon"></i></div>
+            </div>
+            <div className="p1-research-questions-card">
+              <div className="p1-research-questions-text">
+                <h4 className="p1-research-questions-title">Ethical Considerations</h4>
+                <ul className="p1-research-questions-list">
+                  <li>Can something be "too personalized"? Where do users draw the line?</li>
+                </ul>
               </div>
-              <div className = "opportunity">
-                <img src = {images['connection-icon']}/>
-                <h4>Personalized Connection</h4>
-                <p>Revolutionize digital communication by developing technology that recognizes the unique dynamics between individuals, enabling more <span>meaningful and efficient digital interactions</span> across various platforms.</p>
+              <div className="p1-card-icon-container"><i className="bi bi-shield-check p1-card-icon"></i></div>
+            </div>
+            <div className="p1-research-questions-card">
+              <div className="p1-research-questions-text">
+                <h4 className="p1-research-questions-title">Measuring Personalization</h4>
+                <ul className="p1-research-questions-list">
+                  <li>How can personalization be made more user-friendly?</li>
+                  <li>What makes personalization acceptable, and then effective to users?</li>
+                </ul>
               </div>
+              <div className="p1-card-icon-container"><i className="bi bi-bar-chart-line p1-card-icon"></i></div>
             </div>
           </div>
         </div>
       </div>
-      
-      <div className = "approach-container section">
-        <h2 className = "section-title">Approach</h2>
-        <div className = " approach-content section-content">
-          <div className = "approach-text-container">
-            <h4>Staggered introduction of the smartphone<span>:</span></h4>
-            <p>Leveraging the open-ended nature of the brief, introduction of the smartphone was delayed until the second phase</p>
+
+      {/* Emerging Focus */}
+      <div className="p1-section p1-emerging-focus">
+        <span className="p1-label">Intervention</span>
+        <div className="p1-section-content">
+          <div className="p1-title-desc">
+            <h2 className="p1-section-title">Emerging Product Directions</h2>
+            <div className="p1-section-desc">
+              <p>The defined briefs needed to be focused enough to guide ideation, but broad enough to prompt ideas to manifest <span className="p1-highlight p1-highlight--marker">how personalization behaves across the product ecosystem</span>, beyond a single screen/feature.</p>
+            </div>
           </div>
-          <div className = "approach-text-container">
-            <h4>Qualitative research method & diverse participant pool<span>:</span></h4>
-            <p>Conducted near-conversational interviews to gain deep insights. 31 participants were interviewed over 3 progressively narrow phases—both in-person and remotely</p>
-          </div>
-          <div className = "approach-text-container">
-            <h4>Structured research phases<span>:</span></h4>
-            <p>Clearly defined objectives for each phase ensured a structured approach</p>
-          </div>
-          <div className = "approach-text-container">
-            <h4>Goal<span>:</span></h4>
-            <p>To developed a holistic, unbiased understanding of “Personalization” to identify real-world opportunities for intelligent smartphones while addressing user and practitioner concerns</p>
+          <div className="p1-intervention-grid">
+            <div className="p1-intervention-card">
+              <div className="p1-intervention-img-container">
+                <img src={images['curation-icon']} alt="" />
+              </div>
+              <h4 className="p1-intervention-title">Personalized Curation</h4>
+              <p className="p1-body-text">Develop intelligent content curation systems that understand user intent, <span className="p1-intervention-highlight p1-intervention-highlight--3">organize information effectively, and enable seamless discovery</span>, transforming the smartphone into a personal knowledge management tool.</p>
+            </div>
+            <div className="p1-intervention-card">
+              <div className="p1-intervention-img-container">
+                <img src={images['cohesion-icon']} alt="" />
+              </div>
+              <h4 className="p1-intervention-title">Personalized Cohesion</h4>
+              <p className="p1-body-text">Design a cross-system smartphone experience that operates as an autonomous, data-driven ecosystem by anticipating user needs and enabling <span className="p1-intervention-highlight p1-intervention-highlight--1">cohesive interaction across core apps, content and data.</span></p>
+            </div>
+            <div className="p1-intervention-card">
+              <div className="p1-intervention-img-container">
+                <img src={images['connection-icon']} alt="" />
+              </div>
+              <h4 className="p1-intervention-title">Personalized Connection</h4>
+              <p className="p1-body-text">Enhance system communication experiences, such as calling, contacts, and sharing, by incorporating <span className="p1-intervention-highlight p1-intervention-highlight--2">awareness of relationship dynamics</span> to enable more meaningful and efficient interactions.</p>
+            </div>
           </div>
         </div>
       </div>
-      
-      <div className = "methodology-container section">
-        <h2 className = "section-title">Methodology</h2>
-        <div className = "methodology-content section-content">
-          <img src = {images['timeline']}/>
-        </div>
-      </div>
-      
-      <div className = "takeaways-container section">
-        <h2 className = "section-title">Takeaways</h2>
-        <div className = " takeaways-content section-content">
-          <ul>
-            <li>Concise documentation of the research for better knowledge-sharing in a team.</li>
-            <li>When designing for a product that is deeply embeded in everyday life, and used for a wide range of purposes, research must focus on broad user behaviors rather than specific tasks, making it more exploratory.</li>
-            <li>Balancing exploration with decisiveness in the UX process.</li>
-          </ul>
-        </div>
-      </div>
-      
 
     </div>
   )

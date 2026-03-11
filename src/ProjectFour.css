@@ -4,6 +4,12 @@
   padding-bottom: 4em;
 }
 
+@media screen and (min-width: 1024px) {
+  .p4-container {
+    margin-inline: 12vw;
+  }
+}
+
 .p4-container img {
   object-fit: contain;
   width: 100%;
@@ -37,8 +43,8 @@
 
 .credits-container h3{
   font-family: var(--header-font);
-  font-size: var(--medium-small);
-  font-weight: 600;
+  font-size: var(--small);
+  font-weight: 420;
 }
 
 .credits-container h4 {
@@ -50,4 +56,5 @@
 .credits-container p {
   font-family: var(--body-font);
   font-size: var(--medium-small);
+  font-weight: 330;
 }

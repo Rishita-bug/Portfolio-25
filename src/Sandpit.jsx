@@ -14,7 +14,7 @@ function Modal ({imgClicked, isModalVisible, closeModal}) {
   return (
     isModalVisible &&
     <div className = "modal-container">
-      <button className = "close-modal-btn" onClick = {closeModal}>&#10006;</button>
+      <button className = "close-modal-btn" onClick = {closeModal}><i className="bi bi-x-lg"></i></button>
     {imgClicked === "book-spread" ? 
       <iframe 
         className = "modal-content" 
@@ -40,16 +40,27 @@ function SandpitPage() {
     console.log(imgName);
   }
 
+  // Add sandpit-body class to body for white background
+  useEffect(() => {
+    document.body.classList.add("sandpit-body");
+    return () => {
+      document.body.classList.remove("sandpit-body");
+    };
+  }, []);
+
   useEffect(() => {
     if (isModalVisible) {
       document.body.style.overflow = "hidden"; // Prevent scrolling
+      document.body.classList.add("modal-open");
     } else {
       document.body.style.overflow = "auto"; // Restore scrolling
+      document.body.classList.remove("modal-open");
     }
 
     // Cleanup to reset overflow when component unmounts
     return () => {
       document.body.style.overflow = "auto";
+      document.body.classList.remove("modal-open");
     };
   }, [isModalVisible]);
 
@@ -79,14 +90,14 @@ function SandpitPage() {
   }, [isModalVisible]);
 
   return(
-    <>
+    <div className="sandpit-page">
     <Modal
       imgClicked = {selectedImg}
-      isModalVisible = {isModalVisible}      
+      isModalVisible = {isModalVisible}
       closeModal = {() => {
         setSelectedImg(null)
         setIsModalVisible(false)
-      }}>     
+      }}>
     </Modal>
     <div className = "sandpit-container">
 
@@ -154,7 +165,7 @@ function SandpitPage() {
       </div>
 
     </div>
-    </>
+    </div>
   )
 }
 

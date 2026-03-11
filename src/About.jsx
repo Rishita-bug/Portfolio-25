@@ -4,6 +4,7 @@ import './About.css'
 import ProfileImg from './profile-img.jpg'
 import AboutHeader from './about-header.jpg'
 import Resume from './RishitaB-resume-edited.pdf'
+import ContactModal from './ContactModal'
 
 function AboutPage() { 
 
@@ -11,6 +12,7 @@ function AboutPage() {
     
     const email = "rishitabaghel@gmail.com"
     const[isCopied, setIsCopied] = useState(false);
+    const[isModalOpen, setIsModalOpen] = useState(false);
 
     function handleCopy () {
       navigator.clipboard.writeText(email)
@@ -21,6 +23,17 @@ function AboutPage() {
         .catch(() => {
           console.log("Couldn\'t copy email")
         })
+    }
+
+    function handleResumeClick (e) {
+      e.preventDefault();
+      setIsModalOpen(true);
+    }
+
+    function handleModalSubmit (formData) {
+      // Contact info is now being sent via email and stored in Google Sheets
+      // No need to open resume here - it will be emailed to them
+      console.log('Contact info received:', formData);
     }
 
   
@@ -41,7 +54,7 @@ function AboutPage() {
         <div className="links-container">
           <p className = {isCopied ? "tooltip tooltip-visible" : "tooltip"}>email copied to clipboard</p>
           <p className= "rotate-link email-link" onClick = {handleCopy}>email</p>
-          <a className= "rotate-link resume-link" href={Resume} target='_blank'>resume</a>
+          <a className= "rotate-link resume-link" href="#" onClick={handleResumeClick}>resume</a>
         </div>
         <p className="para">
         I’m a 2024 Communication Design graduate from 
@@ -58,10 +71,15 @@ function AboutPage() {
       <div className="links-container-mobile">
           <p className= "rotate-link-mobile"  onClick = {handleCopy}>email</p>
           <p className = {isCopied ? "tooltip tooltip-visible" : "tooltip"}>email copied to clipboard</p>
-          <a className= "rotate-link-mobile" href={Resume}>resume</a>
+          <a className= "rotate-link-mobile" href="#" onClick={handleResumeClick}>resume</a>
       </div>
       <p className = "about-footnote">Thanks for stopping by my digital abode! This site is an evolving space, still maturing in accessibility, usability and joy.</p>
     </div>
+    <ContactModal
+      isOpen={isModalOpen}
+      onClose={() => setIsModalOpen(false)}
+      onSubmit={handleModalSubmit}
+    />
     </div>
   )
 }

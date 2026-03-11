@@ -4,6 +4,7 @@ import './index.css';
 import './HomePage.css';
 import {Link} from 'react-router-dom';
 import projects from './projects';
+import CursorTrail from './CursorTrail';
 
 function HeroSection(){
   const [isHeroVisible, setIsHeroVisible] = useState(false);
@@ -19,7 +20,7 @@ function HeroSection(){
         A designer-storyteller in the avid pursuit of human&#8209;ness in design.
       </h1>
       <p className= {`about-site ${isHeroVisible ? "about-visible" : "about-not-visible"}`}>
-        Here you will find selected work, <span>musings</span>, and ways to reach out to me.
+        Selected work, <span>musings</span>, and ways to reach out to <span>me</span>!
       </p>
       <img className="hero-visual"></img>
     </header>
@@ -74,10 +75,10 @@ function ProjectDescription({scope, description, className}){
 ProjectDescription.displayName = "ProjectDescription";
 
 
-const ProjectThumbnails = forwardRef(({id, source, path}, ref) => {
+const ProjectThumbnails = forwardRef(({id, source, path, className}, ref) => {
   return(
-    <div 
-      className="thumbnail-container"
+    <div
+      className={`thumbnail-container ${className}`}
       data-id = {id}
       ref = {ref}
     >
@@ -97,12 +98,13 @@ function WorkSection({ref}){
   const [isWide, setIsWide] = useState(window.innerWidth >= 700);
 
   const [visibleProject, setVisibleProject] = useState(null);
-  const [currentProject, setCurrentProject] = useState(false);
+  const [currentProject, setCurrentProject] = useState(null);
 
   const [isWorkVisible, setIsWorkVisible] = useState(false);
  
   const workSectionRef = useRef();
   const thumbnailRefs = useRef([]); //create an array of refs to observe
+  const hasSetInitialProject = useRef(false);
 
   useEffect(() => {
 
@@ -147,6 +149,12 @@ function WorkSection({ref}){
       ([entry]) => {
           if(entry.isIntersecting) {
             setIsWorkVisible(true)
+            // Set first project as active when work section becomes visible
+            if (projects.length > 0 && !hasSetInitialProject.current) {
+              hasSetInitialProject.current = true;
+              setCurrentProject(projects[0]);
+              setVisibleProject(projects[0]);
+            }
           }
       }, {threshold: 0.2}
     )
@@ -189,7 +197,7 @@ function WorkSection({ref}){
       {
         projects.map((project, index)=>{
           return(
-            <div className="project-grid" >
+            <div className="project-grid" key={project.id}>
              { !isWide && (
             <ProjectTitles
               number={project.number}
@@ -204,15 +212,15 @@ function WorkSection({ref}){
                 key={project.id}
                 id = {project.id}
                 path={`/work/${project.id}`}
+                className={currentProject?.id === project.id ? "active-thumbnail" : "inactive-thumbnail"}
                 ref = {(el) => (thumbnailRefs.current[index] = el)}
-                                //"When React gives us the DOM element (el) for this Thumbnail, 
+                                //"When React gives us the DOM element (el) for this Thumbnail,
                                 // store it in the thumbnailRefs.current array at the position index."
               />
             {/* </Link> */}
             {isWide ?
             (
             <div>
-            <hr className={currentProject?.id === project.id ? "active-hr" : "inactive-hr" } />
               <ProjectTags
                 className={currentProject?.id === project.id ? "active-tags" : "inactive-tags" }
                 tags = {project.tags}
@@ -224,7 +232,6 @@ function WorkSection({ref}){
               </div>) :
 
               <>
-              <hr className={currentProject?.id === project.id ? "active-hr" : "inactive-hr" } />
               <ProjectTags
                 className={currentProject?.id === project.id ? "active-tags" : "inactive-tags" }
                 tags = {project.tags}
@@ -247,6 +254,7 @@ function WorkSection({ref}){
 function HomePage() {
     return (
       <>
+      <CursorTrail />
       <HeroSection />
       <WorkSection className="set-relative" />
       </>

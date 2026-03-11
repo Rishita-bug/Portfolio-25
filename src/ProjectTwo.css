@@ -50,8 +50,8 @@
 
 .credits-container h3{
   font-family: var(--header-font);
-  font-size: var(--medium-small);
-  font-weight: 600;
+  font-size: var(--small);
+  font-weight: 420;
 }
 
 .credits-container h4 {
@@ -63,4 +63,5 @@
 .credits-container p {
   font-family: var(--body-font);
   font-size: var(--medium-small);
+  font-weight: 330;
 }

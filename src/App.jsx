@@ -1,5 +1,5 @@
 import React from 'react'
-import {createBrowserRouter, RouterProvider, Outlet} from 'react-router-dom'
+import {createBrowserRouter, RouterProvider, Outlet, Navigate} from 'react-router-dom'
 import './index.css'
 import Navbar from './Navbar.jsx'
 import HomePage from './HomePage.jsx'
@@ -8,12 +8,14 @@ import SandpitPage from './Sandpit.jsx'
 import ProjectPage from './Project.jsx'
 import Footer from './Footer.jsx'
 import ScrollToTop from './ScrollTop.jsx'
+import MobileBanner from './MobileBanner.jsx'
 
 
 
 function Layout() {
   return(
     <div>
+      <MobileBanner />
       <ScrollToTop />
       <Navbar />
       <Outlet />
@@ -31,6 +33,7 @@ const router = createBrowserRouter([
       { path: '/sandpit', element: <SandpitPage /> },
       { path: '/about', element: <AboutPage /> },
       { path: '/work/:id', element: <ProjectPage /> },
+      { path: '/work/7', element: <Navigate to="/work/6" replace /> },
     ],
   },
 ]);
