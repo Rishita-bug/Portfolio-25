@@ -142,12 +142,12 @@ const ProjectThree = () => {
               </div>
               <div className="insight-card">
                 <img className="insight-card-img" src={images['exp-user-minimal-wallpaper']} alt="Minimal wallpaper insight"/>
-                <h4>Insight Title</h4>
+                <h4>Minimal Wallpapers</h4>
                 <p>Users have wallpapers with a minimal design or the same homescreen and lockscreen wallpapers.</p>
               </div>
               <div className="insight-card">
                 <img className="insight-card-img" src={images['exp-user-widgets-unnoticed']} alt="Widgets unnoticed insight"/>
-                <h4>Insight Title</h4>
+                <h4>Unnoticed Widgets</h4>
                 <p>Widgets often go unnoticed by users despite being on the homescreen.</p>
               </div>
             </div>
