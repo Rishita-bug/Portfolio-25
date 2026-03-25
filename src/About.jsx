@@ -40,7 +40,9 @@ function AboutPage() {
 
   return(
     <div className = 'set-relative'>
-    <div className = "about-header-container"><img className = "about-header-img" src = {AboutHeader}/></div>
+    <div className = "about-header-container">
+      <img className = "about-header-img" src = {AboutHeader}/>
+    </div>
 
     <div className="about-page-container">
       <div className = "profile-img-container">
@@ -52,20 +54,62 @@ function AboutPage() {
       <h2 className="greeting">hello!</h2>
       <div className="p-container">
         <div className="links-container">
-          <p className = {isCopied ? "tooltip tooltip-visible" : "tooltip"}>email copied to clipboard</p>
-          <p className= "rotate-link email-link" onClick = {handleCopy}>email</p>
-          <a className= "rotate-link resume-link" href="#" onClick={handleResumeClick}>resume</a>
+          <p className = {isCopied ? "tooltip tooltip-visible" : "tooltip"}>
+            email copied to clipboard
+          </p>
+          <p className= "rotate-link email-link" onClick = {handleCopy}>
+            email
+          </p>
+          <a className= "rotate-link resume-link" href="#" onClick={handleResumeClick}>
+            resume
+          </a>
         </div>
-        <p className="para">
+        {/* <p className="para">
         I’m a 2024 Communication Design graduate from 
         <span className = "education"> National Institute </span> 
         of Design, Andhra Pradesh with a fungal enthusiasm for 
         <span className="work"> UX&nbsp;design and research. </span> 
-          During my time in Design school I stumbled upon visual design, film, animation, graphic narrative, UX, branding and various other offshoots of the discipline, making my approach to design <span className="approach">process-driven, analytical yet rooted&nbsp;in&nbsp;storytelling.</span>
-        </p>
+          During my time in Design school I stumbled upon visual design,
+          film, animation, graphic narrative, UX, branding and various
+          other offshoots of the discipline, making my approach to design
+        <span className="approach">process-driven, analytical yet rooted&nbsp;
+          in&nbsp;storytelling.</span>
+        </p> */}
 
-        <p className="para">
-        Currently tinkering with <span className="lately">web development, </span> and kindling a growing interest in graphic design for the web. As a creature I am <span className="self">persistent, curious and wordy.</span> Indulgences include <span className="other">cortados, plein air scribbling, amateur poetry writing and watercolour painting </span> (sometimes concurrently).
+        {/* <p className="para">
+        Currently tinkering with <span className="lately">
+          web development, </span> and kindling a growing 
+          interest in graphic design for the web. As a creature
+           I am <span className="self">persistent, curious and wordy.</span> 
+           Indulgences include <span className="other">cortados, 
+            plein air scribbling, amateur poetry writing and watercolour painting </span> 
+            (sometimes concurrently).
+        </p> */}
+
+        <p className = "para">
+          <span className = "background">I’m a designer 
+            with a <span className = "handwritten"> soft spot </span> 
+            for visual design,and professional experience in 
+            <span className = "highlight"> UX Design and Research.</span></span>
+        </p>
+        <p className = "para">
+          <span className = "work">My experience thus far has been in emerging tech. 
+          I worked on Galaxy AI at Samsung R&D when Gen AI
+          was finding its footing in consumer-facing UX, then at 
+          Thesys, a B2B SaaS startup pioneering Generative UI.
+          </span>
+        </p>
+        <p className = "para">
+          The problems were new, playbooks didn't exist yet, 
+          and frameworks mattered more than static screens.
+        </p>
+        <p className = "para">
+          <span className = "lately">Currently in my salad days 
+          of programming,</span> <span className = "highlight">learning to think from logic-up,
+          not just pixels-down. </span> As a creature I am 
+          <span className = "self handwritten"> persistent, curious and wordy. </span> 
+          Indulgences include <span className = "other">treks, 
+          cortados, plein air scribbling and amateur poetry writing.</span>
         </p>
       </div>
       <div className="links-container-mobile">
@@ -73,7 +117,11 @@ function AboutPage() {
           <p className = {isCopied ? "tooltip tooltip-visible" : "tooltip"}>email copied to clipboard</p>
           <a className= "rotate-link-mobile" href="#" onClick={handleResumeClick}>resume</a>
       </div>
-      <p className = "about-footnote">Thanks for stopping by my digital abode! This site is an evolving space, still maturing in accessibility, usability and joy.</p>
+      <p className = "about-footnote">
+        Thanks for stopping by my digital abode! 
+        This site is an evolving space, still maturing 
+        in accessibility, usability and joy.
+      </p>
     </div>
     <ContactModal
       isOpen={isModalOpen}

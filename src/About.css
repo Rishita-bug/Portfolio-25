@@ -87,7 +87,7 @@
 
 .about-page-container {
   font-family: var(--header-font);
-  font-size: var(--h1);
+  font-size: var(--h2);
   width: 48%;
   min-width: 250px;
   margin-inline: 13vw;
@@ -111,6 +111,15 @@
   content: "\00A0"; /* Non-breaking space */
 }
 
+.handwritten {
+  font-family: "Kids";
+  font-size: 1.2em;
+}
+
+.highlight {
+  color: rgb(64, 201, 130);
+}
+
 .img-span {
   line-height: 0;
 }
@@ -129,17 +138,12 @@
   margin-bottom: 0.5em;
 }
 
-.work,
-.approach {
-  color: #3ae05f;
-}
-
 .self {
   font-family: "Kids";
 }
 
-.education::after {
-  content: "education";
+.background::after {
+  content: "background";
   font-family: var(--body-font);
   font-size: min(0.7em, 0.9rem);
   font-weight: 500;
